@@ -1,0 +1,93 @@
+buildscript {
+    dependencies {
+        classpath "com.commercehub.gradle.plugin:gradle-avro-plugin:0.14.2"
+    }
+}
+
+plugins {
+    id 'java'
+}
+apply plugin: "com.commercehub.gradle.plugin.avro"
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://packages.confluent.io/maven/"
+    }
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+description = '05kafka-begginer'
+sourceCompatibility = 21
+targetCompatibility = 21
+
+def lombokVersion = '1.18.30'
+def mapStructVersion = '1.5.5.Final'
+
+dependencies {
+    implementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
+    implementation group: 'org.apache.commons', name: 'commons-math3', version: '3.6.1'
+    implementation group: 'org.apache.commons', name: 'commons-text', version: '1.8'
+    implementation group: 'org.apache.commons', name: 'commons-collections4', version: '4.4'
+    implementation group: 'commons-io', name: 'commons-io', version: '2.6'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.3'
+
+    implementation group: 'io.reactivex.rxjava2', name: 'rxjava', version: '2.2.10'
+
+    implementation group: 'org.apache.kafka', name: 'kafka-clients', version: '2.8.0'
+    implementation group: 'org.apache.kafka', name: 'kafka-streams', version: '2.8.0'
+
+    //implementation group: 'org.elasticsearch.client', name: 'elasticsearch-rest-client', version: '7.13.0'
+    implementation group: 'org.elasticsearch.client', name: 'elasticsearch-rest-high-level-client', version: '7.13.0'
+
+
+    /*implementation group: 'org.mapstruct', name: 'mapstruct', version: mapStructVersion
+    implementation group: 'org.projectlombok', name: 'lombok', version: lombokVersion
+
+    annotationProcessor group: 'org.mapstruct', name: 'mapstruct-processor', version: mapStructVersion
+    annotationProcessor group: "org.projectlombok", name: "lombok", version: lombokVersion*/
+
+
+    annotationProcessor group: 'org.projectlombok', name: 'lombok-mapstruct-binding', version: '0.2.0'
+
+    compileOnly group: 'org.mapstruct', name: 'mapstruct', version: mapStructVersion
+    testCompileOnly group: 'org.mapstruct', name: 'mapstruct', version: mapStructVersion
+    annotationProcessor group: 'org.mapstruct', name: 'mapstruct-processor', version: mapStructVersion
+    testAnnotationProcessor group: 'org.mapstruct', name: 'mapstruct-processor', version: mapStructVersion
+
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: lombokVersion
+    testCompileOnly group: 'org.projectlombok', name: 'lombok', version: lombokVersion
+    annotationProcessor group: "org.projectlombok", name: "lombok", version: lombokVersion
+    testAnnotationProcessor group: "org.projectlombok", name: "lombok", version: lombokVersion
+
+
+    implementation group: 'one.util', name: 'streamex', version: '0.7.3'
+
+    //avro
+    //implementation group: 'com.commercehub.gradle.plugin.avro', name: 'com.commercehub.gradle.plugin.avro.gradle.plugin', version: '0.99.99', ext: 'pom'
+
+    //works
+    implementation group: 'org.apache.avro', name: 'avro', version: '1.10.1'
+    implementation group: 'io.confluent', name: 'kafka-avro-serializer', version: '5.5.2'
+
+    implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.9.1'
+
+    testImplementation 'io.cucumber:cucumber-java:7.11.0'
+    testImplementation 'io.cucumber:cucumber-junit:7.11.0'
+
+    repositories {
+        mavenCentral()
+    }
+}
+
+avro {
+    createSetters = false
+    fieldVisibility = "PRIVATE"
+}
+
+generateAvroJava {
+    source(rootDir)
+    // Include avro source in root directory only because Gist doesn't support directories
+}

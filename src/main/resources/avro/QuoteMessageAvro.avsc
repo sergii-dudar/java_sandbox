@@ -1,0 +1,27 @@
+{
+  "namespace": "org.kafka.tutorial3avro.generated",
+  "type": "record",
+  "name": "QuoteMessageAvro",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string"
+    },
+    {
+      "name": "quote",
+      "type": "string"
+    },
+    {
+      "name": "version",
+      "type": "int"
+    },
+    {
+      "name": "likes",
+      "type": "int"
+    },
+    {
+      "name": "author",
+      "type": "string"
+    }
+  ]
+}
