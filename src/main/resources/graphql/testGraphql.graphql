@@ -1,0 +1,33 @@
+query Order($id: ID!) {
+    order(id: $id) {
+        field1 {
+            subfield1
+            subfield2 {
+                subfield1
+                subfield2
+            }
+            subfield3 {
+                subfield1
+                subfield2
+                subfield3
+            }
+            subfield4 {
+                subfield1
+                subfield2
+            }
+        }
+        field2
+        field3
+        field4
+    }
+}
+
+
+
+
+
+
+
+
+
+
