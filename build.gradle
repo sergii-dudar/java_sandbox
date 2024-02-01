@@ -32,7 +32,17 @@ dependencies {
     implementation group: 'org.apache.commons', name: 'commons-text', version: '1.8'
     implementation group: 'org.apache.commons', name: 'commons-collections4', version: '4.4'
     implementation group: 'commons-io', name: 'commons-io', version: '2.6'
-    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.3'
+
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.15.3")
+    implementation("com.fasterxml.jackson.datatype:jackson-datatype-guava:2.15.3")
+    implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.15.3")
+    implementation("com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.15.3")
+    implementation("com.google.guava:guava:32.1.2-jre")
+    implementation("com.graphql-java:graphql-java:21.2")
+    implementation("org.springframework:spring-web:6.0.13")
+    implementation("org.assertj:assertj-core:3.24.2")
+    implementation("com.github.tomakehurst:wiremock-jre8:2.26.3")
+    implementation 'org.slf4j:slf4j-simple:2.0.11'
 
     implementation group: 'io.reactivex.rxjava2', name: 'rxjava', version: '2.2.10'
 
@@ -63,7 +73,7 @@ dependencies {
     testAnnotationProcessor group: "org.projectlombok", name: "lombok", version: lombokVersion
 
 
-    implementation group: 'one.util', name: 'streamex', version: '0.7.3'
+    implementation group: 'one.util', name: 'streamex', version: '0.8.1'
 
     //avro
     //implementation group: 'com.commercehub.gradle.plugin.avro', name: 'com.commercehub.gradle.plugin.avro.gradle.plugin', version: '0.99.99', ext: 'pom'
