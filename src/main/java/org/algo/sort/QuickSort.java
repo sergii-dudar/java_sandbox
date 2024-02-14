@@ -1,9 +1,16 @@
-package org.kafka;
+package org.algo.sort;
 
 import java.util.Arrays;
 
 // https://www.javatpoint.com/quick-sort
 public class QuickSort {
+
+    /*
+     Average Time Complexity: O(n log n)
+     Worst-case Time Complexity: O(n^2) (like Bubble Sort)
+     Best-case Time Complexity: O(n log n)
+     Space Complexity: O(log n) auxiliary space due to recursion (on average), but O(n) in worst case due to the depth of recursion stack.
+     */
 
     public static void main(String[] args) {
         int a[] = {13, 18, 27, 2, 19, 25};

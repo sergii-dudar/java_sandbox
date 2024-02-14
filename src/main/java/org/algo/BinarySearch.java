@@ -1,4 +1,4 @@
-package org.kafka;
+package org.algo;
 
 public class BinarySearch {
 
