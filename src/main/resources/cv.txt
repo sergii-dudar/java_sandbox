@@ -1,0 +1,275 @@
+Serhii Dudar
+Senior Java Software Engineer
+
+Vinnytsya
++380930105209
+serhii.dudar@outlook.com
+
+Summary:
+Software Engineer with more than 10 years of experience in creating various number of solutions (different web services, sdks, front end parts) on different sets of tech stack (Java, C#.NET, C++, Python, JavaScript-related technologies).
+
+Skill Highlights:
+
+
+I really love to work on high-load systems, improving speed, performance, optimisation, algorithms, architecture building, reactive programming, non blocking IO, concurrency and multi-threading, event loop-based systems and servers (like netty, nodejs etc) and many many more
+
+Proficient in:
+
+JVM Scope: Java 21, Java EE, Spring Framework, Spring Boot, JavaFX, Axon Framework, Spring Data, Spring Cloud, Spring Sequrity. OAuth, Webflux, Apache Camel, EJB, JSP, Servlets, Project Reactor, netty, rx.java, Hibernate, JDBC, R2DBC, JPA, JSF, multithreading, sonar, junit, rest-assured, wiremock, testcontainers, jmetter, jprofiler …
+
+.NET Scope: C#, ASP.NET(WebForm, MVC, Wep Api), Nancy, SignalR, WinForm, WPF, Silverlight, WinRT, Windows Services, WCF, .Net Remoting, Web Services, ActiveDirectory, MEF, MAF, ADO.NET, Entity Framework, NHibernate, WIX, LINQ, COM, rx.net, Network Programming, Multithreading, MS Reporting Server, Umbraco, DevExpress, MS Unit Test...
+
+Design: OOP, Software Design Patterns, Clean Architecture, TDD... I'm strictly following of *solid, dry, kiss, yagni...* design approaches
+
+Client Scope: JavaScript, typescript, Babel, Rx.js, Angular, ReactJS, Redux, KnockoutJs, RequireJS, JQuery, Bootstrap, ExtJS, JavaFX…
+
+Another: microservices, high load systems, rest, graphql, apollo, sagas, nodejs, nestjs, expressjs, maven, webpack, browserify, gulp, npm, yarn, git, TFS, subversion, teamcity, kubernetes, docker, google cloud, microsoft azure, iis, oauth, jwt, rest, soap, rpc, sql, t-sql, xslt, xpath, event sourcing, cors, websockets, protobuf, tcp, net…
+
+Messaging systems: Apache Kafka (Kafka Streams), RabbitMq, Axon Server, JMS
+
+Databases: MS SQL Server, MySql, PostgreSQL, MongoDb, SQLite, Redis, Hazelcast, Apache Cassandra
+
+IDE etc: VIM, NeoVim, IntelliJ IDEA, WebStorm, Rider, Eclipse, Visual Studio, SQL Server Management Studio, MySQL Workbench, Studio3t, k9s...
+
+PERSONAL INFORMATION
+  Address: , Vinnytsya, 
+  Nationality: 
+  Driving License: 
+  Hobbies: 
+
+LANGUAGES
+  ★★★☆☆ English
+  ★★★★★ Ukrainian
+
+SKILLS
+  Java
+  C#
+  JavaScript
+  TypeScript
+  Apache Kafka
+  PostgreSQL
+  MySQL
+  MS Sql Server
+  SQLite
+  JavaFX
+  Apache Camel
+  Multithreading
+  Object-Oriented Programming
+  Gradle
+  ASP.NET
+  Hibernate
+  Entity Framework
+  Netty
+  JMS
+  SQL
+  Junit
+  Kubernetes
+  RabbitMQ
+  MongoDB
+  Redis
+  Software Design
+  Rx.net
+  Cucumber
+  Hazelcast
+  GraphQL
+  Spring Framework
+  OAuth
+  SignalR
+  .NET Framwrork
+  Concurrency
+  Multithreading
+  Netty
+  NIO
+  
+
+WORK EXPERIENCE
+  * May 2021 – Present
+    Senior Java software engineer at Digitally Inspired company, 
+      City Plumbing | Plumbing &amp; Heating Merchants, Bathroom Stores: UK's largest builders' merchants, supplying tens of thousands of trade quality products that are available for contact free delivery or collection (main public site https://www.cityplumbing.co.uk/)
+
+Responsibilities &amp; Main Achievements
+- system architecture building and supporting
+- technical problems solving
+- code reviews
+- performance optimizations &amp; refactoring
+ - optimization of existing sql complex queries, and developing new
+ - developed from scratch one of the core platform domain `Orders` number of microservices, 3rd party integrations, sinks, consumers and many more. Creation orders from huge number of sources (sales channels) with different configurations, normalizations etc, and sync in handling system called `Universe` (40 years old actually) in fully async flow (by using kafka and many more), with full set of recovery flows, support notifications, ability to recovery and fix.
+ - developed mechanism of order synchronization between two big system based on on demand user calls (that in result allowed to decreace number of expencive calls, as communication with `Universe` system is expencive and allowed by small number of licenced socket connections), and based on order notification mechanism, that's allowed to clients see in `the platform` huge number of applications and sites `orders` changes in real time.
+ - developed order notifications mechanism of loading `Order` changes from `Universe` about order progress (status changes, attribute changes etc) that allowed to clients to trach order progress.
+ - developed cuncurrent `TcpClientConnectionFactory` to connect with `PED` terminals (payment terminals, broadly using in UK big mals), that allowed in resuld built the platform payment system based on it.
+ - extended `universe-kafka-proxy` (central microservice to cummunication with `Universe` system by using kafka request\response topics) to use `long lived sessions` of connections with `Universe` with concurrently safe closing\opening old\new connections, keeping them in live state as much as possible, that in result saved to company a lot of money on `Universe` connections licences (that quite expencive), as in result number of needed connections was decreaded almost in 3-5 times to serve the same platform need as before it, but speed and effective of using this connections and `universe-kafka-proxy`  in general increaded a lot.
+ - developed custom light weigh indexed full text search solution based on postgres (tsvecrot, tsquery) with supporting any table text columnts, that allowed to resolve many busines requirements and build in result many very complex fast search engines to whole platform without need to move many of searches to 3td party search platforms like `elastic search` or `algolia` that quite expencive, but not all the time justified for many cases by many reasones.
+
+
+  ServerSide: Java 11-21, Spring Framework, JEE, Project Reactor, RxJava, Netty, PostgreSQL, Elasticsearch, Redis, Kubernetes, Concurrency and Multithreading, Helm, AWS, Microservices, High Load, Apache Kafka, Apache Avro, Kafka Streams, Kafka Connect, S3, JDBC, R2DBC, Jdbi, jooq, sftp, Rest, GraphQL, Apollo, dgs, Supergraphs and federations, Gradle, Voult, Keycloack, Jaeger, Gitlab, k9s, akhq, cucumber, junit5, assertj...
+
+
+  * April 2019 – May 2021
+    Senior Java software engineer at Sweetcode Lab company, 
+      
+  Natura ERP: https://strategy.natura.io https://crm.natura.io https://sales.natura.io/ https://distribution.natura.io/ etc
+
+
+Responsibilities &amp; Main Achievements
+  - system architecture building and supporting
+  - technical problems solving
+  - interviewing candidates
+  - code reviews
+  - performance optimizations &amp; refactoring
+  - developing new functionality
+  - Implemented integration with US metrc government system to track and controlling regulation company products based on country law that is very bad in context of automatisation processes
+ - Integrated Project Reactor and Netty as the main server, added parallelism for heavy calculations. All togethes allowed to decrease CPU and RAM usage almost in two times, with saving the same level of API throughput. In next it saved a lot of money in next steps of platform scaling.
+ - Implemented cliend side javafx printer app application that installing on factory machines, allowing for workers to print QR-codes etc directly from ERP system to their printers
+  - Implemented ability to track process of delivery products to the customers in real time on customized US goodle maps with ability to control the delivery process.
+
+ServerSide: Java 11, Maven, Spring Boot 2, Rest, oauth2, JWT, Spring Cloud, RSockets, Project Reactor, Netty, Lombok, mapstruct, Quartz, MongoDB, Axon Framework 4, Axon Server, Kafka, Microservices, Event Sourcing and CQRS, Sagas, Apache Commons
+ClientSide: ReactJS, JavaFx (printer app), React Native (driver app), Redux, Sagas, Typescript, rxjs, redux-observable, redux-thunk, lodash, moment, jwt…
+Other: junit, rest-assured, wiremock, testcontainers, Netty, Jetty, powermock, swagger, git
+
+
+  Capna ERP: Distributed system for managing all flow of products from factories to retailers, clients, distributors etc
+
+
+Responsibilities &amp; Achievements:
+  - Migration existing system from php to java spring boot based microservices with extending current, and creating new functionality that as result allowed to business to scale their businesses in two time for 8 months.
+ - Solution architecture
+- Code review
+- Refactoring &amp; code optimizations
+
+ServerSide: Java 8, Spring Boot 2, Spring Cloud (Eureka, Ribbon, Circuit Breaker), Quartz, MySql, RabbitMq, Graphql, Microservices
+ClientSide:  ReactJS, Redux, Sagas, Typescript, rxjs, lodash, moment…
+
+  bank-connect: System of connecting to many bank systems (like american-express, cartachiara, carteaziende etc) from many user accounts (for one person) and collecting it to one processed system to analyses data etc.
+
+Java 8, Spring Boot, Apache Commons, Mapstruct, Junit …
+
+  * May 2018 – April 2019
+    Senior C#.NET fullstack software engineer at Sweetcode Lab company, 
+      
+  elitconnect: system of properties market management system in USA
+
+https://eliteconnectrealestate.com/, https://eliteconnectrealestate.crm.com/...
+
+Responsibilities &amp; Main Achievements
+ - Introduced of Event Sourcing and CQRS to the project; as a result, it's allowed to extend the system in general to be able to collect business-important metrics and the ability to recollect them in requested terms, and it's allowed in general for businesses to decide to scale the system and get very good financial results after less than half a year.
+ - Solution architecture
+ - Code review
+ - Developing new functionality, support
+ - Refactoring &amp; code optimizations
+
+ServerSide: C# 7, (Net 4.7, Net Core, Mono), MySql, MongoDb, Rx.Net, Nancy, Concurrency, Event Sourcing, CQRS, AutoMapper, NLog, WebSockets, Immutales, NUnit, Moq, Integration Nancy.Testing…
+ClientSide:  Angular 6, Redux, Sagas, karma, jasmine typescript, rxjs…
+Other: Gulp, WebPack, Git, npm
+Responsibilities: improving existing system architecture, code reviews, performance optimizations, refactoring, developing new functionality etc …
+
+  * November 2017 – October 2018
+    Java full stack software engineer at ONSEO company (subsidiary GameSys Group), 
+      
+  Gamesys games: https://www.jackpotjoy.com/uk/slots, https://www.virgingames.com/ , https://www.starspins.com/ …
+
+Responsibilities &amp; Main Achievements
+  - Integration and support 3rd party game providers to the platform.
+  - Developed custom solution to collect client statistics about any types of events during client game sessions, that in result allowed to add chiter filters and save a lot of company money
+  - Refactoring &amp; code optimizations
+
+Java 8, Spring Framework 5, Apache Camel, Microservices, Apache Kafka, JMetter, JProfiler, Microservices, Docker, Kubernetes, Sonar, Lombok, Junit, Restassured, Wiremock…
+
+  * February 2017 – November 2017
+    C#.Net and Web software engineer at WinInteractive company, 
+      
+  Bwin: (https://m.bwin.com SPA) One of the bigges sport betting platform.
+
+Responsibilities
+ - Developing new platform functionality and modules on the server and client sides.
+
+ServerSide: C# 7, WebApi 2.0, ASP.NET MVC 5, Vanilla 6, SiteCore, DynaCon, OWIN, Log4Net, PosApi client services to low lavel data...
+ClientSide:  JavaScript, TypeScript, AngularJS, Angular 4, Vanilla 6...
+Other: Gulp, Grunt, WebPack, KarmaJS, KarmaTS, Jasmine, Moxii, NUnit, Protractor, Selenium, Git, Svn npm, yarn...
+
+  * February 2013 – February 2017
+    C#.Net/Java and Web software engineer at WaveAccess company, 
+      
+  Indasoft.TSDB: Distributed highly loaded system of storage and processing of large volumes of time based on miscoservices. 
+
+Responsibilities &amp; Main Achievements: 
+  - Developed an API with the ability to handle thousands (from 100 to 10,000) of requests with very important metrics (temperature, pressure, and many more metric values) for less than a second, with the ability to analyze, compress, store, etc. in real time. Which, as a result, allowed the company and their factories, with sensible control of the processes, to increase their production abilities to 8 times (by initial plans, to 5 times). Such high throughput was achieved mainly by using many concurrency abilities and runtime optimizations.
+ - Involved in system solution architecture, technology investigations and filtering (especially noSql and fast caches solutions)
+ - Code review
+ - Refactoring &amp; code optimizations
+ - Created a client-side SDK to efficiently send large amounts of data to the API using protobuf, batching etc.
+
+
+ServerSide: C#, Java 8, RabbitMq, .Net Framework 4.6, WebApi 2.0 Cluster, Protobuf, OWIN, Multithreading, EF 6, ActiveDirectory, Sql Server 2012, RedisDb, Apache Cassandra(NoSql), KairosDB, Windows Service, SignalR, OPC, Log4Net
+ClientSide(Sdk): Java 8, Spring Framework, Protobuf, Sqlite, websockets, WIX
+Install app: WPF, WIX
+
+  HBS(HighBayStorage.Messaging): A system for collecting message queues, processing them, and sending them via the SAP protocol, and vice versa with supporting many custom client defined query operations (filtering, groupint etc).
+
+Java 8, Spring Framework, Hibernate, SAP, Microservices, MySql, XSLT
+
+  NewClientIntake: System of registration and collection of clients' applications
+
+ServerSide: C#, ASP.NET MVC 5, WebApi, OWIN, EF 5, MS Sql Server, MAF, WIX
+ClientSide: JavaScript(ES5), Angular, JQuery, Bootstrap, RequireJs,
+
+  Continue: Tracking System
+
+ServerSide: C#, ASP.NET MVC 5, EF 5, WebApi, OWIN, DevExpress, MS Sql Server
+ClientSide: JavaScript(ES5), Angular, JQuery, Bootstrap, DevExpress libraries
+
+  EventGame: WaveAccess the system for generating questions and answers on the company's products and events, used for various exhibitions and events. (http://www.eventquizgames.com/)
+
+ServerSide: C#, ASP.NET MVC 5, WebApi, OWIN, EF 5, MS Sql Server
+ClientSide: JavaScript(ES5), WebSokets, JQuery, Bootstrap, KnockoutJs, RequireJs, ExtJs
+
+  ServiceGenerator: System for auto generating WCF services and automatic publishing based on customer configuration.
+
+ServerSide: C#, ASP.NET Web Form, Windows Services, WCF, WPF, MS Sql Server, Microsoft Dynamic CRM
+ClientSide: JavaScript(ES5), JQuery
+
+  LOblastCRM: Integrated system of work with applications and various documents from customers through Microsoft Dynamic CRM
+
+ServerSide: C#, ASP.NET Web Form, MS Sql Server, Microsoft Dynamic CRM
+ClientSide: JavaScript(ES5), JQuery
+
+  WA: company site (http://www.wave-access.com/)
+
+ServerSide: C#, ASP.NET MVC 4, Umbraco, XSLT, MS Sql Server, WebApi
+ClientSide: JavaScript(ES5), JQuery, KnockoutJs
+
+  MyWorkSearch: One of the biggest resource of job search, training, etc in UK. (https://www.myworksearch.co.uk/)
+
+ServerSide: C#, ASP.NET Web Form, ASP.NET MVC, Sql Server, ReportServer
+ClientSide: JavaScript(ES5), JQuery, KendoUI
+
+  AttUnix: Customer site (http://www.attunix.com/)
+
+ServerSide: C#, ASP.NET MVC 4, Umbraco, XSLT, MS Sql Server
+ClientSide: JavaScript, JQuery
+
+  WAShot: Resource CRM of the company's products and their installation online from site on CRM clients (http://shop.wave-access.com/)
+
+ServerSide: C#, ASP.NET Web Form, Umbraco, WPF, MS Sql Server, MS Dynamic CRM
+ClientSide: JavaScript, JQuery
+
+  TrackControl: WaveAccess tracking system
+
+ServerSide: C#, ASP.NET MVC 3, NHibernate, MS Sql Server, Redmine Api, ActiveDirectory
+ClientSide: JavaScript, JQuery
+
+
+EDUCATION
+  * January 2007 – January 2012
+    Vinnytsia National Technical University.,  Specialist, Computer Engineering
+
+EXTRA-CURRICULAR ACTIVITIES
+  * 
+     at , 
+
+COURSES
+  * 
+    , 
+
+REFERENCES
+  *  from 
+
