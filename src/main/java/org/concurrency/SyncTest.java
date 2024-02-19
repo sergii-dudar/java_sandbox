@@ -1,5 +1,6 @@
 package org.example.concurrency;
 
+// @jdk.internal.vm.annotation.Contended
 public class SyncTest {
 
     public static void main(String[] args) {

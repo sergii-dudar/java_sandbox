@@ -6,27 +6,27 @@ Ukraine, Vinnytsya
 serhii.dudar@outlook.com
 Linkedin: https://www.linkedin.com/in/serhii-dudar/
 
-Summary:
-Software engineer with more than 10 years of experience. I have deep knowledge and commercial experience of creating various types of solutions (server applications, SDKs, services, client apps etc); Deep knowledge of OOP principles, HTTP, concurrency and multithreading, microservices building, high-load, optimisations, algorithms, architecture building, non blocking IO, software design patterns, coding best practies etc; SOLID, GRASP, DRY, KISS, YAGNI, Clean Architecture, etc are not just words for me they're approaches that I'm strictly following in my practice to keep code clean, extensible, flexible, fast, and robust to bring to business the best value I can and not fail during all solution live time.
+SUMMARY
+Software engineer with more than 10 years of experience. I have deep knowledge and commercial experience of creating various types of solutions (server applications, SDKs, services, client apps etc); Deep knowledge of OOP principles, HTTP, concurrency and multithreading, microservices building, high-load, optimisations, algorithms, architecture building, non blocking IO, event sourcing and CQRS, software design patterns, coding best practies etc; SOLID, GRASP, DRY, KISS, YAGNI, Clean Architecture, etc are not just words for me, I'm strictly following these approaches in my practice to keep code clean, extensible, flexible, fast, and robust to bring to business the best value I can give and not fail during all solution live time and iterations.
 
 LANGUAGES
-  English: Upper-Intermediate (B2)
-  Ukrainian: Native
+English: Upper-Intermediate (B2)
+Ukrainian: Native
 
 SKILLS
 - Languages: Java, C#, JavaScript, Sql, TypeScript, Python
-- Backend: Spring Framework, Spring Cloud, Webflux, OAuth, GraphQL, DGS, Hibernate, Project Reactor, Rx.Java, JDBC, R2DBC, JOOQ, Apache Camel,
-- Libraries: Rx.Java, Project Reactor, 
-- Frontend: Angular, JavaFX
-- Databases: PostgreSQL, MySql, MS SQL Server, MongoDb, SQLite
+- Backend: Spring Framework, Spring Cloud, Webflux, OAuth, GraphQL, DGS, Hibernate, Project Reactor RxJava, JDBC, R2DBC, JOOQ, Apache Camel, JDBI, NIO, Microservices, High Load, sftp, Quartz, Node.js, Apollo, Express, Voult, Swagger, ASP.NET...
+- Frontend: Angular, ReactJs, JavaFX
+- Databases: PostgreSQL, MySql, MS SQL Server, MongoDb, SQLite, S3
 - Caching: Redis, Hazelcast
+- Data: Apache Avro, Protobuf
 - Message brokers: Apache Kafka (Kafka Streams), RabbitMq, Axon Server, JMS
-- Testing: Junit, Cucumber, Rest-Assured, AssertJ, Wiremock, Testcontainers, Jest
+- Testing: Junit, Cucumber, Rest-Assured, AssertJ, Wiremock, Testcontainers, Jest, Powermock
 - Build: Gradle, Maven
-- Version control:
+- Version control: Gitlab, GitHub, 
 - Servers: Netty, Tomcat, Jetty, JBoss, IIS
-- Profiling: jmetter, jprofiler, jconsole, visualvm
-- Cloud: AWS, Goodle Cloud, Kubernetes
+- Profiling: jmetter, jprofiler, jconsole, visualvm, jaeger
+- Cloud: AWS, Goodle Cloud, Kubernetes, Helm
 - Tools: VIM, IntelliJ IDEA, Eclipse, Rider, Visual Studio, insomnia, akhq, k9s...
 
 WORK EXPERIENCE
@@ -53,38 +53,45 @@ TECHNOLIGIES: Java 11-21, Spring Framework, JEE, Project Reactor, RxJava, Netty,
 
 Period: April 2019 – May 2021
 Position: Senior Java software engineer at Sweetcode Lab company, 
-Project: Natura ERP - https://strategy.natura.io https://crm.natura.io https://sales.natura.io/ https://distribution.natura.io/ etc
+3. Project: Natura ERP - https://strategy.natura.io https://crm.natura.io https://sales.natura.io/ https://distribution.natura.io/ etc
 
-Responsibilities and main achievements:
+Responsibilities: and main achievements:
 - system architecture building and supporting
 - technical problems solving
 - interviewing candidates
 - code reviews
 - performance optimizations and refactoring
 - developing new functionality
+
+Main achievements:
+- Build core microservice infrastructure from scratch with resolving number of problems on this way
+- Introduced Axon Framework that bring strict Event Sourcing and SQRS model that resolved many business problems.
 - Implemented integration with US metrc government system to track and controlling regulation company products based on country law that is very bad in context of automatisation processes
 - Integrated Project Reactor and Netty as the main server, added parallelism for heavy calculations. All togethes allowed to decrease CPU and RAM usage almost in two times, with saving the same level of API throughput. In next it saved a lot of money in next steps of platform scaling.
 - Implemented cliend side javafx printer app application that installing on factory machines, allowing for workers to print QR-codes etc directly from ERP system to their printers
 - Implemented ability to track process of delivery products to the customers in real time on customized US goodle maps with ability to control the delivery process.
 
-ServerSide: Java 11, Maven, Spring Boot 2, Rest, oauth2, JWT, Spring Cloud, RSockets, Project Reactor, Netty, Lombok, mapstruct, Quartz, MongoDB, Axon Framework 4, Axon Server, Kafka, Microservices, Event Sourcing and CQRS, Sagas, Apache Commons
+ServerSide: Java 11, Maven, Spring Boot 2, Rest, oauth2, JWT, Spring Cloud, Google Cloud, Kubernetes, RSockets, Project Reactor, Netty, Lombok, mapstruct, Quartz, MongoDB, Axon Framework 4, Axon Server, Kafka, Microservices, Event Sourcing and CQRS, Sagas, Apache Commons
 ClientSide: ReactJS, JavaFx (printer app), React Native (driver app), Redux, Sagas, Typescript, rxjs, redux-observable, redux-thunk, lodash, moment, jwt…
 Other: junit, rest-assured, wiremock, testcontainers, Netty, Jetty, powermock, swagger, git
 
-Project: Capna ERP - Distributed system for managing all flow of products from factories to retailers, clients, distributors etc
+2. Project: Capna ERP - Distributed system for managing all flow of products from factories to retailers, clients, distributors etc
 
-Responsibilities and main achievements:
-- Migration existing system from php to java spring boot based microservices with extending current, and creating new functionality that as result allowed to business to scale their businesses in two time for 8 months.
+Responsibilities:
 - Solution architecture
 - Code review
 - Refactoring and code optimizations
 
+Main achievements:
+- Migration existing system from php to java spring boot based microservices with extending current, and creating new functionality that as result allowed to business to scale their businesses in two time for 8 months.
+
+TECHNOLIGIES
 ServerSide: Java 8, Spring Boot 2, Spring Cloud (Eureka, Ribbon, Circuit Breaker), Quartz, MySql, RabbitMq, Graphql, Microservices
 ClientSide: ReactJS, Redux, Sagas, Typescript, rxjs, lodash, moment…
 
-Project: bank-connect - System of connecting to many bank systems (like american-express, cartachiara, carteaziende etc) from many user accounts (for one person) and collecting it to one processed system to analyses data etc.
+1. Project: bank-connect - System of connecting to many bank systems (like american-express, cartachiara, carteaziende etc) from many user accounts (for one person) and collecting it to one processed system to analyses data etc.
 
-Technologies: Java 8, Spring Boot, Apache Commons, Mapstruct, Junit …
+TECHNOLIGIES: Java 8, Spring Boot, Apache Commons, Mapstruct, Junit …
 
 --------------------------------------
 
@@ -92,17 +99,19 @@ Period: May 2018 – April 2019
 Position: Senior C#.NET fullstack software engineer at Sweetcode Lab company, 
 Project: elitconnect: system of properties market management system in USA (https://eliteconnectrealestate.com/, https://eliteconnectrealestate.crm.com/...)
 
-Responsibilities and main achievements:
-- Introduced of Event Sourcing and CQRS to the project; as a result, it's allowed to extend the system in general to be able to collect business-important metrics and the ability to recollect them in requested terms, and it's allowed in general for businesses to decide to scale the system and get very good financial results after less than half a year.
+Responsibilities:
 - Solution architecture
 - Code review
 - Developing new functionality, support
 - Refactoring and code optimizations
 
+Main achievements:
+- Introduced of Event Sourcing and CQRS to the project; as a result, it's allowed to extend the system in general to be able to collect business-important metrics and the ability to recollect them in requested terms, and it's allowed in general for businesses to decide to scale the system and get very good financial results after less than half a year.
+
+TECHNOLIGIES
 ServerSide: C# 7, (Net 4.7, Net Core, Mono), MySql, MongoDb, Rx.Net, Nancy, Concurrency, Event Sourcing, CQRS, AutoMapper, NLog, WebSockets, Immutales, NUnit, Moq, Integration Nancy.Testing…
 ClientSide: Angular 6, Redux, Sagas, karma, jasmine typescript, rxjs…
 Other: Gulp, WebPack, Git, npm
-Responsibilities: improving existing system architecture, code reviews, performance optimizations, refactoring, developing new functionality etc …
 
 --------------------------------------
 
@@ -110,12 +119,16 @@ Period: November 2017 – October 2018
 Position: Java full stack software engineer at ONSEO company (subsidiary GameSys Group), 
 Project: Gamesys games - UK one of the greatest gaming platform (https://www.jackpotjoy.com/uk/slots, https://www.virgingames.com/ , https://www.starspins.com/)
 
-Responsibilities and main Achievements:
-- Integration and support 3rd party game providers to the platform.
-- Developed custom solution to collect client statistics about any types of events during client game sessions, that in result allowed to add chiter filters and save a lot of company money
+Responsibilities:
+- Code review
+- Developing new functionality, support
 - Refactoring and code optimizations
+- Integration and support 3rd party game providers to the platform.
 
-Technologis: Java 8, Spring Framework 5, Apache Camel, Microservices, Apache Kafka, JMetter, JProfiler, Microservices, Docker, Kubernetes, Sonar, Lombok, Junit, Restassured, Wiremock…
+Main achievements:
+- Developed custom solution to collect client statistics about any types of events during client game sessions, that in result allowed to add chiter filters and save a lot of company money
+
+TECHNOLIGIES: Java 8, Spring Framework 5, Apache Camel, Microservices, Apache Kafka, JMetter, JProfiler, Microservices, Docker, Kubernetes, Sonar, Lombok, Junit, Restassured, Wiremock…
 
 --------------------------------------
 
@@ -126,6 +139,7 @@ Project: Bwin - (https://m.bwin.com SPA) One of the bigges sport betting platfor
 Responsibilities:
 - Developing new platform functionality and modules on the server and client sides.
 
+TECHNOLIGIES
 ServerSide: C# 7, WebApi 2.0, ASP.NET MVC 5, Vanilla 6, SiteCore, DynaCon, OWIN, Log4Net, PosApi client services to low lavel data...
 ClientSide: JavaScript, TypeScript, AngularJS, Angular 4, Vanilla 6...
 Other: Gulp, Grunt, WebPack, KarmaJS, KarmaTS, Jasmine, Moxii, NUnit, Protractor, Selenium, Git, Svn npm, yarn...
@@ -135,48 +149,61 @@ Other: Gulp, Grunt, WebPack, KarmaJS, KarmaTS, Jasmine, Moxii, NUnit, Protractor
 Period: February 2013 – February 2017
 Position: C#.Net/Java and Web software engineer at WaveAccess company, 
       
-Project: Indasoft.TSDB: Distributed highly loaded system of storage and processing of large volumes of time based on miscoservices.
+12. Project: Indasoft.TSDB: Distributed highly loaded system of storage and processing of large volumes of time based on miscoservices.
 
-Responsibilities and main Achievements:
-- Developed an API with the ability to handle thousands (from 100 to 10,000) of requests with very important metrics (temperature, pressure, and many more metric values) for less than a second, with the ability to analyze, compress, store, etc. in real time. Which, as a result, allowed the company and their factories, with sensible control of the processes, to increase their production abilities to 8 times (by initial plans, to 5 times). Such high throughput was achieved mainly by using many concurrency abilities and runtime optimizations.
+Responsibilities:
 - Involved in system solution architecture, technology investigations and filtering (especially noSql and fast caches solutions)
 - Code review
 - Refactoring and code optimizations
+- Developing new functionality, support
+- Monitoring
+
+Main Achievements:
+- Developed an API with the ability to handle thousands (from 100 to 10,000) of requests with very important metrics (temperature, pressure, and many more metric values) for less than a second, with the ability to analyze, compress, store, etc. in real time. Which, as a result, allowed the company and their factories, with sensible control of the processes, to increase their production abilities to 8 times (by initial plans, to 5 times). Such high throughput was achieved mainly by using many concurrency abilities and runtime optimizations.
+
 - Created a client-side SDK to efficiently send large amounts of data to the API using protobuf, batching etc.
-Technologies: C#, Java 8, RabbitMq, .Net Framework 4.6, WebApi 2.0 Cluster, Protobuf, OWIN, Multithreading, EF 6, ActiveDirectory, Sql Server 2012, RedisDb, Apache Cassandra(NoSql), KairosDB, Windows Service, SignalR, OPC, Log4Net, Spring Framework, Protobuf, Sqlite, websockets, WIX, WPF
+TECHNOLIGIES: C#, Java 8, RabbitMq, .Net Framework 4.6, WebApi 2.0 Cluster, Protobuf, OWIN, Multithreading, EF 6, ActiveDirectory, Sql Server 2012, RedisDb, Apache Cassandra(NoSql), KairosDB, Windows Service, SignalR, OPC, Log4Net, Spring Framework, Protobuf, Sqlite, websockets, WIX, WPF
 
-Project: HBS(HighBayStorage.Messaging) - A system for collecting message queues, processing them, and sending them via the SAP protocol, and vice versa with supporting many custom client defined query operations (filtering, groupint etc).
-Technologies: Java 8, Spring Framework, Hibernate, SAP, Microservices, MySql, XSLT
+11. Project: HBS(HighBayStorage.Messaging) - A system for collecting message queues, processing them, and sending them via the SAP protocol, and vice versa with supporting many custom client defined query operations (filtering, groupint etc).
+TECHNOLIGIES: Java 8, Spring Framework, Hibernate, SAP, Microservices, MySql, XSLT
 
-Project: NewClientIntake - System of registration and collection of clients' applications
-Technologies: C#, ASP.NET MVC 5, WebApi, OWIN, EF 5, MS Sql Server, MAF, WIX | JavaScript, Angular, JQuery, Bootstrap, RequireJs
+10. Project: NewClientIntake - System of registration and collection of clients' applications
+TECHNOLIGIES: C#, ASP.NET MVC 5, WebApi, OWIN, EF 5, MS Sql Server, MAF, WIX | JavaScript, Angular, JQuery, Bootstrap, RequireJs
 
-Project: Continue - Tracking System
-Technologies: C#, ASP.NET MVC 5, EF 5, WebApi, OWIN, DevExpress, MS Sql Server | JavaScript(ES5), Angular, JQuery, Bootstrap, DevExpress libraries
+9. Project: Continue - Tracking System
+Responsibilities: Developed from scratch solution
+TECHNOLIGIES: C#, ASP.NET MVC 5, EF 5, WebApi, OWIN, DevExpress, MS Sql Server | JavaScript(ES5), Angular, JQuery, Bootstrap, DevExpress libraries
 
-Project: EventGame - WaveAccess the system for generating questions and answers on the company's products and events, used for various exhibitions and events. (http://www.eventquizgames.com/)
-Technologies: C#, ASP.NET MVC 5, WebApi, OWIN, EF 5, MS Sql Server | JavaScript(ES5), WebSokets, JQuery, Bootstrap, KnockoutJs, RequireJs, ExtJs
+8. Project: EventGame - WaveAccess the system for generating questions and answers on the company's products and events, used for various exhibitions and events. (http://www.eventquizgames.com/)
+Responsibilities: Developed from scratch solution
+TECHNOLIGIES: C#, ASP.NET MVC 5, WebApi, OWIN, EF 5, MS Sql Server | JavaScript(ES5), WebSokets, JQuery, Bootstrap, KnockoutJs, RequireJs, ExtJs
 
-Project: ServiceGenerator - System for auto generating WCF services and automatic publishing based on customer configuration.
-Technologies: C#, ASP.NET Web Form, Windows Services, WCF, WPF, MS Sql Server, Microsoft Dynamic CRM | JavaScript(ES5), JQuery
+7. Project: ServiceGenerator - System for auto generating WCF services and automatic publishing based on customer configuration.
+Responsibilities: Developed from scratch solution
+TECHNOLIGIES: C#, ASP.NET Web Form, Windows Services, WCF, WPF, MS Sql Server, Microsoft Dynamic CRM | JavaScript(ES5), JQuery
 
-Project: LOblastCRM - Integrated system of work with applications and various documents from customers through Microsoft Dynamic CRM
-Technologies: C#, ASP.NET Web Form, MS Sql Server, Microsoft Dynamic CRM | JavaScript, JQuery
+6. Project: LOblastCRM - Integrated system of work with applications and various documents from customers through Microsoft Dynamic CRM
+Responsibilities: Developed from scratch solution
+TECHNOLIGIES: C#, ASP.NET Web Form, MS Sql Server, Microsoft Dynamic CRM | JavaScript, JQuery
 
-Project: WA - company site (http://www.wave-access.com/)
-Technologies: C#, ASP.NET MVC 4, Umbraco, XSLT, MS Sql Server, WebApi | JavaScript, JQuery, KnockoutJs
+5. Project: WA - company site (http://www.wave-access.com/)
+Responsibilities: Fully re-developed from scratch solution and next support
+TECHNOLIGIES: C#, ASP.NET MVC 4, Umbraco, XSLT, MS Sql Server, WebApi | JavaScript, JQuery, KnockoutJs
 
-Project: MyWorkSearch - One of the biggest resource of job search, training, etc in UK. (https://www.myworksearch.co.uk/)
-Technologies: C#, ASP.NET Web Form, ASP.NET MVC, Sql Server, ReportServer | JavaScript, JQuery, KendoUI
+4. Project: MyWorkSearch - One of the biggest resource of job search, training, etc in UK. (https://www.myworksearch.co.uk/)
+TECHNOLIGIES: C#, ASP.NET Web Form, ASP.NET MVC, Sql Server, ReportServer | JavaScript, JQuery, KendoUI
 
-Project: AttUnix - Customer site (http://www.attunix.com/)
-Technologies: C#, ASP.NET MVC 4, Umbraco, XSLT, MS Sql Server | JavaScript, JQuery
+3. Project: AttUnix - Customer site (http://www.attunix.com/)
+Responsibilities: Developed from scratch solution
+TECHNOLIGIES: C#, ASP.NET MVC 4, Umbraco, XSLT, MS Sql Server | JavaScript, JQuery
 
-Project: WAShot - Resource CRM of the company's products and their installation online from site on CRM clients (http://shop.wave-access.com/)
-Technologies: C#, ASP.NET Web Form, Umbraco, WPF, MS Sql Server, MS Dynamic CRM | JavaScript, JQuery
+2. Project: WAShot - Resource CRM of the company's products and their installation online from site on CRM clients (http://shop.wave-access.com/)
+Responsibilities: Developing new solution
+TECHNOLIGIES: C#, ASP.NET Web Form, Umbraco, WPF, MS Sql Server, MS Dynamic CRM | JavaScript, JQuery
 
-Project: TrackControl - WaveAccess tracking system
-Technologies: C#, ASP.NET MVC 3, NHibernate, MS Sql Server, Redmine Api, ActiveDirectory | JavaScript, JQuery
+1. Project: TrackControl - WaveAccess tracking system
+Responsibilities: Developed from scratch solution
+TECHNOLIGIES: C#, ASP.NET MVC 3, NHibernate, MS Sql Server, Redmine Api, ActiveDirectory | JavaScript, JQuery
 
 EDUCATION
   January 2007 – January 2012
