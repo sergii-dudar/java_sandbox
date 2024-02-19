@@ -7,7 +7,7 @@ serhii.dudar@outlook.com
 Linkedin: https://www.linkedin.com/in/serhii-dudar/
 
 SUMMARY
-Software engineer with more than 10 years of experience. I have deep knowledge and commercial experience of creating various types of solutions (server applications, SDKs, services, client apps etc); Deep knowledge of OOP principles, HTTP, concurrency and multithreading, microservices building, high-load, optimisations, algorithms, architecture building, non blocking IO, event sourcing and CQRS, software design patterns, coding best practies etc; SOLID, GRASP, DRY, KISS, YAGNI, Clean Architecture, etc are not just words for me, I'm strictly following these approaches in my practice to keep code clean, extensible, flexible, fast, and robust to bring to business the best value I can give and not fail during all solution live time and iterations.
+With over 10 years of experience as a software engineer, I specialize in creating diverse solutions ranging from server applications to SDKs and client apps. My expertise spans object-oriented programming principles, HTTP, concurrency, microservices architecture, high-load systems, optimizations, algorithms, software design patterns, and more. I am well-versed in SOLID, GRASP, DRY, KISS, YAGNI, Clean Architecture, and other best practices, which I rigorously adhere to in my work to ensure clean, extensible, flexible, fast, and robust code. My recent focus has been on Java, although I also have a strong background in C#, JavaScript/TypeScript, Python, and related technologies/frameworks. Additionally, I have experience in project leadership roles, ensuring successful project delivery and value generation for businesses across various iterations and project lifecycles.
 
 LANGUAGES
 English: Upper-Intermediate (B2)
@@ -34,18 +34,20 @@ Period: May 2021 – Present
 Position: Senior Java software engineer at Digitally Inspired company, 
 Project:  City Plumbing | Plumbing and Heating Merchants, Bathroom Stores: UK's largest builders' merchants, supplying tens of thousands of trade quality products that are available for contact free delivery or collection (main public site https://www.cityplumbing.co.uk/)
 
-Responsibilities and main achievements:
-- system architecture building and supporting
-- technical problems solving
-- code reviews
-- performance optimizations and refactoring
-- optimization of existing sql complex queries, and developing new
-- developed from scratch one of the core platform domain `Orders` number of microservices, 3rd party integrations, sinks, consumers and many more. Creation orders from huge number of sources (sales channels) with different configurations, normalizations etc, and sync in handling system called `Universe` (40 years old actually) in fully async flow (by using kafka and many more), with full set of recovery flows, support notifications, ability to recovery and fix.
-- developed mechanism of order synchronization between two big system based on on demand user calls (that in result allowed to decreace number of expencive calls, as communication with `Universe` system is expencive and allowed by small number of licenced socket connections), and based on order notification mechanism, that's allowed to clients see in `the platform` huge number of applications and sites `orders` changes in real time.
-- developed order notifications mechanism of loading `Order` changes from `Universe` about order progress (status changes, attribute changes etc) that allowed to clients to trach order progress.
-- developed cuncurrent `TcpClientConnectionFactory` to connect with `PED` terminals (payment terminals, broadly using in UK big mals), that allowed in resuld built the platform payment system based on it.
-- extended `universe-kafka-proxy` (central microservice to cummunication with `Universe` system by using kafka request\response topics) to use `long lived sessions` of connections with `Universe` with concurrently safe closing\opening old\new connections, keeping them in live state as much as possible, that in result saved to company a lot of money on `Universe` connections licences (that quite expencive), as in result number of needed connections was decreaded almost in 3-5 times to serve the same platform need as before it, but speed and effective of using this connections and `universe-kafka-proxy` in general increaded a lot.
-- developed custom light weigh indexed full text search solution based on postgres (tsvecrot, tsquery) with supporting any table text columnts, that allowed to resolve many busines requirements and build in result many very complex fast search engines to whole platform without need to move many of searches to 3td party search platforms like `elastic search` or `algolia` that quite expencive, but not all the time justified for many cases by many reasones.
+Responsibilities:
+- Leading `Order Domain` project
+- Developing new microservices, features, and functionalities
+- Optimizing performance and conducting refactoring tasks
+
+Main achievements:
+- Optimized numerous complex SQL queries to improve database performance.
+- Led the development of critical microservices and integrations for the "Orders" domain on the platform. This included the creation of microservices, 3rd party integrations, sinks, consumers, and more. Successfully implemented an asynchronous flow using Kafka to synchronize orders from various sources, normalize configurations, and seamlessly integrate with the legacy slow system. Implemented comprehensive recovery flows and notifications.
+- Designed and implemented a mechanism for order synchronization between two major systems, reducing the number of expensive calls by leveraging on-demand user requests and order notification mechanisms.
+- Developed an order notification mechanism to track real-time changes in orders from the legacy slow system system, allowing clients to monitor order progress effectively.
+- Engineered a concurrent TcpClientConnectionFactory to connect with PED terminals, laying the foundation for the platform's payment system.
+- Enhanced the legacy slow system system proxy microservice to optimize connection management with the legacy slow system system, significantly reducing licensing costs and improving connection efficiency by using `kafka streams`.
+- Created a custom lightweight indexed full-text search solution based on PostgreSQL (tsvector, tsquery), enabling the implementation of complex and fast search engines across the platform without the need for expensive third-party search platforms like Elasticsearch or Algolia.
+- Introduced the `Clean Architecture` principle to the project, collaborating with other leads to establish a unified service creation and refactoring architecture. This initiative significantly simplified support efforts, streamlined extension processes, and facilitated the integration of new client services into various domains.
 
 TECHNOLIGIES: Java 11-21, Spring Framework, JEE, Project Reactor, RxJava, Netty, PostgreSQL, Elasticsearch, Redis, Kubernetes, Concurrency and Multithreading, Helm, AWS, Microservices, High Load, Apache Kafka, Apache Avro, Kafka Streams, Kafka Connect, S3, JDBC, R2DBC, Jdbi, jooq, sftp, Node.js, GraphQL, Apollo, dgs, Supergraphs and federations, Gradle, Voult, Keycloack, Jaeger, Gitlab, k9s, akhq, cucumber, junit5, assertj...
 
@@ -55,21 +57,19 @@ Period: April 2019 – May 2021
 Position: Senior Java software engineer at Sweetcode Lab company, 
 3. Project: Natura ERP - https://strategy.natura.io https://crm.natura.io https://sales.natura.io/ https://distribution.natura.io/ etc
 
-Responsibilities: and main achievements:
-- system architecture building and supporting
-- technical problems solving
-- interviewing candidates
-- code reviews
-- performance optimizations and refactoring
-- developing new functionality
+Responsibilities:
+- Leading project technically
+- Developing new microservices, features, and functionalities
+- Building and maintaining system architecture
+- Optimizing performance and conducting refactoring tasks
 
 Main achievements:
-- Build core microservice infrastructure from scratch with resolving number of problems on this way
-- Introduced Axon Framework that bring strict Event Sourcing and SQRS model that resolved many business problems.
-- Implemented integration with US metrc government system to track and controlling regulation company products based on country law that is very bad in context of automatisation processes
-- Integrated Project Reactor and Netty as the main server, added parallelism for heavy calculations. All togethes allowed to decrease CPU and RAM usage almost in two times, with saving the same level of API throughput. In next it saved a lot of money in next steps of platform scaling.
-- Implemented cliend side javafx printer app application that installing on factory machines, allowing for workers to print QR-codes etc directly from ERP system to their printers
-- Implemented ability to track process of delivery products to the customers in real time on customized US goodle maps with ability to control the delivery process.
+- Developed core microservice infrastructure from scratch, addressing various challenges along the way.
+- Introduced the Axon Framework, enabling strict Event Sourcing and CQRS models, which effectively solved numerous business issues.
+- Integrated with the US government's METRC system to monitor and regulate company products in compliance with country laws, despite challenges with automation processes.
+- Utilized Project Reactor and Netty as the primary server components, introducing parallelism for resource-intensive computations. This optimization led to nearly halving CPU and RAM usage while maintaining consistent API throughput, resulting in significant cost savings during platform scaling.
+- Created a client-side JavaFX printer application deployed on factory machines, allowing workers to directly print QR codes and other documents from the ERP system.
+Implemented real-time tracking of product delivery to customers using customized Google Maps integration, providing control over the delivery process.
 
 ServerSide: Java 11, Maven, Spring Boot 2, Rest, oauth2, JWT, Spring Cloud, Google Cloud, Kubernetes, RSockets, Project Reactor, Netty, Lombok, mapstruct, Quartz, MongoDB, Axon Framework 4, Axon Server, Kafka, Microservices, Event Sourcing and CQRS, Sagas, Apache Commons
 ClientSide: ReactJS, JavaFx (printer app), React Native (driver app), Redux, Sagas, Typescript, rxjs, redux-observable, redux-thunk, lodash, moment, jwt…
@@ -78,12 +78,12 @@ Other: junit, rest-assured, wiremock, testcontainers, Netty, Jetty, powermock, s
 2. Project: Capna ERP - Distributed system for managing all flow of products from factories to retailers, clients, distributors etc
 
 Responsibilities:
-- Solution architecture
-- Code review
-- Refactoring and code optimizations
+- Developing new microservices, features, and functionalities
+- Developing front end side functionality
+- Optimizing performance and conducting refactoring tasks
 
 Main achievements:
-- Migration existing system from php to java spring boot based microservices with extending current, and creating new functionality that as result allowed to business to scale their businesses in two time for 8 months.
+- Successfully migrated the existing system from PHP to Java Spring Boot-based microservices. This involved extending current functionalities and creating new features. The migration enabled the business to scale its operations twofold within a span of 8 months.
 
 TECHNOLIGIES
 ServerSide: Java 8, Spring Boot 2, Spring Cloud (Eureka, Ribbon, Circuit Breaker), Quartz, MySql, RabbitMq, Graphql, Microservices
@@ -100,13 +100,12 @@ Position: Senior C#.NET fullstack software engineer at Sweetcode Lab company,
 Project: elitconnect: system of properties market management system in USA (https://eliteconnectrealestate.com/, https://eliteconnectrealestate.crm.com/...)
 
 Responsibilities:
-- Solution architecture
-- Code review
-- Developing new functionality, support
-- Refactoring and code optimizations
+- Developing new microservices, features, and functionalities
+- Optimizing performance and conducting refactoring tasks
+- Developing front end side functionality
 
 Main achievements:
-- Introduced of Event Sourcing and CQRS to the project; as a result, it's allowed to extend the system in general to be able to collect business-important metrics and the ability to recollect them in requested terms, and it's allowed in general for businesses to decide to scale the system and get very good financial results after less than half a year.
+- Introduced Event Sourcing and Command Query Responsibility Segregation (CQRS) to the project. This implementation enabled the system to gather crucial business metrics and retrieve them as needed. As a result, businesses gained the flexibility to scale the system effectively, leading to significant financial gains within less than half a year.
 
 TECHNOLIGIES
 ServerSide: C# 7, (Net 4.7, Net Core, Mono), MySql, MongoDb, Rx.Net, Nancy, Concurrency, Event Sourcing, CQRS, AutoMapper, NLog, WebSockets, Immutales, NUnit, Moq, Integration Nancy.Testing…
@@ -120,13 +119,13 @@ Position: Java full stack software engineer at ONSEO company (subsidiary GameSys
 Project: Gamesys games - UK one of the greatest gaming platform (https://www.jackpotjoy.com/uk/slots, https://www.virgingames.com/ , https://www.starspins.com/)
 
 Responsibilities:
-- Code review
-- Developing new functionality, support
-- Refactoring and code optimizations
-- Integration and support 3rd party game providers to the platform.
+- Developing new microservices, features, and functionalities.
+- Optimizing performance and conducting refactoring tasks.
+- Developing front end side functionality
+- Integrating and supporting third-party game providers on the platform.
 
 Main achievements:
-- Developed custom solution to collect client statistics about any types of events during client game sessions, that in result allowed to add chiter filters and save a lot of company money
+- Created a customized solution for collecting client statistics across various event types during game sessions. This implementation facilitated the integration of cheat detection filters and resulted in significant cost savings for the company.
 
 TECHNOLIGIES: Java 8, Spring Framework 5, Apache Camel, Microservices, Apache Kafka, JMetter, JProfiler, Microservices, Docker, Kubernetes, Sonar, Lombok, Junit, Restassured, Wiremock…
 
@@ -137,7 +136,12 @@ Position: C#.Net Full Stack Software Engineer at WinInteractive company,
 Project: Bwin - (https://m.bwin.com SPA) One of the bigges sport betting platform.
 
 Responsibilities:
-- Developing new platform functionality and modules on the server and client sides.
+- Developing new microservices, features, and functionalities.
+- Developing front end side functionality
+- Optimizing performance and conducting refactoring tasks.
+
+Main achievements:
+- Developed dynamic and configurable web forms on-the-fly using ASP.NET, WebSockets, AngularJS, and CRM technologies. These forms boasted extensive customizability, validations, views, and support for various input types and counts. This initiative resulted in substantial time and cost savings for multiple developer teams and the company as a whole.
 
 TECHNOLIGIES
 ServerSide: C# 7, WebApi 2.0, ASP.NET MVC 5, Vanilla 6, SiteCore, DynaCon, OWIN, Log4Net, PosApi client services to low lavel data...
@@ -152,16 +156,16 @@ Position: C#.Net/Java and Web software engineer at WaveAccess company,
 12. Project: Indasoft.TSDB: Distributed highly loaded system of storage and processing of large volumes of time based on miscoservices.
 
 Responsibilities:
-- Involved in system solution architecture, technology investigations and filtering (especially noSql and fast caches solutions)
-- Code review
-- Refactoring and code optimizations
-- Developing new functionality, support
-- Monitoring
+- Project leadership
+- Contributing to system solution architecture, technology evaluations, and selection (with a focus on NoSQL databases and fast caching solutions)
+- Refactoring and optimizing code for improved performance
+- Developing new functionality and providing ongoing support
+- Monitoring system performance and health
 
 Main Achievements:
-- Developed an API with the ability to handle thousands (from 100 to 10,000) of requests with very important metrics (temperature, pressure, and many more metric values) for less than a second, with the ability to analyze, compress, store, etc. in real time. Which, as a result, allowed the company and their factories, with sensible control of the processes, to increase their production abilities to 8 times (by initial plans, to 5 times). Such high throughput was achieved mainly by using many concurrency abilities and runtime optimizations.
+- Engineered an API capable of processing thousands (ranging from 100 to 10,000) of requests within a fraction of a second, handling critical metrics such as temperature, pressure, and various other parameters. This real-time analysis, compression, and storage capability empowered the company and its factories to significantly boost production capacities, achieving up to 8 times the initial plans (originally targeted for 5 times). The achievement of such high throughput was primarily attributed to leveraging numerous concurrency features and runtime optimizations.
+- Developed a client-side SDK leveraging Protobuf for efficient transmission of large data volumes to the API, implementing batching techniques for optimized performance.
 
-- Created a client-side SDK to efficiently send large amounts of data to the API using protobuf, batching etc.
 TECHNOLIGIES: C#, Java 8, RabbitMq, .Net Framework 4.6, WebApi 2.0 Cluster, Protobuf, OWIN, Multithreading, EF 6, ActiveDirectory, Sql Server 2012, RedisDb, Apache Cassandra(NoSql), KairosDB, Windows Service, SignalR, OPC, Log4Net, Spring Framework, Protobuf, Sqlite, websockets, WIX, WPF
 
 11. Project: HBS(HighBayStorage.Messaging) - A system for collecting message queues, processing them, and sending them via the SAP protocol, and vice versa with supporting many custom client defined query operations (filtering, groupint etc).
