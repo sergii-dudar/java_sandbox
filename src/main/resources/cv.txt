@@ -19,7 +19,7 @@ SKILLS
 - Frontend: Angular, ReactJs, JavaFX
 - Databases: PostgreSQL, MySql, MS SQL Server, MongoDb, SQLite, S3
 - Caching: Redis, Hazelcast
-- Data: Apache Avro, Protobuf
+- Data: Apache Avro, Protobuf, JSON, XML, SOAP
 - Message brokers: Apache Kafka (Kafka Streams), RabbitMq, Axon Server, JMS
 - Testing: Junit, Cucumber, Rest-Assured, AssertJ, Wiremock, Testcontainers, Jest, Powermock
 - Build: Gradle, Maven
@@ -27,6 +27,7 @@ SKILLS
 - Servers: Netty, Tomcat, Jetty, JBoss, IIS
 - Profiling: jmetter, jprofiler, jconsole, visualvm, jaeger
 - Cloud: AWS, Goodle Cloud, Kubernetes, Helm
+- Libs: Lombok, Mapstruct, StreamEx, Guava, Jackson, Apache Commons, org.immutables...
 - Tools: VIM, IntelliJ IDEA, Eclipse, Rider, Visual Studio, insomnia, akhq, k9s...
 
 WORK EXPERIENCE
@@ -49,13 +50,13 @@ Main achievements:
 - Created a custom lightweight indexed full-text search solution based on PostgreSQL (tsvector, tsquery), enabling the implementation of complex and fast search engines across the platform without the need for expensive third-party search platforms like Elasticsearch or Algolia.
 - Introduced the `Clean Architecture` principle to the project, collaborating with other leads to establish a unified service creation and refactoring architecture. This initiative significantly simplified support efforts, streamlined extension processes, and facilitated the integration of new client services into various domains.
 
-TECHNOLIGIES: Java 11-21, Spring Framework, JEE, Project Reactor, RxJava, Netty, PostgreSQL, Elasticsearch, Redis, Kubernetes, Concurrency and Multithreading, Helm, AWS, Microservices, High Load, Apache Kafka, Apache Avro, Kafka Streams, Kafka Connect, S3, JDBC, R2DBC, Jdbi, jooq, sftp, Node.js, GraphQL, Apollo, dgs, Supergraphs and federations, Gradle, Voult, Keycloack, Jaeger, Gitlab, k9s, akhq, cucumber, junit5, assertj...
+TECHNOLIGIES: Java 11-21, Spring Framework, JEE, Project Reactor, RxJava, Netty, PostgreSQL, Elasticsearch, Redis, Kubernetes, Concurrency and Multithreading, Helm, AWS, Microservices, High Load, Apache Kafka, Apache Avro, Kafka Streams, Kafka Connect, S3, JDBC, R2DBC, Jdbi, jooq, sftp, Node.js, GraphQL, Apollo, dgs, Supergraphs and federations, Gradle, Lombok, Mapstruct, StreamEx, Guava, Jackson, Apache Commons, org.immutables, Voult, Keycloack, Jaeger, Gitlab, k9s, akhq, cucumber, junit5, assertj...
 
 --------------------------------------
 
 Period: April 2019 – May 2021
 Position: Senior Java software engineer at Sweetcode Lab company, 
-3. Project: Natura ERP - https://strategy.natura.io https://crm.natura.io https://sales.natura.io/ https://distribution.natura.io/ etc
+3. Project: Natura ERP System, for one of the largest cannabis cultivation and manufacturing company based in California, specializing in providing high-quality cannabis products to licensed retailers and brands.
 
 Responsibilities:
 - Leading project technically
@@ -69,7 +70,7 @@ Main achievements:
 - Integrated with the US government's METRC system to monitor and regulate company products in compliance with country laws, despite challenges with automation processes.
 - Utilized Project Reactor and Netty as the primary server components, introducing parallelism for resource-intensive computations. This optimization led to nearly halving CPU and RAM usage while maintaining consistent API throughput, resulting in significant cost savings during platform scaling.
 - Created a client-side JavaFX printer application deployed on factory machines, allowing workers to directly print QR codes and other documents from the ERP system.
-Implemented real-time tracking of product delivery to customers using customized Google Maps integration, providing control over the delivery process.
+- Implemented real-time tracking of product delivery to customers using customized Google Maps integration, providing control over the delivery process.
 
 ServerSide: Java 11, Maven, Spring Boot 2, Rest, oauth2, JWT, Spring Cloud, Google Cloud, Kubernetes, RSockets, Project Reactor, Netty, Lombok, mapstruct, Quartz, MongoDB, Axon Framework 4, Axon Server, Kafka, Microservices, Event Sourcing and CQRS, Sagas, Apache Commons
 ClientSide: ReactJS, JavaFx (printer app), React Native (driver app), Redux, Sagas, Typescript, rxjs, redux-observable, redux-thunk, lodash, moment, jwt…
@@ -97,7 +98,7 @@ TECHNOLIGIES: Java 8, Spring Boot, Apache Commons, Mapstruct, Junit …
 
 Period: May 2018 – April 2019
 Position: Senior C#.NET fullstack software engineer at Sweetcode Lab company, 
-Project: elitconnect: system of properties market management system in USA (https://eliteconnectrealestate.com/, https://eliteconnectrealestate.crm.com/...)
+Project: elitconnect: system of properties market management system in USA
 
 Responsibilities:
 - Developing new microservices, features, and functionalities
@@ -152,7 +153,9 @@ Other: Gulp, Grunt, WebPack, KarmaJS, KarmaTS, Jasmine, Moxii, NUnit, Protractor
 
 Period: February 2013 – February 2017
 Position: C#.Net/Java and Web software engineer at WaveAccess company, 
-      
+
+General: Many solutions are primarily developed using C#.NET, C++, Java, and JavaScript for various business purposes, ranging from customer-facing websites to factory control applications, among others.
+
 12. Project: Indasoft.TSDB: Distributed highly loaded system of storage and processing of large volumes of time based on miscoservices.
 
 Responsibilities:
