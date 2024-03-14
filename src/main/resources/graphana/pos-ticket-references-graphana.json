@@ -1,0 +1,498 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 60,
+  "iteration": 1700227832639,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "P4169E866C3094E38"
+      },
+      "description": "Currently allocated tickets count of branch. To monitor if any branch allocated tickets count is below threshold. Not showing types with count > 60.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "red",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 0
+              },
+              {
+                "color": "yellow",
+                "value": 30
+              },
+              {
+                "color": "green",
+                "value": 50
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 17,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "minVizHeight": 75,
+        "minVizWidth": 75,
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "text": {}
+      },
+      "pluginVersion": "8.5.20",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "P4169E866C3094E38"
+          },
+          "disableTextWrap": false,
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "last_over_time(allocated_ticket_current{branch=~\"$branch_variable\", ticket_type=~\"$ticket_type_variable\"}[$__interval] AND allocated_ticket_current <= 60)",
+          "format": "time_series",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": true,
+          "legendFormat": "{{branch}}: {{ticket_type}} ",
+          "range": false,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "Currently allocated tickets count of branch and ticket type (only lower 60). [ For '$branch_variable' branches and types '$ticket_type_variable' ]",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "P4169E866C3094E38"
+      },
+      "description": "Sum of all allocated tickets particular branch. To monitor ticket allocation rate (for selected time-frame) of branch.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "axisSoftMin": 0,
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 2,
+            "scaleDistribution": {
+              "type": "linear"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 25,
+        "w": 24,
+        "x": 0,
+        "y": 17
+      },
+      "id": 2,
+      "options": {
+        "barRadius": 0.05,
+        "barWidth": 0.47,
+        "fullHighlight": false,
+        "groupWidth": 1,
+        "legend": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "orientation": "auto",
+        "showValue": "auto",
+        "stacking": "none",
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        },
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 0
+      },
+      "pluginVersion": "10.2.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "P4169E866C3094E38"
+          },
+          "disableTextWrap": false,
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "last_over_time(allocated_ticket_sum{branch=~\"$branch_variable\", ticket_type=~\"$ticket_type_variable\"}[$__interval] and allocated_ticket_sum > 0)",
+          "format": "time_series",
+          "fullMetaSearch": false,
+          "includeNullMetadata": false,
+          "instant": true,
+          "legendFormat": "{{branch}}: {{ticket_type}}",
+          "range": false,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "New ticket numbers allocated from POS. [ For '$branch_variable' branches and types '$ticket_type_variable' ]",
+      "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "P4169E866C3094E38"
+      },
+      "description": "To monitor POS ticket allocation request latency. Request/response for new ticket numbers allocation from POS.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 1,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "always",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "line"
+            }
+          },
+          "decimals": 0,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 16,
+        "w": 24,
+        "x": 0,
+        "y": 42
+      },
+      "id": 3,
+      "interval": "1m",
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "timezone": [
+          "utc"
+        ],
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "10.2.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "P4169E866C3094E38"
+          },
+          "disableTextWrap": false,
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "ticket_allocation_response_time[$__interval]",
+          "format": "time_series",
+          "fullMetaSearch": false,
+          "includeNullMetadata": false,
+          "instant": false,
+          "legendFormat": "ticket_allocation_response_time",
+          "range": true,
+          "rawQuery": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "Request/response for new ticket numbers allocation from POS latency.",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "P4169E866C3094E38"
+      },
+      "description": "Failed request for new ticket numbers allocation from POS. To monitor failed ticket allocation request rate.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "axisSoftMin": 0,
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 2,
+            "scaleDistribution": {
+              "type": "linear"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 25,
+        "w": 24,
+        "x": 0,
+        "y": 58
+      },
+      "id": 4,
+      "options": {
+        "barRadius": 0.05,
+        "barWidth": 0.47,
+        "fullHighlight": false,
+        "groupWidth": 1,
+        "legend": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "orientation": "auto",
+        "showValue": "auto",
+        "stacking": "none",
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        },
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 0
+      },
+      "pluginVersion": "10.2.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "P4169E866C3094E38"
+          },
+          "disableTextWrap": false,
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "last_over_time(ticket_allocation_request_fail{branch=~\"$branch_variable\", ticket_type=~\"$ticket_type_variable\"}[$__interval] and ticket_allocation_request_fail > 0)",
+          "format": "time_series",
+          "fullMetaSearch": false,
+          "includeNullMetadata": false,
+          "instant": true,
+          "legendFormat": "{{branch}}: {{ticket_type}}",
+          "range": false,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "Failed request for new ticket numbers allocation from POS. [ For '$branch_variable' branches and types '$ticket_type_variable' ]",
+      "type": "barchart"
+    }
+  ],
+  "refresh": "",
+  "schemaVersion": 36,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "selected": false,
+          "text": [
+            "All"
+          ],
+          "value": [
+            "$__all"
+          ]
+        },
+        "datasource": {
+          "type": "prometheus",
+          "uid": "prometheus"
+        },
+        "definition": "allocated_ticket_current",
+        "hide": 0,
+        "includeAll": true,
+        "label": "All Branches",
+        "multi": true,
+        "name": "branch_variable",
+        "options": [],
+        "query": {
+          "query": "allocated_ticket_current",
+          "refId": "StandardVariableQuery"
+        },
+        "refresh": 1,
+        "regex": "/branch=\\\"(\\d+)\\\"/",
+        "skipUrlSync": false,
+        "sort": 3,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": [
+            "All"
+          ],
+          "value": [
+            "$__all"
+          ]
+        },
+        "datasource": {
+          "type": "prometheus",
+          "uid": "prometheus"
+        },
+        "definition": "allocated_ticket_current",
+        "hide": 0,
+        "includeAll": true,
+        "label": "Branch Ticket Types",
+        "multi": true,
+        "name": "ticket_type_variable",
+        "options": [],
+        "query": {
+          "query": "allocated_ticket_current",
+          "refId": "StandardVariableQuery"
+        },
+        "refresh": 1,
+        "regex": "/ticket_type=\\\"(\\w+)\\\"/",
+        "skipUrlSync": false,
+        "sort": 1,
+        "type": "query"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Pos Ticket References",
+  "uid": "f762077f-d9df-4996-997e-d5cb5127889f",
+  "version": 18,
+  "weekStart": ""
+}
