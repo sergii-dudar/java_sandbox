@@ -19,3 +19,4 @@ print(~(A and B)) -- Called Logical NOT Operator. Use to reverses the logical st
 print("\n")
 print(a..b) -- Concatenates two strings.
 print(#"Hello") --An unary operator that return the length of the a string or a table.
+print(#{1,2,3}) --An unary operator that return the length of the a string or a table.
