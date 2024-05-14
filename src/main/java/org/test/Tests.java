@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.SneakyThrows;
-import org.example.utils.JsonUtil;
+import org.utils.JsonUtil;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,4 +1,4 @@
-package org.example.utils;
+package org.utils;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonInclude;
