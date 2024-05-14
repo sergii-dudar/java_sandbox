@@ -8,6 +8,8 @@
 
 # Build targets
 out/
+bin/
+.vscode/
 build/
 target/
 **/main/resources/logback-extend.xml
