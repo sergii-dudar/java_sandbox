@@ -1,0 +1,1 @@
+sort +1nr # sort by second work (+1n), reverse (r)
