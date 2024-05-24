@@ -1,6 +1,5 @@
 #!/bin/bash
 
-  
 #ARRAY[0]="Zara"
 #ARRAY[1]="Qadir"
 #ARRAY[2]="Mahnaz"
@@ -16,3 +15,9 @@ echo
 for item in "${ARRAY[@]}"; do
     echo "$item"
 done
+
+#----------------
+echo '-------------------'
+
+echo "First Method: ${ARRAY[*]}"
+#echo "Second Method: ${ARRAY[@]}"

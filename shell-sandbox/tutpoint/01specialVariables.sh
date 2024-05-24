@@ -1,6 +1,6 @@
 #!/bin/bash
 
-testFunction() {
+function testFunction() {
 
   echo "File Name: $0"
   echo "First Parameter : $1"
