@@ -1,6 +1,6 @@
-#!/bin/zsh
+#!/bin/bash
 
-function testFunction() {
+testFunction() {
 
   echo "File Name: $0"
   echo "First Parameter : $1"
@@ -9,7 +9,12 @@ function testFunction() {
   echo "Quoted Values: $*"
   echo "Total Number of Parameters : $#"
 
-  #for TOKEN in "$@"; do
+  for TOKEN in "$@"; do
+    echo "TOKEN: $TOKEN"
+  done
+
+  echo '----'
+  #for TOKEN in $*; do
   #  echo "TOKEN: $TOKEN"
   #done
 }
