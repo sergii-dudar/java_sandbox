@@ -37,3 +37,11 @@ fi
 if [[ ! $emptyString ]]; then
   echo '-n ! $emptyString is zero'
 fi
+
+
+# concatenation
+echo
+str1="first line"
+str2="second line"
+echo $str1$str2
+echo $str1 the $str2

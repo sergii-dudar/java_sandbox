@@ -10,3 +10,22 @@
 #\t - horizontal tab
 #\v - vertical tab
 
+a=10
+echo -e "Value of a is $a \n"
+
+#-----------Command Substitution
+echo -e "\n"
+echo "command substitution:"
+
+DATE=$(date)
+echo "Date is $DATE"
+
+USERS=$(who | wc -l)
+echo "Logged in user are $USERS"
+
+UP=$(date ; uptime)
+echo "Uptime is $UP"
+
+echo
+LS=$(ls)
+echo "LS is: $LS"
