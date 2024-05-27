@@ -21,7 +21,8 @@
 #7. () (Subshell) Usage: Groups commands into a subshell, where they are executed in a separate environment.
 # (command1; command2; command3)
 
-#8. {} (Command Grouping) Usage: Groups commands together, but unlike (), they are executed in the current shell.
+#8. {} (Command Grouping) Usage: Groups commands together (so that they are executed as a single block),
+# but unlike (), they are executed in the current shell.
 # { command1; command2; command3; }
 
 #9. > (Output Redirection) Usage: Redirects the output of a command to a file, overwriting the file if it exists.
