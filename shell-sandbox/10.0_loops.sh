@@ -12,7 +12,7 @@ done
 
 #------------------------------------------------
 #----------------The for Loop
-echo -e "\n"
+printf "\n"
 
 echo -n "for loop: "
 for var in 0 1 2 3 4 5 6 7 8 9; do
@@ -27,7 +27,7 @@ done
 
 #------------------------------------------------
 #----------------The until Loop
-echo -e "\n"
+printf "\n"
 
 a=0
 echo -n "until loop: "
@@ -38,7 +38,7 @@ done
 
 #------------------------------------------------
 #----------------The nesting Loop
-echo -e "\n"
+printf "\n"
 
 a=0
 echo "nesting loop: "
@@ -54,7 +54,7 @@ done
 
 #------------------------------------------------
 #----------------The select Loop
-#echo -e "\n"
+#printf "\n"
 
 #cho "select loop: "
 #elect DRINK in tea cofee water juice appe all none; do

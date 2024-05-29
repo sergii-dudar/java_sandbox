@@ -25,7 +25,7 @@ echo "1. Return value is $result"
 echo "2. Return value is $(hello 2 3)"
 
 #----------------------------------------------------
-echo -e "\n---------------------------Variable Scope: "
+printf "\n---------------------------Variable Scope: "
 
 v1='A'
 v2='B'
@@ -48,7 +48,7 @@ echo "v1 is $v1."
 echo "v2 is $v2."
 
 #----------------------------------------------------
-echo -e "\n---------------------------Return Values: "
+printf "\n---------------------------Return Values: "
 
 print_it() {
    echo Hello "$1"
@@ -59,7 +59,7 @@ print_it User
 print_it Reader
 echo The previous function returned a value of $?
 
-echo -e "\n---------------------------Capture echo: "
+printf "\n---------------------------Capture echo: "
 print_it2() {
    local my_greet="Welcome to Javatpoint."
    echo "$my_greet"

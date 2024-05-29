@@ -14,7 +14,7 @@ a=10
 echo -e "Value of a is $a \n"
 
 #-----------Command Substitution
-echo -e "\n"
+printf "\n"
 echo "command substitution:"
 
 DATE=$(date)

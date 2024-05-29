@@ -5,7 +5,7 @@
 
 #------------------------------------------------
 #----------------The for Loop
-echo -e "\n"
+printf "\n"
 
 # for variable in list...   - The list can contain numbers or string etc. separated by spaces.
 # for (( expression1; expression2; expression3 ))...
@@ -29,14 +29,14 @@ for item in $str1; do
   echo -n "$item+ "
 done
 
-echo -e "\nC style: "
+printf "\nC style: "
 
 # C stype
 for ((i = 1; i <= 10; i++)); do
   echo -n "$i "
 done
 
-echo -e "\nbreak: "
+printf "\nbreak: "
 
 # break
 # continue
@@ -47,7 +47,7 @@ for table in {2..100..2}; do
   fi
 done
 
-echo -e "\ncontinue: "
+printf "\ncontinue: "
 for ((i = 1; i <= 20; i++)); do
   if [[ $i -gt 5 && $i -lt 16 ]]; then
     continue
@@ -55,7 +55,7 @@ for ((i = 1; i <= 20; i++)); do
   echo -n "$i "
 done
 
-echo -e "\ninfinit: "
+printf "\ninfinit: "
 for ((i = 1; ; i++)); do # of for (( ; ; ))
   #sleep 1s
   echo -n "$i "
@@ -67,7 +67,7 @@ done
 
 #-------------------------------------------
 #----------------The while Loop
-echo -e "\n\nThe while Loop:"
+printf "\n\nThe while Loop:"
 
 #read -p "Enter starting number: " snum
 #read -p "Enter ending number: " enum
@@ -81,7 +81,7 @@ while ((snum <= enum)); do
   ((snum++))
 done
 
-echo -e "\nMultiple Conditions: "
+printf "\nMultiple Conditions: "
 snum=1
 enum=10
 
@@ -91,14 +91,14 @@ while ((snum < enum || snum == enum)); do
   ((snum++))
 done
 
-echo -e "\nInfinite While Loop: "
+printf "\nInfinite While Loop: "
 # while :; do
 # while true; do
 #  sleep 1s
 #  echo "Welcome to Javatpoint."
 # done
 
-echo -e "\nWhile Loop Break: "
+printf "\nWhile Loop Break: "
 i=10
 while ((i >= 1)); do
   if ((i == 2)); then
@@ -109,7 +109,7 @@ while ((i >= 1)); do
   ((i--))
 done
 
-echo -e "\nWhile Loop Continue: "
+printf "\nWhile Loop Continue: "
 i=0
 while ((i <= 10)); do
   ((i++))
@@ -121,7 +121,7 @@ done
 
 #------------------------------------------------
 #----------------The until Loop
-echo -e "\n\nUntil Loop"
+printf "\n\nUntil Loop"
 
 i=1
 # until [ $i -gt 10 ]; do
@@ -130,7 +130,7 @@ until ((i > 10)); do
   ((i++))
 done
 
-echo -e "\nUntil Loop Multiple Conditions"
+printf "\nUntil Loop Multiple Conditions"
 max=5
 a=1
 b=0

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e "\n---------#Check whether a variable is set or not using -v option "
+printf "\n---------#Check whether a variable is set or not using -v option "
 
 A=100
 #A: variable is set.
@@ -17,7 +17,7 @@ else
   echo "Variable having name 'B' is not set."
 fi
 
-echo -e "\n---------#Check whether a variable is set or not using -z option "
+printf "\n---------#Check whether a variable is set or not using -z option "
 
 #A: variable is set.
 if [[ -z ${A} ]]; then
@@ -34,7 +34,7 @@ else
 fi
 
 #-----------------------------------------
-echo -e "\n---------#Check whether a variable is set or not using -z option2 "
+printf "\n---------#Check whether a variable is set or not using -z option2 "
 
 VAR=''
 

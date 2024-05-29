@@ -34,23 +34,23 @@ ARRAY_NAMED=(
 )
 # echo ${ARRAY_NAME[2]}
 
-echo -e "\n----------------Print Bash Array: "
+printf "\n----------------Print Bash Array: "
 declare -p ARRAY_INDEXED
 declare -p ARRAY_NAMED
 
-echo -e "\n----------------Print All the Elements: "
+printf "\n----------------Print All the Elements: "
 echo "${ARRAY_INDEXED[@]}"
 echo "${ARRAY_NAMED[@]}"
 for i in "${ARRAY_INDEXED[@]}"; do echo -n "$i "; done
 
-echo -e "\n----------------Printing the Keys of an Array: "
+printf "\n----------------Printing the Keys of an Array: "
 echo "${!ARRAY_INDEXED[@]}" # 0 1 2
 echo "${!ARRAY_NAMED[@]}"   # 0 1 2
 
-echo -e "\n----------------Finding Array Length: "
+printf "\n----------------Finding Array Length: "
 echo "The array contains ${#ARRAY_INDEXED[@]} elements"
 
-echo -e "\n----------------Loop through the Array: "
+printf "\n----------------Loop through the Array: "
 for key in "${!ARRAY_INDEXED[@]}"; do
     echo The key: "$key" value is: "${ARRAY_INDEXED[$key]}"
 done
@@ -66,25 +66,25 @@ for ((i = 0; i < length; i++)); do
     echo "$i -> ${ARRAY_INDEXED[$i]}"
 done
 
-echo -e "\n----------------Adding Elements to an Array: "
+printf "\n----------------Adding Elements to an Array: "
 ARRAY_INDEXED[length + 1]="JavaScript"
 ARRAY_INDEXED+=(CSS SQL)
 echo "${ARRAY_INDEXED[@]}"
 
-echo -e "\n----------------Updating Array Element: "
+printf "\n----------------Updating Array Element: "
 ARRAY_INDEXED[4]="Javatpoint"
 echo "${ARRAY_INDEXED[@]}"
 
-echo -e "\n----------------Deleting an Element from an Array: "
+printf "\n----------------Deleting an Element from an Array: "
 unset 'ARRAY_NAME[1]'
 echo "${ARRAY_INDEXED[@]}"
 echo "${!ARRAY_INDEXED[@]}"
 
-# echo -e "\n----------------Deleting the Entire Array: "
+# printf "\n----------------Deleting the Entire Array: "
 # unset ARRAY_NAME
 # echo "${!ARRAY_NAME[@]}"
 
-echo -e "\n----------------Slice Array Elements: "
+printf "\n----------------Slice Array Elements: "
 SLICED_ARRAY=("${ARRAY_INDEXED[@]:1:3}")
 echo "original:" "${ARRAY_INDEXED[@]}"
 echo "sliced:" "${SLICED_ARRAY[@]}"

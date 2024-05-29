@@ -1,6 +1,6 @@
 #!/bin/bash
 
-file="$HOME/serhii.home/personal/git/java_sandbox/testfiles/users"
+file="./testfiles/users"
 
 # 1.
 value=$(cat "$file")

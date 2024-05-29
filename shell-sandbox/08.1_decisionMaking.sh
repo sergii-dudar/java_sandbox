@@ -109,6 +109,19 @@ elif [ $num -lt 100 ]; then
 fi
 
 #-------------------------------
+#-------------- Logical combinations
+
+VAR_A=(10)
+VAR_B=3
+VAR_T=2
+if [[ ${VAR_A[0]} -eq 1 && ($VAR_B = "bee" || $VAR_T = "tee") ]]; then
+#if ((VAR_A[0] == 1 && (VAR_B == "bee" || VAR_T == "tee"))); then
+  echo "multiple true"
+else
+  echo "multiple false"
+fi
+
+#-------------------------------
 #-------------- bash case
 
 echo "Do you know Java Programming?"
@@ -152,4 +165,15 @@ Linux | linux)
   echo "Sounds interesting. I will try that."
   echo
   ;;
+esac
+
+#simple case bash structure
+echo "--------------simple case bash structure"
+mycase=1
+case $mycase in
+1) echo "You selected bash" ;;
+2) echo "You selected perl" ;;
+3) echo "You selected phyton" ;;
+4) echo "You selected c++" ;;
+5) exit ;;
 esac

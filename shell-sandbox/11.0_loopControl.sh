@@ -2,7 +2,7 @@
 
 #------------------------------------------------
 #----------------The infinite loop
-echo -e "\n"
+printf "\n"
 
 a=10
 
@@ -14,7 +14,7 @@ a=10
 
 #------------------------------------------------
 #----------------break && brake n
-echo -e "\n"
+printf "\n"
 echo "break && brake n"
 
 a=0
@@ -40,7 +40,7 @@ done
 
 #------------------------------------------------
 #----------------continue && continue n
-echo -e "\n"
+printf "\n"
 echo "continue && continue n"
 
 nums="1 2 3 4 5 6 7"

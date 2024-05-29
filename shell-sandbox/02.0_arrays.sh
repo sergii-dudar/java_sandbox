@@ -7,6 +7,7 @@
 #ARRAY[4]="Daisy"
 #OR
 
+#my_array=(apple banana "Fruit Basket" orange)
 ARRAY=("Zara" "Qadir" "Mahnaz" "Ayan" "Daisy")
 
 echo "First Index: ${ARRAY[0]}"

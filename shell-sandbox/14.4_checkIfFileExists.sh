@@ -30,7 +30,7 @@
 # '-e' option is used to check whether a file exists regardless of the type
 # '-f' option is used to return true value only if the file is a regular file
 
-dir="/home/serhii/serhii.home/personal/git/java_sandbox/testfiles"
+dir="./testfiles"
 file="$dir/testpasswd"
 if test -f "$file"; then
   echo "$file exist "
@@ -42,6 +42,10 @@ fi
 
 if [[ -f "$file" ]]; then
   echo "$file exist "
+fi
+
+if [ -e "$file" ]; then
+    echo "$file exists as a file"
 fi
 
 echo
@@ -56,7 +60,7 @@ echo
 }
 [ -f $file ] && echo "$file exist" || echo "$file does not exist"
 
-echo -e "\n---------#Check If Directory Exists "
+printf "\n---------#Check If Directory Exists "
 # '-d' allows us to test whether a file is a directory or not.
 
 if [ -d "$dir" ]; then
@@ -66,7 +70,7 @@ fi
 [[ -d "$dir" ]] && echo "$dir is a directory"
 
 #---------------------------------------------------------
-echo -e "\n---------#Check IF File does not Exist "
+printf "\n---------#Check IF File does not Exist "
 
 unexists=missing_read_file.txt
 if [ ! -f "$unexists" ]; then
