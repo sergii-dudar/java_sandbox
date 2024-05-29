@@ -1,5 +1,9 @@
 #!/bin/bash
 
+
+
+
+
 file='/home/serhii/serhii.home/personal/git/java_sandbox/shell-sandbox/tutpoint/07fileTestOperators.sh'
 
 #-b file	Checks if file is a block special file; if yes, then the condition becomes true.	[ -b $file ] is false.

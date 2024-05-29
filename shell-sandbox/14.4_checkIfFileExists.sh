@@ -15,7 +15,7 @@
 # -p : File Returns	'True' if the FILE exists as a pipe.
 # -r : File Returns	'True' if the FILE exists as a readable file.
 # -S : File Returns	'True' if the FILE exists as a socket.
-# -s : File Returns	'True' if the FILE exists and has nonzero size.
+#!!!! -s : File Returns	'True' if the FILE exists and has nonzero size.
 # -u : File Returns	'True' if the FILE exists, and set-user-id (suid) flag is set.
 # -w : File Returns	'True' if the FILE exists as a writable file.
 # -x : File Returns	'True' if the FILE exists as an executable file.
