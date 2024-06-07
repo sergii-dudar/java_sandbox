@@ -29,8 +29,8 @@ b = 5
 c = a // b
 print("a: {} b: {} a//b: {}".format(a, b, c))
 
-# ---------------- Comparison Operators
-print("\n|||Comparison Operators:")
+# ======================================== Comparison Operators
+print("\n========================================|||Comparison Operators:")
 
 a = 21
 b = 10
@@ -66,8 +66,8 @@ if b >= a:
 else:
     print("Line 6 - b is neither greater than  nor equal to b")
 
-# ---------------- Bitwise Operators
-print("\n|||Bitwise Operators:")
+# ======================================== Bitwise Operators
+print("\n========================================|||Bitwise Operators:")
 
 a = 20
 b = 10
@@ -93,8 +93,8 @@ print("result of LEFT SHIFT is ", c, ':', bin(c))
 c = a >> 2
 print("result of RIGHT SHIFT is ", c, ':', bin(c))
 
-# ---------------- Logical Operators
-print("\n|||Logical Operators:")
+# ======================================== Logical Operators
+print("\n========================================|||Logical Operators:")
 
 var = 5
 
@@ -111,8 +111,8 @@ print(result)
 result = varNone or 2
 print(result)
 
-# ---------------- Membership Operators
-print("\n|||Membership Operators:")
+# ======================================== Membership Operators
+print("\n========================================|||Membership Operators:")
 
 a = 10
 b = 20
@@ -143,8 +143,8 @@ if [1, 2] in list1:
 else:
     print("[1, 2] is not present in the given list")
 
-# ---------------- Identity Operators
-print("\n|||Identity Operators:")
+# ======================================== Identity Operators
+print("\n========================================|||Identity Operators:")
 
 a = [1, 2, 3, 4, 5]
 b = [1, 2, 3, 4, 5]

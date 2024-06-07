@@ -12,8 +12,8 @@ def printinfo(name, age=35):
 printinfo(age=50, name="miki")
 printinfo(name="miki")
 
-# ----------------
-print("\n|||:")
+# ========================================
+print("\n========================================|||:")
 
 
 def percent(phy, maths, maxmarks=200):
@@ -29,8 +29,8 @@ phy = 40
 maths = 46
 print(percent(phy, maths, 100))
 
-# ----------------Calling Function Without Keyword Arguments
-print("\n|||:Calling Function Without Keyword Arguments")
+# ========================================Calling Function Without Keyword Arguments
+print("\n========================================|||:Calling Function Without Keyword Arguments")
 
 
 def percent(phy, maths, maxmarks=200):

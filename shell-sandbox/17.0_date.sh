@@ -19,7 +19,7 @@ date -I
 
 # Format Option | Part of Date| Description                                   |   Example Output
 # with Codes	  |   	        |                                               |
-# --------------------------------------------------------------------------------------------------
+# ========================================----------------------------------------------------------------------------------
 # date +%a      | Weekday     | Name of a weekday in short form               | Mon
 #                               (e.g., Sun, Mon, Tue, Wed, Thu, Fri, Sat      |
 # date +%A      | Weekday     | Name of the weekday in full form              | Monday

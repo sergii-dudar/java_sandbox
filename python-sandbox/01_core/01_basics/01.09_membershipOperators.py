@@ -17,8 +17,8 @@ print(b, "not in", var, ":", b not in var)
 print(c, "not in", var, ":", c not in var)
 print(d, "not in", var, ":", d not in var)
 
-# ---------------- Membership Operator with Lists and Tuples
-print("\n|||Membership Operator with Lists and Tuples:")
+# ======================================== Membership Operator with Lists and Tuples
+print("\n========================================|||Membership Operator with Lists and Tuples:")
 
 var = [10, 20, 30, 40]
 a = 20
@@ -47,8 +47,8 @@ a = 10
 b = 20
 print((a, b), "in", var, ":", (a, b) in var)
 
-# ---------------- Membership Operator with Sets
-print("\n|||Membership Operator with Sets:")
+# ======================================== Membership Operator with Sets
+print("\n========================================|||Membership Operator with Sets:")
 
 var = {10, 20, 30, 40}
 a = 10
@@ -60,8 +60,8 @@ a = 10
 b = 20
 print((a, b), "in", var, ":", (a, b) in var)
 
-# ---------------- Membership Operator with Dictionaries
-print("\n|||Membership Operator with Dictionaries:")
+# ======================================== Membership Operator with Dictionaries
+print("\n========================================|||Membership Operator with Dictionaries:")
 
 # Python checks the membership only with the collection of keys and not values.
 var = {1: 10, 2: 20, 3: 30}

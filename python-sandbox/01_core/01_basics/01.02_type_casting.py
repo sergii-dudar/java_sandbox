@@ -1,7 +1,7 @@
 #!/usr/bin/python3.12
 
-# ---------------- Implicit Casting
-print("\n|||Implicit Casting:")
+# ======================================== Implicit Casting
+print("\n========================================|||Implicit Casting:")
 
 a = True
 b = 10.5
@@ -9,8 +9,8 @@ c = a + b
 
 print(c)  # 11.5
 
-# ---------------- Explicit Casting
-print("\n|||Implicit Casting:")
+# ======================================== Explicit Casting
+print("\n========================================|||Implicit Casting:")
 
 print(str('True'))
 print(str([1, 2, 3]))
@@ -24,8 +24,8 @@ print(a)
 print(b)
 print(c)
 
-# ---------------- Conversion of Sequence Types
-print("\n|||Conversion of Sequence Types:")
+# ======================================== Conversion of Sequence Types
+print("\n========================================|||Conversion of Sequence Types:")
 
 list1 = [1, 2, 3, 4, 5]  # List Object
 tuple1 = (1, 2, 3, 4, 5)  # Tupple Object

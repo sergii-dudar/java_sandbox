@@ -5,8 +5,8 @@ for letter in 'Python':  # First Example
         continue
     print('Current Letter :', letter)
 
-# ----------------
-print("\n|||:")
+# ========================================
+print("\n========================================|||:")
 
 var = 10  # Second Example
 while var > 0:
@@ -16,8 +16,8 @@ while var > 0:
     print('Current variable value :', var)
 print("Good bye!")
 
-# ----------------
-print("\n|||:")
+# ========================================
+print("\n========================================|||:")
 
 num = 60
 print("Prime factors for: ", num)

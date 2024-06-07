@@ -1,0 +1,10 @@
+2024-06-07 16:13:37,378 This is a harmless debug Message
+2024-06-07 16:13:37,378 This is just an information
+2024-06-07 16:13:37,378 It is a Warning. Please make changes
+2024-06-07 16:13:37,378 You are trying to divide by zero
+2024-06-07 16:13:37,378 Internet is down
+DEBUG:root:This is a harmless debug Message
+INFO:root:This is just an information
+WARNING:root:It is a Warning. Please make changes
+ERROR:root:You are trying to divide by zero
+CRITICAL:root:Internet is down

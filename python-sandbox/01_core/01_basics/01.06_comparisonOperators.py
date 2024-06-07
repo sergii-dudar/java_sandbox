@@ -1,7 +1,7 @@
 #!/usr/bin/python3.12
 
-# ---------------- Comparison Operators
-print("\n|||Comparison Operators:")
+# ======================================== Comparison Operators
+print("\n========================================|||Comparison Operators:")
 
 print("Both operands are integer")
 a = 5
@@ -11,8 +11,8 @@ print("a=", a, "b=", b, "a<b is", a < b)
 print("a=", a, "b=", b, "a==b is", a == b)
 print("a=", a, "b=", b, "a!=b is", a != b)
 
-# ---------------- Comparison of Booleans
-print("\n|||Comparison of Booleans:")
+# ======================================== Comparison of Booleans
+print("\n========================================|||Comparison of Booleans:")
 # Boolean objects in Python are really integers: True is 1 and False is 0
 
 a = True
@@ -22,8 +22,8 @@ print("a=", a, "b=", b, "a>b is", a > b)
 print("a=", a, "b=", b, "a==b is", a == b)
 print("a=", a, "b=", b, "a!=b is", a != b)
 
-# ---------------- Comparison of Sequence Types
-print("\n|||Comparison of Sequence Types:")
+# ======================================== Comparison of Sequence Types
+print("\n========================================|||Comparison of Sequence Types:")
 # In Python, comparison of only similar sequence objects can be performed. A string object is comparable with
 #    another string only. A list cannot be compared with a tuple, even if both have same items.
 
@@ -51,8 +51,8 @@ print("a=", a, "b=", b, "a>b is", a > b)
 print("a=", a, "b=", b, "a==b is", a == b)
 print("a=", a, "b=", b, "a!=b is", a != b)
 
-# ---------------- Comparison of Dictionary Objects
-print("\n|||Comparison of Dictionary Objects:")
+# ======================================== Comparison of Dictionary Objects
+print("\n========================================|||Comparison of Dictionary Objects:")
 
 print("comparison of dictionary objects")
 a = {1: 1, 2: 2}

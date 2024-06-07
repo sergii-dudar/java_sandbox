@@ -8,8 +8,8 @@ def myfunction(a: int, b: int) -> int:
 print(myfunction(10, 20))
 print(myfunction("Hello ", "Python"))
 
-# ----------------Parameters metadata With Annotations Expression
-print("\n|||:Parameters metadata With Annotations Expression")
+# ========================================Parameters metadata With Annotations Expression
+print("\n========================================|||:Parameters metadata With Annotations Expression")
 
 
 def total(x: 'marks in Physics', y: 'marks in chemistry'):

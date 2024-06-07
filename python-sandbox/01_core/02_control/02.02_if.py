@@ -1,7 +1,7 @@
 #!/usr/bin/python3.12
 
-# ---------------- single if
-print("\n|||:single if")
+# ======================================== single if
+print("\n========================================|||:single if")
 
 discount = 0
 amount = 1200
@@ -12,8 +12,8 @@ if amount > 1000:
 
 print("amount = ", amount - discount)
 
-# ---------------- single if
-print("\n|||:if else")
+# ======================================== single if
+print("\n========================================|||:if else")
 
 age = 25
 print("age: ", age)
@@ -22,8 +22,8 @@ if age >= 18:
 else:
     print("not eligible to vote")
 
-# ---------------- single if
-print("\n|||:if else if")
+# ======================================== single if
+print("\n========================================|||:if else if")
 
 amount = 2500
 print('Amount = ', amount)
@@ -55,11 +55,11 @@ else:
 
 print('Payable amount = ', amount - discount)
 
-# ---------------- single if
-print("\n|||:single if")
+# ======================================== single if
+print("\n========================================|||:single if")
 
-# ---------------- nested if
-print("\n|||:nested if")
+# ======================================== nested if
+print("\n========================================|||:nested if")
 
 num = 8
 print("num = ", num)

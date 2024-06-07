@@ -21,8 +21,8 @@ def printme(str):
 printme("I'm first call to user defined function!")
 printme("Again second call to the same function")
 
-# ----------------pass params
-print("\n|||:pass params")
+# ========================================pass params
+print("\n========================================|||:pass params")
 
 
 def testfunction(arg):
@@ -62,8 +62,8 @@ testfunction(var)
 print("list after function call", var)
 print("ID after passing:", id(var))
 
-# ----------------Python Function Arguments
-print("\n|||:Python Function Arguments")
+# ========================================Python Function Arguments
+print("\n========================================|||:Python Function Arguments")
 
 
 def greetings2(name):
@@ -76,8 +76,8 @@ greetings2("Samay")
 greetings2("Pratima")
 greetings2("Steven")
 
-# ----------------Keyword Arguments
-print("\n|||:Keyword Arguments")
+# ========================================Keyword Arguments
+print("\n========================================|||:Keyword Arguments")
 
 
 # Function definition is here
@@ -103,8 +103,8 @@ def printinfo1(name, age):
 # Now you can call printinfo function
 printinfo1(age=50, name="miki")
 
-# ----------------Default Arguments
-print("\n|||:Default Arguments")
+# ========================================Default Arguments
+print("\n========================================|||:Default Arguments")
 
 
 def printinfo2(name, age=35):
@@ -118,8 +118,8 @@ def printinfo2(name, age=35):
 printinfo2(age=50, name="miki")
 printinfo2(name="miki")
 
-# ----------------Positional-only arguments
-print("\n|||:Positional-only arguments ")
+# ========================================Positional-only arguments
+print("\n========================================|||:Positional-only arguments ")
 
 
 # The benefit of using this type of argument is that it ensures the functions are called
@@ -132,8 +132,8 @@ def posFun(x, y, /, z):
 print("Evaluating positional-only arguments: ")
 posFun(33, 22, z=11)
 
-# ----------------Keyword-only arguments
-print("\n|||:Keyword-only arguments")
+# ========================================Keyword-only arguments
+print("\n========================================|||:Keyword-only arguments")
 
 
 # Keyword-only arguments are those arguments that must be specified by their name while
@@ -146,8 +146,8 @@ def posFun(*, num1, num2, num3):
 print("Evaluating keyword-only arguments: ")
 posFun(num1=6, num2=8, num3=5)
 
-# ----------------Arbitrary or Variable-length Arguments
-print("\n|||:Arbitrary or Variable-length Arguments")
+# ========================================Arbitrary or Variable-length Arguments
+print("\n========================================|||:Arbitrary or Variable-length Arguments")
 
 
 # Function definition is here
@@ -167,8 +167,8 @@ def printinfo(arg1, *vartuple):
 printinfo(10)
 printinfo(70, 60, 50)
 
-# ----------------Return Value
-print("\n|||:Return Value")
+# ========================================Return Value
+print("\n========================================|||:Return Value")
 
 
 def add(x, y):
@@ -181,8 +181,8 @@ b = 20
 result = add(a, b)
 print("a = {} b = {} a+b = {}".format(a, b, result))
 
-# ---------------- Anonymous Functions
-print("\n|||:Anonymous Functions")
+# ======================================== Anonymous Functions
+print("\n========================================|||:Anonymous Functions")
 
 sum1 = lambda arg1, arg2: arg1 + arg2
 
@@ -190,8 +190,8 @@ sum1 = lambda arg1, arg2: arg1 + arg2
 print("Value of total : ", sum1(10, 20))
 print("Value of total : ", sum1(20, 20))
 
-# ----------------Global vs. Local variables
-print("\n|||:Global vs. Local variables")
+# ========================================Global vs. Local variables
+print("\n========================================|||:Global vs. Local variables")
 
 total2 = 0  # This is global variable.
 

@@ -9,8 +9,8 @@ print("bool to int:", int(True))
 print("bool to float:", float(False))
 print("bool to complex:", complex(True))
 
-# ---------------- Boolean Expression
-print("\n|||Boolean Expression:")
+# ======================================== Boolean Expression
+print("\n========================================|||Boolean Expression:")
 
 # Check true
 a = True

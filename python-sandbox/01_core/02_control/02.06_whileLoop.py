@@ -7,8 +7,8 @@ while count < 5:
 
 print("End of while loop")
 
-# ----------------
-print("\n|||:")
+# ========================================
+print("\n========================================|||:")
 
 # var = '0'
 # while var.isnumeric():
@@ -17,8 +17,8 @@ print("\n|||:")
 #        print("Your input", var)
 # print("End of while loop")
 
-# ----------------Python Infinite while Loop
-print("\n|||:Python Infinite while Loop")
+# ========================================Python Infinite while Loop
+print("\n========================================|||:Python Infinite while Loop")
 
 # var = 1
 # while var == 1:  # This constructs an infinite loop
@@ -26,8 +26,8 @@ print("\n|||:Python Infinite while Loop")
 #    print("You entered: ", num)
 # print("Good bye!")
 
-# ----------------while-else Loop
-print("\n|||:while-else Loop")
+# ========================================while-else Loop
+print("\n========================================|||:while-else Loop")
 
 count = 0
 while count < 5:
@@ -37,15 +37,15 @@ else:
     print("While loop over. Now in else block")
 print("End of while loop")
 
-# ----------------Single Statement Suites
-print("\n|||:Single Statement Suites")
+# ========================================Single Statement Suites
+print("\n========================================|||:Single Statement Suites")
 
 flag = 0
 while flag: print("Given flag is really true!")
 print("Good bye!")
 
-# ----------------Nested while Loop Example
-print("\n|||:Nested while Loop Example")
+# ========================================Nested while Loop Example
+print("\n========================================|||:Nested while Loop Example")
 
 i = 2
 while i < 100:

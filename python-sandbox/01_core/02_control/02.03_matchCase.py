@@ -1,7 +1,7 @@
 #!/usr/bin/python3.12
 
-# ---------------- Python match-case Statement
-print("\n|||: Python match-case Statement")
+# ======================================== Python match-case Statement
+print("\n========================================|||: Python match-case Statement")
 
 
 def weekday(n):
@@ -28,8 +28,8 @@ print(weekday(3))
 print(weekday(6))
 print(weekday(7))
 
-# ---------------- brake
-print("\n|||: Python match-case brake")
+# ======================================== brake
+print("\n========================================|||: Python match-case brake")
 # in case match-case no need brake, as in case match, executing only matched block
 
 x = 2
@@ -45,8 +45,8 @@ match x:
 
 print("This is after the match-case block")
 
-# ---------------- Combined Cases in Match Statement
-print("\n|||: Combined Cases in Match Statement")
+# ======================================== Combined Cases in Match Statement
+print("\n========================================|||: Combined Cases in Match Statement")
 
 
 def access(user):
@@ -63,8 +63,8 @@ print(access("manager"))
 print(access("Guest"))
 print(access("Ravi"))
 
-# ---------------- List as the Argument in Match Case Statement
-print("\n|||: List as the Argument in Match Case Statement")
+# ======================================== List as the Argument in Match Case Statement
+print("\n========================================|||: List as the Argument in Match Case Statement")
 
 
 def greeting(details):
@@ -82,8 +82,8 @@ print(greeting(["Morning", "Ravi"]))
 print(greeting(["Afternoon", "Guest"]))
 print(greeting(["Evening", "Kajal", "Praveen", "Lata"]))
 
-# ---------------- Using "if" in "Case" Clause
-print("\n|||: Using \"if\" in \"Case\" Clause")
+# ======================================== Using "if" in "Case" Clause
+print("\n========================================|||: Using \"if\" in \"Case\" Clause")
 
 
 # allows you to include if statement in the case clause for conditional computation of match variable

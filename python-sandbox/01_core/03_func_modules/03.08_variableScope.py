@@ -4,8 +4,8 @@
 # Global Variables
 # Nonlocal Variables
 
-# ----------------Local Variables
-print("\n|||:Local Variables")
+# ========================================Local Variables
+print("\n========================================|||:Local Variables")
 
 
 def myfunction():
@@ -18,8 +18,8 @@ def myfunction():
 
 print(myfunction())
 
-# ----------------Global Variables
-print("\n|||:Global Variables")
+# ========================================Global Variables
+print("\n========================================|||:Global Variables")
 
 # global variables
 name = 'TutorialsPoint'
@@ -35,8 +35,8 @@ def myfunction1():
 # function call
 myfunction1()
 
-# ----------------Nonlocal Variables
-print("\n|||:Nonlocal Variables")
+# ========================================Nonlocal Variables
+print("\n========================================|||:Nonlocal Variables")
 
 
 def yourFunction():
@@ -59,13 +59,13 @@ def yourFunction():
 
 yourFunction()
 
-# ----------------Python globals() Function
-print("\n|||:Python globals() Function")
+# ========================================Python globals() Function
+print("\n========================================|||:Python globals() Function")
 
 print(globals())
 
-# ----------------Python locals() Function
-print("\n|||:Python locals() Function")
+# ========================================Python locals() Function
+print("\n========================================|||:Python locals() Function")
 
 name = 'TutorialsPoint'
 marks = 50
@@ -86,8 +86,8 @@ print()
 print(globals()['name'])  # displays TutorialsPoint
 print(locals().get('a'))  # displays 10
 
-# ----------------Namespace Conflict in Python
-print("\n|||:Namespace Conflict in Python")
+# ========================================Namespace Conflict in Python
+print("\n========================================|||:Namespace Conflict in Python")
 
 marks = 50  # this is a global variable
 
@@ -108,8 +108,8 @@ print()
 #    print(marks)
 
 
-# ----------------Modifying global variable from function
-print("\n|||:Modifying global variable from function")
+# ========================================Modifying global variable from function
+print("\n========================================|||:Modifying global variable from function")
 
 var1 = 50  # this is a global variable
 var2 = 60  # this is a global variable

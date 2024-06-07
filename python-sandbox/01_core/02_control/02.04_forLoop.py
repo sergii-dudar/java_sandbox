@@ -12,8 +12,8 @@
 # Python's built-in range() function returns an iterator object that streams a sequence of numbers.
 #   We can run a for loop with range as well.
 
-# ---------------- Loop with Strings
-print("\n|||: Loop with Strings")
+# ======================================== Loop with Strings
+print("\n========================================|||: Loop with Strings")
 
 zen = '''
 Beautiful is better than ugly.
@@ -25,8 +25,8 @@ for char in zen:
     if char not in 'aeiou':
         print(char, end='')
 
-# ---------------- Loop with Tuples
-print("\n|||: Loop with Tuples")
+# ======================================== Loop with Tuples
+print("\n========================================|||: Loop with Tuples")
 
 numbersTuple = (34, 54, 67, 21, 78, 97, 45, 44, 80, 19)
 total = 0
@@ -34,8 +34,8 @@ for num in numbersTuple:
     total += num
 print("Total =", total)
 
-# ----------------
-print("\n|||:")
+# ========================================
+print("\n========================================|||:")
 
 numbersList = [34, 54, 67, 21, 78, 97, 45, 44, 80, 19]
 total = 0
@@ -43,8 +43,8 @@ for num in numbersList:
     if num % 2 == 0:
         print(num, end=', ')
 
-# ---------------- Loop with Range Objects
-print("\n|||: Loop with Range Objects")
+# ======================================== Loop with Range Objects
+print("\n========================================|||: Loop with Range Objects")
 # Python's range object is an iterator which generates an integer with each iteration
 # range(start, stop, step)
 # - Start − Starting value of the range. Optional. Default is 0
@@ -75,16 +75,16 @@ print()
 for num in range(1, 10, 2):
     print(num, end=' ')
 
-# ---------------- for Loop with Sequence Indexes
-print("\n|||:for Loop with Sequence Indexes")
+# ======================================== for Loop with Sequence Indexes
+print("\n========================================|||:for Loop with Sequence Indexes")
 
 numbers = [34, 54, 67, 21, 78]
 indices = range(len(numbers))
 for index in indices:
     print("index:", index, "number:", numbers[index])
 
-# ----------------
-print("\n|||:for Loop with Dictionaries")
+# ========================================
+print("\n========================================|||:for Loop with Dictionaries")
 
 numbers = {10: "Ten", 20: "Twenty", 30: "Thirty", 40: "Forty"}
 for x in numbers:  # numbers.keys()
@@ -101,8 +101,8 @@ for x in numbers.items():
 for x, y in numbers.items():
     print(x, ":", y)
 
-# ---------------- else Statement with For Loop
-print("\n|||:else Statement with For Loop")
+# ======================================== else Statement with For Loop
+print("\n========================================|||:else Statement with For Loop")
 
 # For loop to iterate between 10 to 20
 for num in range(10, 20):
@@ -119,8 +119,8 @@ for num in range(10, 20):
             print(num, "is a prime number")
             break
 
-# ---------------- Nested for Loop Example
-print("\n|||:Nested for Loop Example")
+# ======================================== Nested for Loop Example
+print("\n========================================|||:Nested for Loop Example")
 
 months = ["jan", "feb", "mar"]
 days = ["sun", "mon", "tue"]

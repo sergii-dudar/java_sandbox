@@ -15,8 +15,8 @@ printInfo("Naveen", 29)
 # by keyword arguments
 printInfo(name="miki", age=30)
 
-# ----------------
-print("\n|||:")
+# ========================================
+print("\n========================================|||:")
 
 
 def division(num, den):

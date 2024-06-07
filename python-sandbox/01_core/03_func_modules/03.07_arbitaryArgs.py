@@ -11,8 +11,8 @@ def add(*args):
 print(add(10, 20, 30, 40))
 print(add(1, 2, 3))
 
-# ---------------- Required Arguments With Arbitrary Arguments
-print("\n|||: Required Arguments With Arbitrary Arguments")
+# ======================================== Required Arguments With Arbitrary Arguments
+print("\n========================================|||: Required Arguments With Arbitrary Arguments")
 
 
 def avg(first, *rest):
@@ -23,8 +23,8 @@ def avg(first, *rest):
 result = avg(40, 30, 50, 25)
 print(result)
 
-# ---------------- Arbitrary Keyword Arguments (**kwargs)
-print("\n|||: Arbitrary Keyword Arguments (**kwargs)")
+# ======================================== Arbitrary Keyword Arguments (**kwargs)
+print("\n========================================|||: Arbitrary Keyword Arguments (**kwargs)")
 
 
 # If a variable in the argument list has two asterisks prefixed to it, the function
@@ -42,8 +42,8 @@ print("pass four keyword args")
 # pass four keyword args
 addr(Name="Raam", City="Mumbai", ph_no="9123134567", PIN="400001")
 
-# ---------------- Arbitrary Keyword Arguments (**kwargs)
-print("\n|||: Multiple Arguments With Arbitrary Keyword Arguments")
+# ======================================== Arbitrary Keyword Arguments (**kwargs)
+print("\n========================================|||: Multiple Arguments With Arbitrary Keyword Arguments")
 
 
 def percent(math, sci, **optional):
@@ -59,8 +59,8 @@ def percent(math, sci, **optional):
 result = percent(math=80, sci=75, Eng=70, Hist=65, Geo=72)
 print("percentage:", result)
 
-# ---------------- custom print
-print("\n|||: custom print")
+# ======================================== custom print
+print("\n========================================|||: custom print")
 
 
 def myPrint(*args, sep=',', end='; '):
@@ -69,8 +69,8 @@ def myPrint(*args, sep=',', end='; '):
 
 myPrint("hello", "python")
 
-# ---------------- unpack args
-print("\n|||: unpack args")
+# ======================================== unpack args
+print("\n========================================|||: unpack args")
 
 
 def printDict(**argDict1):
