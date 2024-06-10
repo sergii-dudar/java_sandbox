@@ -1,3 +1,1 @@
-some test line1
-some test line2
-some test line3
+Hello codersWelcome to javaTpoint
