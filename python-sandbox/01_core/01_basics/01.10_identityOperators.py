@@ -14,9 +14,15 @@ b = [1, 2, 3, 4, 5]
 c = a
 
 # Comparing and printing return values
+print("is:")
 print(a is c)
 print(a is b)
 
+print("==:")
+print(a == c)
+print(a == b)
+
+print()
 # Printing IDs of a, b, and c
 print("id(a) : ", id(a))
 print("id(b) : ", id(b))
