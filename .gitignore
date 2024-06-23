@@ -6,6 +6,7 @@
 *.ipr
 *.tgz
 **/.DS_Store
+**/__pycache__
 
 # Build targets
 out/
