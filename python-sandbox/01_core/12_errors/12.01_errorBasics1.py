@@ -5,11 +5,13 @@
 # try:
 #     # Code block
 #     # These statements are those which can probably have some error
-#
+# except ExceptionI:
+#    If there is ExceptionI, then execute this block.
+# except ExceptionII:
+#    If there is ExceptionII, then execute this block.
 # except:
 #     # This block is optional.
 #     # If the try block encounters an exception, this block will handle it.
-#
 # else:
 #     # If there is no exception, this code block will be executed by the Python interpreter
 #

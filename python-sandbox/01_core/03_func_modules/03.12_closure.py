@@ -13,6 +13,9 @@ def word():
 
 word()
 
+# ========================================
+print("\n========================================|||:")
+
 
 def word2():
     string = 'Python returns from inner function as closure'
@@ -26,3 +29,45 @@ def word2():
 
 
 word2()()
+
+# ========================================
+print("\n========================================|||:")
+
+
+def functionA(name):
+    name = "New name"
+
+    def functionB():
+        print(name)
+
+    return functionB
+
+
+myfunction = functionA("My name")
+myfunction()
+
+# ========================================nonlocal Keyword
+print("\n========================================|||:nonlocal Keyword")
+
+
+def functionA():
+    counter = 0
+
+    def functionB():
+        nonlocal counter
+        counter += 1
+        return counter
+
+    return functionB
+
+
+myfunction = functionA()
+
+retval = myfunction()
+print("Counter:", retval)
+
+retval = myfunction()
+print("Counter:", retval)
+
+retval = myfunction()
+print("Counter:", retval)

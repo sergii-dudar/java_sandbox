@@ -1,5 +1,8 @@
 #!/usr/bin/python3.12
 
+# dict methods: https://www.tutorialspoint.com/python/python_dictionary_methods.htm
+
+
 capitals = {"Maharashtra": "Mumbai", "Gujarat": "Gandhinagar",
             "Telangana": "Hyderabad", "Karnataka": "Bengaluru"}
 numbers = {10: "Ten", 20: "Twenty", 30: "Thirty", 40: "Forty"}
@@ -49,17 +52,33 @@ print(d3)  # {'a': 2, 'b': 4, 'c': 30, 'a1': 20, 'b1': 40, 'c1': 60}
 d1 |= d2
 print(d1)  # {'a': 2, 'b': 4, 'c': 30, 'a1': 20, 'b1': 40, 'c1': 60}
 
-# ========================================
-print("\n========================================|||:")
+# ========================================create a new dictionary by extracting the keys from a given dictionary.
+print(
+    "\n========================================|||:create a new dictionary by extracting the keys from a given dictionary.")
 
-# ========================================
-print("\n========================================|||:")
+d1 = {"one": 11, "two": 22, "three": 33, "four": 44, "five": 55}
+keys = ['two', 'five']
+d2 = {}
+for k in keys:
+    d2[k] = d1[k]
+print(d2)
 
-# ========================================
-print("\n========================================|||:")
+# ========================================convert a dictionary to list of (k,v) tuples.
+print("\n========================================|||:convert a dictionary to list of (k,v) tuples.")
 
-# ========================================
-print("\n========================================|||:")
+d1 = {"one": 11, "two": 22, "three": 33, "four": 44, "five": 55}
+l1 = list(d1.items())
+print(l1)
 
-# ========================================
-print("\n========================================|||:")
+# ========================================remove keys with same values in a dictionary.
+print("\n========================================|||:remove keys with same values in a dictionary.")
+
+d1 = {"one": "eleven", "2": 2, "three": 3, "11": "eleven", "four": 44, "two": 2}
+vals = list(d1.values())  # all values
+uvals = [v for v in vals if vals.count(v) == 1]  # unique values
+d2 = {}
+for k, v in d1.items():
+    if v in uvals:
+        d = {k: v}
+        d2.update(d)
+print("dict with unique value:", d2)
