@@ -27,6 +27,7 @@
 
 #9. > (Output Redirection) Usage: Redirects the output of a command to a file, overwriting the file if it exists.
 # command > file
+# as 1 is stdout: [command 1> file] is same as [command > file]
 
 #10. >> (Append Output Redirection) Usage: Redirects the output of a command to a file, appending to the file if it exists.
 # command >> file
