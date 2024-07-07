@@ -1,7 +1,8 @@
 #!/usr/bin/python3.12
 
-# ========================================Static Methods
-print("\n========================================|||:Static Methods")
+# ========================================Using staticmethod() Function
+print(
+    "\n========================================|||:Using staticmethod() Function")
 
 
 class Employee:
@@ -28,7 +29,8 @@ e1.counter()
 Employee.counter()
 
 # ========================================Using @staticmethod Decorator
-print("\n========================================|||:Using @staticmethod Decorator")
+print(
+    "\n========================================|||:Using @staticmethod Decorator")
 
 
 class Student:
