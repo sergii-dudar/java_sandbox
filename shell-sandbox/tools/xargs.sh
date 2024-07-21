@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "one two three" | xargs touch
 echo "one two three" | xargs rm
 
