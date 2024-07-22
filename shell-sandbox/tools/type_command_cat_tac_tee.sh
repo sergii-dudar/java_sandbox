@@ -28,4 +28,9 @@ echo "Hello, World!" | tee -a newfile.txt # like: echo "Hello, World!" >> newfil
 alias cat='bat'
 command cat .bashrc # it will use /usr/bin/cat , and will skip alias
 
-
+# `type` [command] with alias showing alias description
+type find # find is an alias for fd --color=always
+type ls # ls is an alias for eza -al --color=always --group-directories-first
+type cat # cat is an alias for bat --decorations=always --color=always
+type echo # echo is a shell builtin
+type findt # findt is a shell function from /home/serhii/serhii.shell/fzf.scripts.sh
