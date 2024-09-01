@@ -4,10 +4,15 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class SocketChannelClient {
 
     public static void main(String[] args) throws IOException {
+
+        AtomicBoolean closed = new AtomicBoolean(false);
+        final boolean resultSet = closed.compareAndSet(false, true);
+
         SocketChannel client = SocketChannel.open();
         client.connect(new InetSocketAddress( 8080));
 

@@ -5,13 +5,15 @@ Optimistic Locking:
 - Advantages:
     Generally better for systems with low contention, where conflicts are infrequent.
     Allows for higher concurrency as transactions don't block each other during reads.
-    Pessimistic Locking:
+    
+Pessimistic Locking:
 
 How it works: Pessimistic locking, on the other hand, assumes that conflicts are more likely to occur. When a transaction wants to access a resource, it locks the resource to prevent other transactions from accessing or modifying it until the lock is released.
 Implementation: Different types of locks can be used, such as shared locks for reading and exclusive locks for writing. Transactions explicitly acquire and release locks during their execution.
 Advantages:
 Guarantees data consistency by preventing multiple transactions from accessing or modifying the same resource simultaneously.
 Easier to reason about in certain scenarios, especially when contention is high.
+
 Choosing Between Optimistic and Pessimistic Locking:
 
 Concurrency Requirements: If the system experiences high contention for resources, pessimistic locking may be more appropriate to ensure data consistency.

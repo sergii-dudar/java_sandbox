@@ -1,13 +1,13 @@
 buildscript {
     dependencies {
-        classpath "com.commercehub.gradle.plugin:gradle-avro-plugin:0.14.2"
+        //classpath "com.commercehub.gradle.plugin:gradle-avro-plugin:0.14.2"
     }
 }
 
 plugins {
     id 'java'
 }
-apply plugin: "com.commercehub.gradle.plugin.avro"
+//apply plugin: "com.commercehub.gradle.plugin.avro"
 
 repositories {
     mavenCentral()
@@ -92,12 +92,12 @@ dependencies {
     }
 }
 
-avro {
-    createSetters = false
-    fieldVisibility = "PRIVATE"
-}
+//avro {
+//    createSetters = false
+//    fieldVisibility = "PRIVATE"
+//}
 
-generateAvroJava {
-    source(rootDir)
-    // Include avro source in root directory only because Gist doesn't support directories
-}
+//generateAvroJava {
+//    source(rootDir)
+//    // Include avro source in root directory only because Gist doesn't support directories
+//}

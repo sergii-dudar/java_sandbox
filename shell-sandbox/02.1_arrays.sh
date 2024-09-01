@@ -24,7 +24,7 @@
 
 #----Bash Array Initialization
 #declare -a ARRAY_INDEXED
-ARRAY_INDEXED=(element_1st element_2nd element_Nth)
+   ARRAY_INDEXED=(element_1st element_2nd element_Nth)
 
 declare -A ARRAY_NAMED
 ARRAY_NAMED=(
