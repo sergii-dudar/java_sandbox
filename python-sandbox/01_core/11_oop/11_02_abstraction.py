@@ -54,6 +54,7 @@ print("\n========================================|||:")
 # Python program to define
 # abstract class
 
+
 class Polygon(ABC):
     # abstract method
     def sides(self):

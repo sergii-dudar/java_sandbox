@@ -10,20 +10,21 @@
 # ========================================Create an Anonymous Class
 print("\n========================================|||:Create an Anonymous Class")
 
-anon = type('', (object,), {})
+anon = type("", (object,), {})
 obj = anon()
 print("type of obj:", type(obj))
 
 # ========================================Anonymous Class and Object Example
 print(
-    "\n========================================|||:Anonymous Class and Object Example")
+    "\n========================================|||:Anonymous Class and Object Example"
+)
 
 
 def getA(self):
     return self.a
 
 
-obj = type('', (object,), {'a': 5, 'b': 6, 'c': 7,
-                           'getA': getA,
-                           'getB': lambda self: self.b})()
+obj = type(
+    "", (object,), {"a": 5, "b": 6, "c": 7, "getA": getA, "getB": lambda self: self.b}
+)()
 print(obj.getA(), obj.getB())

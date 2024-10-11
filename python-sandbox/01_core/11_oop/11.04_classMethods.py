@@ -1,5 +1,6 @@
 #!/usr/bin/python3.12
 
+
 class Employee:
     empCount = 0
 
@@ -49,7 +50,9 @@ e4 = Employee.newemployee("Anil", 21)
 Employee.showcount()
 
 # ========================================Access Class Attributes in Class Method
-print("\n========================================|||:Access Class Attributes in Class Method")
+print(
+    "\n========================================|||:Access Class Attributes in Class Method"
+)
 
 
 class Cloth:
@@ -65,7 +68,9 @@ class Cloth:
 print(Cloth.showPrice())
 
 # ========================================Dynamically Add Class Method to a Class
-print("\n========================================|||:Dynamically Add Class Method to a Class")
+print(
+    "\n========================================|||:Dynamically Add Class Method to a Class"
+)
 
 
 class Cloth:

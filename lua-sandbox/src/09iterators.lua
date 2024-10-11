@@ -37,8 +37,7 @@ end
 ---- Stateful Iterators
 print()
 
-function elementIterator (collection)
-
+function elementIterator(collection)
     local index = 0
     local count = #collection
 
@@ -51,14 +50,10 @@ function elementIterator (collection)
             -- return the current element of the iterator
             return collection[index]
         end
-
     end
-
 end
 
 array = { "Lua", "Tutorial" }
 for element in elementIterator(array) do
     print(element)
 end
-
-
