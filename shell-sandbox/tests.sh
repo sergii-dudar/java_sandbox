@@ -1,15 +1,16 @@
 #!/bin/bash
 
-test() {
-    return 0
-}
+home="$HOME"
+dir="/Users/serhii/serhii.home/work/git.work/ua-payments-payment-preprocessing/payment-preprocessing/src/main/java/ua/raiffeisen/payments/paymentpreprocessing"
 
-find_git_root() {
-    return 1
-}
+while [ "$dir" != "$home" ]; do
+    found_file=$(fd --no-ignore -d 1 -t f -H ".classpath.cache" "$dir")
+    if [[ -n $found_file ]]; then
+        break
+    fi
+    dir=$(dirname "$dir")
+done
 
-if ! find_git_root && test; then
-    echo "Condition met"
-else
-    echo "Condition not met."
-fi
+file="$dir/.classpath.cache"
+cat "$file"
+
