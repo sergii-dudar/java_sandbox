@@ -4,3 +4,15 @@ UseTab: Always
 TabWidth: 2
 SpaceAfterCStyleCast: true
 IndentCaseLabels: true
+ColumnLimit: 80
+AllowAllParametersOfDeclarationOnNextLine: false
+BreakBeforeBraces: Attach
+AlignArrayOfStructures: None
+AlignConsecutiveAssignments: None
+AlignConsecutiveDeclarations: None
+AlignEscapedNewlines: DontAlign
+AlignOperands: DontAlign
+AlignTrailingComments: false
+BinPackArguments: false
+BinPackParameters: false
+BreakStringLiterals: false
