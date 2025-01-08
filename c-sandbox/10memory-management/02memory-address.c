@@ -7,20 +7,36 @@ void example4();
 void example5();
 
 int main() {
-	example1();
-	printf("\n\n");
-	example2();
-	printf("\n\n");
-	example3();
-	printf("\n\n");
-	example4();
-	printf("\n\n");
-	example5();
+    example1();
+    printf("\n\n");
+    example2();
+    printf("\n\n");
+    example3();
+    printf("\n\n");
+    example4();
+    printf("\n\n");
+    example5();
 
-	return 0;
+    return 0;
 }
 
-void example1() {}
+void example1() {
+    // initialize an array of ints
+    int numbers[5] = {1, 2, 3, 4, 5};
+    int i = 0;
+
+    // print the address of the array variable
+    printf("numbers = %p\n", numbers);
+
+    // print addresses of each array index
+    do {
+        printf("numbers[%u] = %p\n", i, (void *) (&numbers[i]));
+        i++;
+    } while (i < 5);
+
+    // print the size of the array
+    printf("sizeof(numbers) = %lu\n", sizeof(numbers));
+}
 void example2() {}
 void example3() {}
 void example4() {}

@@ -30,3 +30,4 @@ local.gradle.properties
 application-dev.yml
 
 **/haskell-sandbox/**/.stack-work
+**/rust-sandbox/**/Cargo.lock
