@@ -1,6 +1,6 @@
-BasedOnStyle: LLVM
-IndentWidth: 2
-UseTab: Always
+BasedOnStyle: llvm
+IndentWidth: 4
+UseTab: Never
 TabWidth: 2
 SpaceAfterCStyleCast: true
 IndentCaseLabels: true
