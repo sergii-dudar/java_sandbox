@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+	"os"
+)
 
 func main() {
 	example1()
@@ -21,7 +25,24 @@ func main() {
 // --------------------------------------
 
 func example1() {
-	fmt.Printf(">>>Example6: \n")
+	fmt.Printf(">>>Example1: \n")
+
+	fmt.Println("write to file------------")
+	data := []byte("Hello!\nWelcome to Tutorialspoint.")
+	// Write the content to a file
+	er := os.WriteFile("file1.txt", data, 8649)
+	if er != nil {
+		log.Fatalf("Failed to write to file: %v", er)
+	}
+	log.Println("The written files is printed successfully!")
+
+	fmt.Println("\nread from file------------")
+	data, err := os.ReadFile("file1.txt")
+	if err != nil {
+		log.Fatal(err)
+	}
+	// Display the content
+	fmt.Println(string(data))
 }
 
 // --------------------------------------

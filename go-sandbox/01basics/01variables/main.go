@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 func main() {
 	example1()
@@ -57,10 +60,25 @@ func example4() {
 }
 
 func example5() {
+	// Type Conversion
+	var sum int = 17
+	var count int = 5
+	var mean float32
+
+	mean = float32(sum) / float32(count)
+	fmt.Printf("Value of mean : %f\n", mean)
 }
 
 func example6() {
+	// Reflect
+	age := 27.5
+	fmt.Printf("%T\n", age)
+	fmt.Println(reflect.TypeOf(age))
 }
 
 func example7() {
+	// go rune
+	rune := 'A'
+	fmt.Printf("%d \n", rune)
+	fmt.Println(reflect.TypeOf(rune))
 }

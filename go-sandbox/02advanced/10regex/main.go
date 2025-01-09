@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"regexp"
+)
 
 func main() {
 	example1()
@@ -21,19 +24,30 @@ func main() {
 // --------------------------------------
 
 func example1() {
-	fmt.Printf(">>>Example6: \n")
+	fmt.Printf(">>>Example1: \n")
+	re := regexp.MustCompile(".com")
+	fmt.Println(re.FindString("google.com"))
+	fmt.Println(re.FindString("abc.org"))
+	fmt.Println(re.FindString("fb.com"))
 }
 
 // --------------------------------------
 
 func example2() {
 	fmt.Printf(">>>Example2: \n")
+	re := regexp.MustCompile(".com")
+	fmt.Println(re.FindStringIndex("google.com"))
+	fmt.Println(re.FindStringIndex("abc.org"))
+	fmt.Println(re.FindStringIndex("fb.com"))
 }
 
 // --------------------------------------
 
 func example3() {
 	fmt.Printf(">>>Example3: \n")
+	re := regexp.MustCompile("f([a-z]+)ing")
+	fmt.Println(re.FindStringSubmatch("flying"))
+	fmt.Println(re.FindStringSubmatch("abcfloatingxyz"))
 }
 
 // --------------------------------------

@@ -103,20 +103,62 @@ func (s *student) updateGrade(newGrade string) {
 	s.grade = newGrade
 }
 
-// --------------------------------------
+// --------------------------------------Recursion in Go
 
 func example5() {
 	fmt.Printf(">>>Example5: \n")
+	var i int = 15
+	fmt.Printf("Factorial of %d is %d", i, factorial(i))
 }
 
-// --------------------------------------
+func factorial(i int) int {
+	if i <= 1 {
+		return 1
+	}
+	return i * factorial(i-1)
+}
+
+// --------------------------------------Fibonacci Series Using Recursion
 
 func example6() {
 	fmt.Printf(">>>Example6: \n")
+	var i int
+	for i = 0; i < 10; i++ {
+		fmt.Printf("%d ", fibonaci(i))
+	}
+}
+
+func fibonaci(i int) (ret int) {
+	if i == 0 {
+		return 0
+	}
+	if i == 1 {
+		return 1
+	}
+	return fibonaci(i-1) + fibonaci(i-2)
 }
 
 // --------------------------------------
+// The defer keyword is generally used for cleaning purpose.
+// The defer keyword postpones the execution of a function or
+// statement until the end of the calling function.
+
+// It executes code (a function or expression) when the
+// enclosing function returns before the closing
+// curly brace }. It is also executed if an error occurs
+// during the execution of the enclosing function.
 
 func example7() {
 	fmt.Printf(">>>Example7: \n")
+
+	defer print1("Hi...")
+	print2("there")
+}
+
+func print1(s string) {
+	fmt.Println(s)
+}
+
+func print2(s string) {
+	fmt.Println(s)
 }
