@@ -7,17 +7,18 @@ void example4();
 void example5();
 
 int main() {
-	example1();
-	printf("\n\n");
-	example2();
-	printf("\n\n");
-	example3();
-	printf("\n\n");
-	example4();
-	printf("\n\n");
-	example5();
+    printf(">>>>>--------------EXAMPLE1--------------<<<<<\n");
+    example1();
+    printf("\n>>>>>--------------EXAMPLE2--------------<<<<<\n");
+    example2();
+    printf("\n>>>>>--------------EXAMPLE3--------------<<<<<\n");
+    example3();
+    printf("\n>>>>>--------------EXAMPLE4--------------<<<<<\n");
+    example4();
+    printf("\n>>>>>--------------EXAMPLE5--------------<<<<<\n");
+    example5();
 
-	return 0;
+    return 0;
 }
 
 void example1() {}

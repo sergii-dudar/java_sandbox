@@ -33,24 +33,34 @@ void example9();
 void example10();
 
 int main() {
+    printf(">>>>>--------------EXAMPLE1--------------<<<<<\n");
     example1();
-    printf("\n\n");
+
+    printf("\n\n>>>>>--------------EXAMPLE2--------------<<<<<\n");
     example2();
-    printf("\n\n");
+
+    printf("\n\n>>>>>--------------EXAMPLE3--------------<<<<<\n");
     example3();
-    printf("\n\n");
+
+    printf("\n\n>>>>>--------------EXAMPLE4--------------<<<<<\n");
     example4();
-    printf("\n\n");
+
+    printf("\n\n>>>>>--------------EXAMPLE5--------------<<<<<\n");
     example5();
-    printf("\n\n");
+
+    printf("\n\n>>>>>--------------EXAMPLE6--------------<<<<<\n");
     example6();
-    printf("\n\n");
+
+    printf("\n\n>>>>>--------------EXAMPLE7--------------<<<<<\n");
     example7();
-    printf("\n\n");
+
+    printf("\n\n>>>>>--------------EXAMPLE8--------------<<<<<\n");
     example8();
-    printf("\n\n");
+
+    printf("\n\n>>>>>--------------EXAMPLE9--------------<<<<<\n");
     example9();
-    printf("\n\n");
+
+    printf("\n\n>>>>>--------------EXAMPLE10--------------<<<<<\n");
     example10();
 
     return 0;

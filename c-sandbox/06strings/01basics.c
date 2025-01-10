@@ -16,32 +16,37 @@ void example4();
 void example5();
 
 int main() {
-	example1();
-	printf("\n\n");
-	example2();
-	printf("\n\n");
-	example3();
-	printf("\n\n");
-	example4();
-	printf("\n\n");
-	example5();
+    printf(">>>>>--------------EXAMPLE1--------------<<<<<\n");
+    example1();
 
-	return 0;
+    printf("\n\n>>>>>--------------EXAMPLE2--------------<<<<<\n");
+    example2();
+
+    printf("\n\n>>>>>--------------EXAMPLE3--------------<<<<<\n");
+    example3();
+
+    printf("\n\n>>>>>--------------EXAMPLE4--------------<<<<<\n");
+    example4();
+
+    printf("\n\n>>>>>--------------EXAMPLE5--------------<<<<<\n");
+    example5();
+
+    return 0;
 }
 
 void example1() {
-	char greeting[] = {'H', 'e', 'l', 'l', 'o', '\0'};
+    char greeting[] = {'H', 'e', 'l', 'l', 'o', '\0'};
 
-	for (int i = 0; i < 5; i++) {
-		printf("%c", greeting[i]);
-	}
+    for (int i = 0; i < 5; i++) {
+        printf("%c", greeting[i]);
+    }
 
-	//----
-	char greeting1[] = {'H', 'e', 'l', 'l', 'o', '\0'};
-	printf("\nGreeting message: %s\n", greeting1);
+    //----
+    char greeting1[] = {'H', 'e', 'l', 'l', 'o', '\0'};
+    printf("\nGreeting message: %s\n", greeting1);
 
-	//----
-	printf("%s\n", greeting);
+    //----
+    printf("%s\n", greeting);
 }
 void example2() {}
 void example3() {}

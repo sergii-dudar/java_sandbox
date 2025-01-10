@@ -15,16 +15,22 @@ void example6();
 // void twoDArray(int row, int col, int a[row][col]);
 
 int main() {
+    printf(">>>>>--------------EXAMPLE1--------------<<<<<\n");
     // example1();
-    // printf("\n\n");
+    //
+    printf("\n\n>>>>>--------------EXAMPLE2--------------<<<<<\n");
     // example2();
-    // printf("\n\n");
+    //
+    printf("\n\n>>>>>--------------EXAMPLE3--------------<<<<<\n");
     // example3();
-    // printf("\n\n");
+    //
+    printf("\n\n>>>>>--------------EXAMPLE4--------------<<<<<\n");
     // example4();
-    // printf("\n\n");
+    //
+    printf("\n\n>>>>>--------------EXAMPLE5--------------<<<<<\n");
     example5();
-    printf("\n\n");
+
+    printf("\n\n>>>>>--------------EXAMPLE6--------------<<<<<\n");
     example6();
 
     return 0;

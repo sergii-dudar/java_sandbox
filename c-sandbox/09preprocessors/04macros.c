@@ -12,14 +12,19 @@ int main() {
     printf("Value of PI = %d\n", PI);
     printf("Value of MAX = %d\n", MAX);
 
+    printf(">>>>>--------------EXAMPLE1--------------<<<<<\n");
     example1();
-    printf("\n\n");
+
+    printf("\n\n>>>>>--------------EXAMPLE2--------------<<<<<\n");
     example2();
-    printf("\n\n");
+
+    printf("\n\n>>>>>--------------EXAMPLE3--------------<<<<<\n");
     example3();
-    printf("\n\n");
+
+    printf("\n\n>>>>>--------------EXAMPLE4--------------<<<<<\n");
     example4();
-    printf("\n\n");
+
+    printf("\n\n>>>>>--------------EXAMPLE5--------------<<<<<\n");
     example5();
 
     return 0;
