@@ -1,23 +1,51 @@
-main = do
-    example1
-    example2
-    example3
-    example4
-    example5
-    example6
-    example7
-
 example1 = do
-    putStrLn "\n"
+    putStrLn ""
+
 example2 = do
-    putStrLn "\n"
+    putStrLn ""
+
 example3 = do
-    putStrLn "\n"
+    putStrLn ""
+
 example4 = do
-    putStrLn "\n"
+    putStrLn ""
+
 example5 = do
-    putStrLn "\n"
+    putStrLn ""
+
 example6 = do
-    putStrLn "\n"
+    putStrLn ""
+
 example7 = do
-    putStrLn "\n"
+    putStrLn ""
+
+example8 = do
+    putStrLn ""
+
+example9 = do
+    putStrLn ""
+
+example10 = do
+    putStrLn ""
+
+main = do
+    putStrLn ">>>>>--------------EXAMPLE1--------------<<<<<"
+    example1
+    putStrLn "\n>>>>>--------------EXAMPLE2--------------<<<<<"
+    example2
+    putStrLn "\n>>>>>--------------EXAMPLE3--------------<<<<<"
+    example3
+    putStrLn "\n>>>>>--------------EXAMPLE4--------------<<<<<"
+    example4
+    putStrLn "\n>>>>>--------------EXAMPLE5--------------<<<<<"
+    example5
+    putStrLn "\n>>>>>--------------EXAMPLE6--------------<<<<<"
+    example6
+    putStrLn "\n>>>>>--------------EXAMPLE7--------------<<<<<"
+    example7
+    putStrLn "\n>>>>>--------------EXAMPLE8--------------<<<<<"
+    example8
+    putStrLn "\n>>>>>--------------EXAMPLE9--------------<<<<<"
+    example9
+    putStrLn "\n>>>>>--------------EXAMPLE10--------------<<<<<"
+    example10
