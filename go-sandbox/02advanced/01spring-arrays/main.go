@@ -6,18 +6,19 @@ import (
 )
 
 func main() {
+	fmt.Println(">>>>>--------------EXAMPLE1--------------<<<<<")
 	example1()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE2--------------<<<<<")
 	example2()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE3--------------<<<<<")
 	example3()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE4--------------<<<<<")
 	example4()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE5--------------<<<<<")
 	example5()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE6--------------<<<<<")
 	example6()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE7--------------<<<<<")
 	example7()
 }
 
@@ -25,7 +26,7 @@ func main() {
 var a int = 20
 
 func example1() {
-	fmt.Printf(">>>Example1: \n")
+	
 	/* local variable declaration in main function */
 	var a int = 10
 	var b int = 20
@@ -46,7 +47,7 @@ func sum(a, b int) int {
 // --------------------------------------
 
 func example2() {
-	fmt.Printf(">>>Example2: \n")
+	
 	greeting := "Hello world!"
 
 	fmt.Printf("normal string: ")
@@ -71,7 +72,7 @@ func example2() {
 // --------------------------------------Concatenating Strings
 
 func example3() {
-	fmt.Printf(">>>Example3: \n")
+	
 	greetings := []string{"Hello", "world!"}
 	fmt.Println(strings.Join(greetings, " "))
 }
@@ -79,7 +80,7 @@ func example3() {
 // --------------------------------------Arrays
 
 func example4() {
-	fmt.Printf(">>>Example4: \n")
+	
 	var n [10]int /* n is an array of 10 integers */
 	var i, j int
 
@@ -97,7 +98,7 @@ func example4() {
 // --------------------------------------Multidimensional Arrays
 
 func example5() {
-	fmt.Printf(">>>Example5: \n")
+	
 	/* an array with 5 rows and 2 columns*/
 	a := [5][2]int{{0, 0}, {1, 2}, {2, 4}, {3, 6}, {4, 8}}
 	var i, j int
@@ -113,7 +114,7 @@ func example5() {
 // --------------------------------------Passing arrays to functions
 
 func example6() {
-	fmt.Printf(">>>Example6: \n")
+	
 	/* an int array with 5 elements */
 	balance := []int{1000, 2, 3, 17, 50}
 	var avg float32
@@ -140,5 +141,5 @@ func getAverage(arr []int, size int) float32 {
 // --------------------------------------
 
 func example7() {
-	fmt.Printf(">>>Example7: \n")
+	
 }

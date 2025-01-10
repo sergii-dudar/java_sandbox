@@ -9,18 +9,19 @@ import (
 // They provide a way to send and receive values between different goroutines,
 // enabling concurrent programming
 func main() {
+	fmt.Println(">>>>>--------------EXAMPLE1--------------<<<<<")
 	example1()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE2--------------<<<<<")
 	example2()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE3--------------<<<<<")
 	example3()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE4--------------<<<<<")
 	example4()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE5--------------<<<<<")
 	example5()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE6--------------<<<<<")
 	example6()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE7--------------<<<<<")
 	example7()
 }
 

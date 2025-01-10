@@ -6,25 +6,26 @@ import (
 )
 
 func main() {
+	fmt.Println(">>>>>--------------EXAMPLE1--------------<<<<<")
 	example1()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE2--------------<<<<<")
 	example2()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE3--------------<<<<<")
 	example3()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE4--------------<<<<<")
 	example4()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE5--------------<<<<<")
 	example5()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE6--------------<<<<<")
 	example6()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE7--------------<<<<<")
 	example7()
 }
 
 // --------------------------------------
 
 func example1() {
-	fmt.Printf(">>>Example1: \n")
+	
 	re := regexp.MustCompile(".com")
 	fmt.Println(re.FindString("google.com"))
 	fmt.Println(re.FindString("abc.org"))
@@ -34,7 +35,7 @@ func example1() {
 // --------------------------------------
 
 func example2() {
-	fmt.Printf(">>>Example2: \n")
+	
 	re := regexp.MustCompile(".com")
 	fmt.Println(re.FindStringIndex("google.com"))
 	fmt.Println(re.FindStringIndex("abc.org"))
@@ -44,7 +45,7 @@ func example2() {
 // --------------------------------------
 
 func example3() {
-	fmt.Printf(">>>Example3: \n")
+	
 	re := regexp.MustCompile("f([a-z]+)ing")
 	fmt.Println(re.FindStringSubmatch("flying"))
 	fmt.Println(re.FindStringSubmatch("abcfloatingxyz"))
@@ -53,23 +54,23 @@ func example3() {
 // --------------------------------------
 
 func example4() {
-	fmt.Printf(">>>Example4: \n")
+	
 }
 
 // --------------------------------------
 
 func example5() {
-	fmt.Printf(">>>Example5: \n")
+	
 }
 
 // --------------------------------------
 
 func example6() {
-	fmt.Printf(">>>Example6: \n")
+	
 }
 
 // --------------------------------------
 
 func example7() {
-	fmt.Printf(">>>Example7: \n")
+	
 }

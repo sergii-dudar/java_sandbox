@@ -3,25 +3,26 @@ package main
 import "fmt"
 
 func main() {
+	fmt.Println(">>>>>--------------EXAMPLE1--------------<<<<<")
 	example1()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE2--------------<<<<<")
 	example2()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE3--------------<<<<<")
 	example3()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE4--------------<<<<<")
 	example4()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE5--------------<<<<<")
 	example5()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE6--------------<<<<<")
 	example6()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE7--------------<<<<<")
 	example7()
 }
 
 // --------------------------------------Defining a Map
 
 func example1() {
-	fmt.Printf(">>>Example1: \n")
+	
 	var countryCapitalMap map[string]string
 	/* create a map*/
 	countryCapitalMap = make(map[string]string)
@@ -56,7 +57,7 @@ func example1() {
 // --------------------------------------delete() Function
 
 func example2() {
-	fmt.Printf(">>>Example2: \n")
+	
 	/* create a map*/
 	countryCapitalMap := map[string]string{"France": "Paris", "Italy": "Rome", "Japan": "Tokyo", "India": "New Delhi"}
 
@@ -87,7 +88,7 @@ func example3() {
 	}
 
 	fmt.Println(m)
-	fmt.Printf(">>>Example3: \n")
+	
 }
 
 type Vertex struct {
@@ -97,23 +98,23 @@ type Vertex struct {
 // --------------------------------------
 
 func example4() {
-	fmt.Printf(">>>Example4: \n")
+	
 }
 
 // --------------------------------------
 
 func example5() {
-	fmt.Printf(">>>Example5: \n")
+	
 }
 
 // --------------------------------------
 
 func example6() {
-	fmt.Printf(">>>Example6: \n")
+	
 }
 
 // --------------------------------------
 
 func example7() {
-	fmt.Printf(">>>Example7: \n")
+	
 }

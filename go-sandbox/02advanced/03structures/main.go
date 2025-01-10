@@ -3,18 +3,19 @@ package main
 import "fmt"
 
 func main() {
+	fmt.Println(">>>>>--------------EXAMPLE1--------------<<<<<")
 	example1()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE2--------------<<<<<")
 	example2()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE3--------------<<<<<")
 	example3()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE4--------------<<<<<")
 	example4()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE5--------------<<<<<")
 	example5()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE6--------------<<<<<")
 	example6()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE7--------------<<<<<")
 	example7()
 }
 
@@ -27,7 +28,7 @@ type Books struct {
 }
 
 func example1() {
-	fmt.Printf(">>>Example1: \n")
+	
 	var Book1 Books /* Declare Book1 of type Book */
 	var Book2 Books /* Declare Book2 of type Book */
 
@@ -59,7 +60,7 @@ func example1() {
 // --------------------------------------Structures as Function Arguments
 
 func example2() {
-	fmt.Printf(">>>Example2: \n")
+	
 	var Book1 Books /* Declare Book1 of type Book */
 	var Book2 Books /* Declare Book2 of type Book */
 
@@ -93,7 +94,7 @@ func printBook(book Books) {
 // --------------------------------------Pointers to Structures
 
 func example3() {
-	fmt.Printf(">>>Example3: \n")
+	
 	var Book1 Books /* Declare Book1 of type Book */
 	var Book2 Books /* Declare Book2 of type Book */
 
@@ -127,7 +128,7 @@ func printBookPtr(book *Books) {
 // --------------------------------------Embedded Struct
 
 func example4() {
-	fmt.Printf(">>>Example4: \n")
+	
 	p1 := person{"Raj", "Kumar"}
 	p1.details()
 	e1 := employee{person: person{"John", "Ponting"}, empId: 11}
@@ -154,17 +155,17 @@ func (e employee) details() {
 // --------------------------------------
 
 func example5() {
-	fmt.Printf(">>>Example5: \n")
+	
 }
 
 // --------------------------------------
 
 func example6() {
-	fmt.Printf(">>>Example6: \n")
+	
 }
 
 // --------------------------------------
 
 func example7() {
-	fmt.Printf(">>>Example7: \n")
+	
 }

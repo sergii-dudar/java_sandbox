@@ -7,25 +7,26 @@ import (
 )
 
 func main() {
+	fmt.Println(">>>>>--------------EXAMPLE1--------------<<<<<")
 	example1()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE2--------------<<<<<")
 	example2()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE3--------------<<<<<")
 	example3()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE4--------------<<<<<")
 	example4()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE5--------------<<<<<")
 	example5()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE6--------------<<<<<")
 	example6()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE7--------------<<<<<")
 	example7()
 }
 
 // --------------------------------------
 
 func example1() {
-	fmt.Printf(">>>Example1: \n")
+	
 	p := fmt.Println
 
 	present := time.Now() // current time
@@ -62,7 +63,7 @@ func example1() {
 // --------------------------------------
 
 func example2() {
-	fmt.Printf(">>>Example2: \n")
+	
 	present := time.Now()
 	fmt.Println("Today : ", present.Format("Mon, Jan 2, 2006 at 3:04pm"))
 	someTime := time.Date(2017, time.March, 30, 11, 30, 55, 123456, time.Local)
@@ -80,7 +81,7 @@ func example2() {
 // --------------------------------------Epoch
 
 func example3() {
-	fmt.Printf(">>>Example3: \n")
+	
 	p := fmt.Println
 	current_time := time.Now()
 	secs := current_time.Unix()
@@ -99,7 +100,7 @@ func example3() {
 // --------------------------------------Tickers
 // https://www.javatpoint.com/go-tickers
 func example4() {
-	fmt.Printf(">>>Example4: \n")
+	
 	tickerValue := time.NewTicker(time.Millisecond * 100)
 	go func() {
 		for t := range tickerValue.C {
@@ -114,7 +115,7 @@ func example4() {
 // --------------------------------------
 
 func example5() {
-	fmt.Printf(">>>Example5: \n")
+	
 	// go doPolling()
 	select {} // The select statement lets a goroutine wait on multiple communication operations.
 }
@@ -132,11 +133,11 @@ func doPolling() {
 // --------------------------------------
 
 func example6() {
-	fmt.Printf(">>>Example6: \n")
+	
 }
 
 // --------------------------------------
 
 func example7() {
-	fmt.Printf(">>>Example7: \n")
+	
 }

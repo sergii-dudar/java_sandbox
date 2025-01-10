@@ -9,18 +9,19 @@ import (
 )
 
 func main() {
+	fmt.Println(">>>>>--------------EXAMPLE1--------------<<<<<")
 	example1()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE2--------------<<<<<")
 	example2()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE3--------------<<<<<")
 	example3()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE4--------------<<<<<")
 	example4()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE5--------------<<<<<")
 	example5()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE6--------------<<<<<")
 	example6()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE7--------------<<<<<")
 	example7()
 }
 
@@ -59,7 +60,7 @@ var (
 )
 
 func example2() {
-	fmt.Printf(">>>Example2: \n")
+	
 	wait.Add(2)
 	go increment("foo: ")
 	go increment("bar: ")
@@ -83,7 +84,7 @@ func increment(s string) {
 var mutex sync.Mutex
 
 func example3() {
-	fmt.Printf(">>>Example3: \n")
+	
 	count = 0
 	wait.Add(2)
 	go incrementSync("foo: ")
@@ -109,7 +110,7 @@ func incrementSync(s string) {
 // --------------------------------------Atomic Variable
 
 func example4() {
-	fmt.Printf(">>>Example4: \n")
+	
 	count = 0
 	wait.Add(2)
 	go incrementAtomic("foo: ")
@@ -130,7 +131,7 @@ func incrementAtomic(s string) {
 // --------------------------------------Go Channel
 
 func example5() {
-	fmt.Printf(">>>Example5: \n")
+	
 	done := make(chan bool, 1)
 	go worker(done)
 	fmt.Println("waiting of worker...")
@@ -147,7 +148,7 @@ func worker(done chan bool) {
 // --------------------------------------Worker Pools
 
 func example6() {
-	fmt.Printf(">>>Example6: \n")
+	
 	job := make(chan int, 10)
 	result := make(chan int, 10)
 	for w := 1; w <= 2; w++ {
@@ -173,5 +174,5 @@ func workerPool(id int, jobs <-chan int, results chan<- int) {
 // --------------------------------------
 
 func example7() {
-	fmt.Printf(">>>Example7: \n")
+	
 }

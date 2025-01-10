@@ -6,25 +6,26 @@ import (
 )
 
 func main() {
+	fmt.Println(">>>>>--------------EXAMPLE1--------------<<<<<")
 	example1()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE2--------------<<<<<")
 	example2()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE3--------------<<<<<")
 	example3()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE4--------------<<<<<")
 	example4()
-	fmt.Print("\n\n")
+	fmt.Println(">>>>>--------------EXAMPLE5-----------<<<<<")
 	example5()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE6--------------<<<<<")
 	example6()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE7--------------<<<<<")
 	example7()
 }
 
 // --------------------------------------Syntax of a Method
 
 func example1() {
-	fmt.Printf(">>>Example1: \n")
+	
 	circle := Circle{x: 0, y: 0, radius: 5}
 	fmt.Printf("Circle area: %f", circle.area())
 }
@@ -42,7 +43,7 @@ func (circle Circle) area() float64 {
 // --------------------------------------Struct Type Receiver
 
 func example2() {
-	fmt.Printf(">>>Example2: \n")
+	
 	rectObj := Rectangle{width: 2.4, height: 4.5}
 	fmt.Println("Area of Rectangle:", rectObj.Area())
 }
@@ -62,7 +63,7 @@ func (rect Rectangle) Area() float64 {
 func example3() {
 	// You can also create a method with non-struct type receivers of such type
 	// whose definition is present in the same package.
-	fmt.Printf(">>>Example3: \n")
+	
 	x := value(3)
 	y := x.cube()
 
@@ -80,7 +81,7 @@ func (v value) cube() value {
 // --------------------------------------Methods with Pointer Receiver
 
 func example4() {
-	fmt.Printf(">>>Example4: \n")
+	
 	// You can create a method that can have pointer receivers. This approach
 	// reflects the changes done in the method in the caller.
 
@@ -106,7 +107,7 @@ func (s *student) updateGrade(newGrade string) {
 // --------------------------------------Recursion in Go
 
 func example5() {
-	fmt.Printf(">>>Example5: \n")
+	
 	var i int = 15
 	fmt.Printf("Factorial of %d is %d", i, factorial(i))
 }
@@ -121,7 +122,7 @@ func factorial(i int) int {
 // --------------------------------------Fibonacci Series Using Recursion
 
 func example6() {
-	fmt.Printf(">>>Example6: \n")
+	
 	var i int
 	for i = 0; i < 10; i++ {
 		fmt.Printf("%d ", fibonaci(i))
@@ -149,7 +150,7 @@ func fibonaci(i int) (ret int) {
 // during the execution of the enclosing function.
 
 func example7() {
-	fmt.Printf(">>>Example7: \n")
+	
 
 	defer print1("Hi...")
 	print2("there")

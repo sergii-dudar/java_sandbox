@@ -3,25 +3,26 @@ package main
 import "fmt"
 
 func main() {
+	fmt.Println(">>>>>--------------EXAMPLE1--------------<<<<<")
 	example1()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE2--------------<<<<<")
 	example2()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE3--------------<<<<<")
 	example3()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE4--------------<<<<<")
 	example4()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE5--------------<<<<<")
 	example5()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE6--------------<<<<<")
 	example6()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE7--------------<<<<<")
 	example7()
 }
 
 // --------------------------------------
 
 func example1() {
-	fmt.Printf(">>>Example1: \n")
+	
 	var a int = 10
 	fmt.Printf("Address of a variable: %x\n", &a)
 }
@@ -29,7 +30,7 @@ func example1() {
 // --------------------------------------
 
 func example2() {
-	fmt.Printf(">>>Example2: \n")
+	
 	var a int = 20 /* actual variable declaration */
 	var ip *int    /* pointer variable declaration */
 
@@ -48,7 +49,7 @@ func example2() {
 const MAX int = 3
 
 func example3() {
-	fmt.Printf(">>>Example3: \n")
+	
 	// a := []int{10, 100, 200}
 	// var i int
 	//
@@ -71,7 +72,7 @@ func example3() {
 // --------------------------------------Pointer to pointer
 
 func example4() {
-	fmt.Printf(">>>Example4: \n")
+	
 	var a int
 	var ptr *int
 	var pptr **int
@@ -93,7 +94,7 @@ func example4() {
 // --------------------------------------Passing pointers to functions
 
 func example5() {
-	fmt.Printf(">>>Example5: \n")
+	
 	/* local variable definition */
 	var a int = 100
 	var b int = 200
@@ -121,11 +122,11 @@ func swap(x *int, y *int) {
 // --------------------------------------
 
 func example6() {
-	fmt.Printf(">>>Example6: \n")
+	
 }
 
 // --------------------------------------
 
 func example7() {
-	fmt.Printf(">>>Example7: \n")
+	
 }

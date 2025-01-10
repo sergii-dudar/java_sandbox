@@ -6,25 +6,26 @@ import (
 )
 
 func main() {
+	fmt.Println(">>>>>--------------EXAMPLE1--------------<<<<<")
 	example1()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE2--------------<<<<<")
 	example2()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE3--------------<<<<<")
 	example3()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE4--------------<<<<<")
 	example4()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE5--------------<<<<<")
 	example5()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE6--------------<<<<<")
 	example6()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE7--------------<<<<<")
 	example7()
 }
 
 // --------------------------------------
 
 func example1() {
-	fmt.Printf(">>>Example1: \n")
+	
 	str := "I love my country"
 	fmt.Println(len(str))
 	fmt.Println("Ascii value of A is ", "A"[0])
@@ -54,7 +55,7 @@ func example1() {
 // --------------------------------------
 
 func example2() {
-	fmt.Printf(">>>Example2: \n")
+	
 	str := "I,love,my,country"
 	var arr []string = strings.Split(str, ",")
 	fmt.Println(len(arr))
@@ -66,7 +67,7 @@ func example2() {
 // --------------------------------------
 
 func example3() {
-	fmt.Printf(">>>Example3: \n")
+	
 	fmt.Printf("%q\n", strings.Split("x,y,z", ","))
 	fmt.Printf("%q\n", strings.Split(" John and Jack and Johnny and Jinn ", "and"))
 	fmt.Printf("%q\n", strings.Split(" abc ", ""))
@@ -76,7 +77,7 @@ func example3() {
 // --------------------------------------
 
 func example4() {
-	fmt.Printf(">>>Example4: \n")
+	
 	fmt.Println(strings.ContainsAny("Hello", "A"))
 	fmt.Println(strings.ContainsAny("Hello", "o & e"))
 	fmt.Println(strings.ContainsAny("Hello", ""))
@@ -86,17 +87,17 @@ func example4() {
 // --------------------------------------
 
 func example5() {
-	fmt.Printf(">>>Example5: \n")
+	
 }
 
 // --------------------------------------
 
 func example6() {
-	fmt.Printf(">>>Example6: \n")
+	
 }
 
 // --------------------------------------
 
 func example7() {
-	fmt.Printf(">>>Example7: \n")
+	
 }

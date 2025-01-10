@@ -6,18 +6,19 @@ import (
 )
 
 func main() {
+	fmt.Println(">>>>>--------------EXAMPLE1--------------<<<<<")
 	example1()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE2--------------<<<<<")
 	example2()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE3--------------<<<<<")
 	example3()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE4--------------<<<<<")
 	example4()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE5--------------<<<<<")
 	example5()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE6--------------<<<<<")
 	example6()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE7--------------<<<<<")
 	example7()
 }
 
@@ -54,7 +55,7 @@ func getArea(shape Shape) float64 {
 }
 
 func example1() {
-	fmt.Printf(">>>Example1: \n")
+	
 	circle := Circle{x: 0, y: 0, radius: 5}
 	rectangle := Rectangle{width: 10, height: 5}
 
@@ -65,7 +66,7 @@ func example1() {
 // --------------------------------------
 
 func example2() {
-	fmt.Printf(">>>Example2: \n")
+	
 	c1 := car{"suzuki", "blue"}
 	t1 := toyota{"Toyota", "Red", 100}
 	c1.accelerate()
@@ -104,29 +105,29 @@ func (t toyota) accelerate() {
 // --------------------------------------
 
 func example3() {
-	fmt.Printf(">>>Example3: \n")
+	
 }
 
 // --------------------------------------
 
 func example4() {
-	fmt.Printf(">>>Example4: \n")
+	
 }
 
 // --------------------------------------
 
 func example5() {
-	fmt.Printf(">>>Example5: \n")
+	
 }
 
 // --------------------------------------
 
 func example6() {
-	fmt.Printf(">>>Example6: \n")
+	
 }
 
 // --------------------------------------
 
 func example7() {
-	fmt.Printf(">>>Example7: \n")
+	
 }

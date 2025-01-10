@@ -8,25 +8,26 @@ import (
 )
 
 func main() {
+	fmt.Println(">>>>>--------------EXAMPLE1--------------<<<<<")
 	example1()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE2--------------<<<<<")
 	example2()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE3--------------<<<<<")
 	example3()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE4--------------<<<<<")
 	example4()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE5--------------<<<<<")
 	example5()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE6--------------<<<<<")
 	example6()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE7--------------<<<<<")
 	example7()
 }
 
 // --------------------------------------
 
 func example1() {
-	fmt.Printf(">>>Example1: \n")
+	
 	result, err := Sqrt(-1)
 
 	if err != nil {
@@ -54,7 +55,7 @@ func Sqrt(value float64) (float64, error) {
 // --------------------------------------recover()
 
 func example2() {
-	fmt.Printf(">>>Example2: \n")
+	
 	fmt.Println(SaveDivide(10, 0))
 	fmt.Println(SaveDivide(10, 10))
 }
@@ -87,7 +88,7 @@ func SaveDivide(num1, num2 int) int {
 // This termination sequences is called panicking and can be controlled by the built-in function recover.
 
 func example3() {
-	fmt.Printf(">>>Example3: \n")
+	
 	// panic("Error Situation")
 	_, err := os.Open("/tmp/file")
 	if err != nil {
@@ -98,7 +99,7 @@ func example3() {
 // --------------------------------------
 
 func example4() {
-	fmt.Printf(">>>Example4: \n")
+	
 	fmt.Println("Calling x from main.")
 	x()
 	fmt.Println("Returned from x.")
@@ -130,17 +131,17 @@ func y(i int) {
 // --------------------------------------
 
 func example5() {
-	fmt.Printf(">>>Example5: \n")
+	
 }
 
 // --------------------------------------
 
 func example6() {
-	fmt.Printf(">>>Example6: \n")
+	
 }
 
 // --------------------------------------
 
 func example7() {
-	fmt.Printf(">>>Example7: \n")
+	
 }

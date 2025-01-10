@@ -3,25 +3,26 @@ package main
 import "fmt"
 
 func main() {
+	fmt.Println(">>>>>--------------EXAMPLE1--------------<<<<<")
 	example1()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE2--------------<<<<<")
 	example2()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE3--------------<<<<<")
 	example3()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE4--------------<<<<<")
 	example4()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE5--------------<<<<<")
 	example5()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE6--------------<<<<<")
 	example6()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE7--------------<<<<<")
 	example7()
 }
 
 // --------------------------------------Simple Closure
 
 func example1() {
-	fmt.Printf(">>>Example6: \n")
+	
 	updateCounter := func() func() int {
 		// define a local variable inside the function
 		count := 100
@@ -43,7 +44,7 @@ func example1() {
 // --------------------------------------Passing Values into Closures
 
 func example2() {
-	fmt.Printf(">>>Example2: \n")
+	
 	// Define an outer function that accepts a value
 	updateCounter := func(initial int) func() int {
 		count := initial // Initialize count with the passed value
@@ -71,29 +72,29 @@ func example2() {
 // --------------------------------------
 
 func example3() {
-	fmt.Printf(">>>Example3: \n")
+	
 }
 
 // --------------------------------------
 
 func example4() {
-	fmt.Printf(">>>Example4: \n")
+	
 }
 
 // --------------------------------------
 
 func example5() {
-	fmt.Printf(">>>Example5: \n")
+	
 }
 
 // --------------------------------------
 
 func example6() {
-	fmt.Printf(">>>Example6: \n")
+	
 }
 
 // --------------------------------------
 
 func example7() {
-	fmt.Printf(">>>Example7: \n")
+	
 }

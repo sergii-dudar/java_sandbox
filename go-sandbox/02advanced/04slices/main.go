@@ -3,31 +3,32 @@ package main
 import "fmt"
 
 func main() {
+	fmt.Println(">>>>>--------------EXAMPLE1--------------<<<<<")
 	example1()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE2--------------<<<<<")
 	example2()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE3--------------<<<<<")
 	example3()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE4--------------<<<<<")
 	example4()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE5--------------<<<<<")
 	example5()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE6--------------<<<<<")
 	example6()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE7--------------<<<<<")
 	example7()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE8--------------<<<<<")
 	example8()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE9--------------<<<<<")
 	example9()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE10--------------<<<<<")
 	example10()
 }
 
 // --------------------------------------Defining a slice
 
 func example1() {
-	fmt.Printf(">>>Example1: \n")
+	
 	numbers := make([]int, 3, 5)
 	printSlice(numbers)
 
@@ -47,7 +48,7 @@ func printSlice(x []int) {
 // --------------------------------------Subslicing
 
 func example2() {
-	fmt.Printf(">>>Example2: \n")
+	
 	/* create a slice */
 	numbers := []int{0, 1, 2, 3, 4, 5, 6, 7, 8}
 	printSlice(numbers)
@@ -79,7 +80,7 @@ func example2() {
 // --------------------------------------append() and copy()
 
 func example3() {
-	fmt.Printf(">>>Example3: \n")
+	
 	var numbers []int
 	printSlice(numbers)
 
@@ -106,7 +107,7 @@ func example3() {
 // --------------------------------------for Range
 
 func example4() {
-	fmt.Printf(">>>Example4: \n")
+	
 	/* create a slice */
 	numbers := []int{0, 1, 2, 3, 4, 5, 6, 7, 8}
 
@@ -134,7 +135,7 @@ func example4() {
 // --------------------------------------
 
 func example5() {
-	fmt.Printf(">>>Example5: \n")
+	
 	odd := [6]int{2, 4, 6, 8, 10, 12}
 	var s []int = odd[1:4]
 	fmt.Println(s)
@@ -143,7 +144,7 @@ func example5() {
 // --------------------------------------
 
 func example6() {
-	fmt.Printf(">>>Example6: \n")
+	
 	names := [4]string{
 		"John",
 		"Jim",
@@ -162,7 +163,7 @@ func example6() {
 // --------------------------------------
 
 func example7() {
-	fmt.Printf(">>>Example7: \n")
+	
 	s := []struct {
 		i int
 		b bool

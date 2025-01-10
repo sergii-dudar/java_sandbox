@@ -6,27 +6,28 @@ import (
 )
 
 func main() {
+	fmt.Println(">>>>>--------------EXAMPLE1--------------<<<<<")
 	example1()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE2--------------<<<<<")
 	example2()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE3--------------<<<<<")
 	example3()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE4--------------<<<<<")
 	example4()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE5--------------<<<<<")
 	example5()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE6--------------<<<<<")
 	example6()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE7--------------<<<<<")
 	example7()
-	fmt.Print("\n\n")
+	fmt.Println("\n>>>>>--------------EXAMPLE8--------------<<<<<")
 	example8()
 }
 
 // --------------------------------------Call by Value
 
 func example1() {
-	fmt.Printf(">>>Example1: \n")
+	
 	var a int = 100
 	var b int = 200
 
@@ -53,7 +54,7 @@ func swap(x, y int) int {
 // --------------------------------------
 
 func example2() {
-	fmt.Printf(">>>Example2: \n")
+	
 	student := Student{name: "Reese Witherspoon", age: 23, grade: "A"}
 	fmt.Println("Student data before function call:\n", student)
 
@@ -80,7 +81,7 @@ func changeStudentData(s Student) {
 // --------------------------------------Call by reference
 
 func example3() {
-	fmt.Printf(">>>Example3: \n")
+	
 	/* local variable definition */
 	var a int = 100
 	var b int = 200
@@ -108,7 +109,7 @@ func swapRef(x *int, y *int) {
 // --------------------------------------
 
 func example4() {
-	fmt.Printf(">>>Example4: \n")
+	
 	student := Student{name: "Reese Witherspoon", age: 23, grade: "A"}
 	fmt.Println("Student data before function call:\n", student)
 
@@ -129,7 +130,7 @@ func changeStudentDataRef(s *Student) {
 // --------------------------------------Functions as Values
 
 func example5() {
-	fmt.Printf(">>>Example5: \n")
+	
 
 	/* declare a function variable */
 	getSquareRoot := func(x float64) float64 {
@@ -143,7 +144,7 @@ func example5() {
 // --------------------------------------Assigning a Function to a Variable
 
 func example6() {
-	fmt.Printf(">>>Example6: \n")
+	
 	// Assign the function to a variable
 	sum := addTwoNumbers
 
@@ -160,7 +161,7 @@ func addTwoNumbers(a int, b int) int {
 // --------------------------------------Passing a Function as an Argument
 
 func example7() {
-	fmt.Printf(">>>Example7: \n")
+	
 	result := calculation(2, 5, multiplyNumbers)
 	fmt.Println("Result:", result)
 }
@@ -177,7 +178,7 @@ func multiplyNumbers(x int, y int) int {
 // --------------------------------------Returning a Function as a Value
 
 func example8() {
-	fmt.Printf(">>>Example8: \n")
+	
 	multiplyByTwo := calculationRet(2)
 	result := multiplyByTwo(20)
 	fmt.Println("Result:", result)
