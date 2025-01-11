@@ -28,3 +28,6 @@ local.gradle.properties
 
 # Dev settings
 application-dev.yml
+
+**/haskell-sandbox/**/.stack-work
+**/rust-sandbox/**/Cargo.lock

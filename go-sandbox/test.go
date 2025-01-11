@@ -7,5 +7,5 @@ func main() {
 	var x float64
 	fmt.Println(x)
 	x = 20.0
-	fmt.Println("Hello, World!")
+	fmt.Println("Hello, World! ")
 }
