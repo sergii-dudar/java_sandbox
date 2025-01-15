@@ -1,32 +1,32 @@
 example1 = do
-    putStrLn ""
+    putStrLn "--->>> :"
 
 example2 = do
-    putStrLn ""
+    putStrLn "--->>> :"
 
 example3 = do
-    putStrLn ""
+    putStrLn "--->>> :"
 
 example4 = do
-    putStrLn ""
+    putStrLn "--->>> :"
 
 example5 = do
-    putStrLn ""
+    putStrLn "--->>> :"
 
 example6 = do
-    putStrLn ""
+    putStrLn "--->>> :"
 
 example7 = do
-    putStrLn ""
+    putStrLn "--->>> :"
 
 example8 = do
-    putStrLn ""
+    putStrLn "--->>> :"
 
 example9 = do
-    putStrLn ""
+    putStrLn "--->>> :"
 
 example10 = do
-    putStrLn ""
+    putStrLn "--->>> :"
 
 main = do
     putStrLn ">>>>>--------------EXAMPLE1--------------<<<<<"
