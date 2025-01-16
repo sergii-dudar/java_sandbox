@@ -1,5 +1,6 @@
 example1 = do
-    putStrLn "--->>> :"
+    putStrLn "--->>> Monads: "
+    print ([1 .. 10] >>= (\x -> if odd x then [x * 2] else []))
 
 example2 = do
     putStrLn "--->>> :"
