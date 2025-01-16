@@ -1,23 +1,23 @@
-fn example1() {}
-fn example2() {}
-fn example3() {}
-fn example4() {}
-fn example5() {}
-fn example6() {}
-fn example7() {}
-fn example8() {}
-fn example9() {}
-fn example10() {}
-fn example11() {}
-fn example12() {}
-fn example13() {}
-fn example14() {}
-fn example15() {}
-fn example16() {}
-fn example17() {}
-fn example18() {}
-fn example19() {}
-fn example20() {}
+fn example1() { println!("--->>> : "); }
+fn example2() { println!("--->>> : "); }
+fn example3() { println!("--->>> : "); }
+fn example4() { println!("--->>> : "); }
+fn example5() { println!("--->>> : "); }
+fn example6() { println!("--->>> : "); }
+fn example7() { println!("--->>> : "); }
+fn example8() { println!("--->>> : "); }
+fn example9() { println!("--->>> : "); }
+fn example10() { println!("--->>> : "); }
+fn example11() { println!("--->>> : "); }
+fn example12() { println!("--->>> : "); }
+fn example13() { println!("--->>> : "); }
+fn example14() { println!("--->>> : "); }
+fn example15() { println!("--->>> : "); }
+fn example16() { println!("--->>> : "); }
+fn example17() { println!("--->>> : "); }
+fn example18() { println!("--->>> : "); }
+fn example19() { println!("--->>> : "); }
+fn example20() { println!("--->>> : "); }
 
 fn main() {
     println!(">>>>>--------------EXAMPLE1--------------<<<<<");
