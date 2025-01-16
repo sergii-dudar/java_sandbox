@@ -39,18 +39,69 @@ fn example2() {
     println!("{:?}", result);
     println!("{:?}", is_even(30));
 }
-// =======================================================>>>
+// =======================================================>>>Match with Option
+
+enum CarType {
+    Hatch,
+    Sedan,
+    SUV,
+}
+fn print_size(car: CarType) {
+    match car {
+        CarType::Hatch => {
+            println!("Small sized car");
+        }
+        CarType::Sedan => {
+            println!("medium sized car");
+        }
+        CarType::SUV => {
+            println!("Large sized Sports Utility car");
+        }
+    }
+}
 fn example3() {
-    println!("--->>> : ");
+    println!("--->>> Match Statement and Enum: ");
+    print_size(CarType::SUV);
+    print_size(CarType::Hatch);
+    print_size(CarType::Sedan);
 }
 
-// =======================================================>>>
+// =======================================================>>>Match with Option
+
 fn example4() {
-    println!("--->>> : ");
+    println!("--->>> Match with Option: ");
+    match is_even(5) {
+        Some(data) => {
+            if data == true {
+                println!("Even no");
+            }
+        }
+        None => {
+            println!("not even");
+        }
+    }
 }
-// =======================================================>>>
+// =======================================================>>>Match & Enum with Data Type
+#[derive(Debug)]
+enum GenderCategory1 {
+    Name(String),
+    Usr_ID(i32),
+}
 fn example5() {
-    println!("--->>> : ");
+    println!("--->>> Match & Enum with Data Type: ");
+    let p1 = GenderCategory1::Name(String::from("Mohtashim"));
+    let p2 = GenderCategory1::Usr_ID(100);
+    println!("{:?}", p1);
+    println!("{:?}", p2);
+
+    match p1 {
+        GenderCategory1::Name(val) => {
+            println!("{}", val);
+        }
+        GenderCategory1::Usr_ID(val) => {
+            println!("{}", val);
+        }
+    }
 }
 // =======================================================>>>
 fn example6() {
