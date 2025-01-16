@@ -1,36 +1,73 @@
-pub mod movies {
-    pub fn play(name: String) {
-        println!("Playing movie {}", name);
-    }
-}
-use movies::play;
+use std::fmt::Display;
 
 fn example1() {
-    movies::play("Herold and Kumar".to_string());
-    play("Herold and Kumar ".to_string());
+    println!("--->>> Generic Collection: ");
+    let mut vector_integer: Vec<i32> = vec![20, 30];
+    vector_integer.push(40);
+    // vector_integer.push("hello"); missmatched type
+    println!("{:?}", vector_integer);
 } // =======================================================>>>
 
-pub mod movies1 {
-    pub mod english {
-        pub mod comedy {
-            pub fn play1(name: String) {
-                println!("Playing comedy movie {}", name);
-            }
-        }
+struct Data<T> {
+    value: T,
+}
+fn example2() {
+    println!("--->>> Generic Structure: ");
+
+    //generic type of i32
+    let t: Data<i32> = Data { value: 350 };
+    println!("value is :{} ", t.value);
+
+    //generic type of String
+    let t2: Data<String> = Data {
+        value: "Tom".to_string(),
+    };
+    println!("value is :{} ", t2.value);
+} // =======================================================>>>
+
+//declare a structure
+struct Book {
+    name: &'static str,
+    id: u32,
+}
+//declare a trait
+trait Printable {
+    fn print(&self);
+}
+//implement the trait
+impl Printable for Book {
+    fn print(&self) {
+        println!(
+            "Printing book with id: {}, and name: {}",
+            self.id, self.name
+        )
     }
 }
-use movies1::english::comedy::play1;
-fn example2() {
-    movies1::english::comedy::play1("Airplane!".to_string());
-    play1("Airplane!".to_string());
-} // =======================================================>>>
+
 fn example3() {
-    println!("--->>> Rand from https://crates.io/: ");
+    println!("--->>> Traits: ");
+    //create an instance of the structure
+    let b1 = Book {
+        id: 1001,
+        name: "Rust in Action",
+    };
+    b1.print();
 } // =======================================================>>>
 fn example4() {
-    println!("--->>> : ");
+    println!("--->>> Generic Functions: ");
 } // =======================================================>>>
+
+fn print_pro<T: Display>(t: T) {
+    // The parameter’s type should implement the Display trait so that its value can
+    // be printed by the println! macro.
+    println!("Inside print_pro generic function:");
+    println!("{}", t);
+}
+
 fn example5() {
+    print_pro(10 as u8);
+    print_pro(20 as u16);
+    print_pro("Hello TutorialsPoint");
     println!("--->>> : ");
 } // =======================================================>>>
 fn example6() {

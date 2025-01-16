@@ -1,31 +1,61 @@
-pub mod movies {
-    pub fn play(name: String) {
-        println!("Playing movie {}", name);
-    }
-}
-use movies::play;
+use std::{
+    fs::{self, OpenOptions},
+    io::{Read, Write},
+};
 
 fn example1() {
-    movies::play("Herold and Kumar".to_string());
-    play("Herold and Kumar ".to_string());
+    println!("--->>> Write to a File: ");
+    let mut file = std::fs::File::create("data.txt").expect("create failed");
+    file.write_all("Hello World".as_bytes())
+        .expect("write failed");
+    file.write_all("\nTutorialsPoint".as_bytes())
+        .expect("write failed");
+    println!("data written to file");
+
+    println!("\n--->>> Append to a File: ");
+    let mut file = OpenOptions::new()
+        .append(true)
+        .open("data.txt")
+        .expect("cannot open file");
+    file.write_all("\nHello World Appended".as_bytes())
+        .expect("write failed");
+    file.write_all("\nTutorialsPoint Appended".as_bytes())
+        .expect("write failed");
+    println!("file append success");
+
+    println!("\n--->>> Read from a File: ");
+    let mut file = std::fs::File::open("data.txt").unwrap();
+    let mut contents = String::new();
+    file.read_to_string(&mut contents).unwrap();
+    println!("{}", contents);
+
+    println!("\n--->>> Delete a file: ");
+    fs::remove_file("data.txt").expect("could not remove file");
+    println!("file is removed");
 } // =======================================================>>>
 
-pub mod movies1 {
-    pub mod english {
-        pub mod comedy {
-            pub fn play1(name: String) {
-                println!("Playing comedy movie {}", name);
-            }
-        }
-    }
-}
-use movies1::english::comedy::play1;
 fn example2() {
-    movies1::english::comedy::play1("Airplane!".to_string());
-    play1("Airplane!".to_string());
+    /* println!("--->>> Copy a file: ");
+    let mut command_line: std::env::Args = std::env::args();
+    command_line.next().unwrap();
+    // skip the executable file name
+    // accept the source file
+    let source = command_line.next().unwrap();
+    // accept the destination file
+    let destination = command_line.next().unwrap();
+    let mut file_in = std::fs::File::open(source).unwrap();
+    let mut file_out = std::fs::File::create(destination).unwrap();
+    let mut buffer = [0u8; 4096];
+    loop {
+        let nbytes = file_in.read(&mut buffer).unwrap();
+        file_out.write(&buffer[..nbytes]).unwrap();
+        if nbytes < buffer.len() {
+            break;
+        }
+    } */
 } // =======================================================>>>
 fn example3() {
-    println!("--->>> Rand from https://crates.io/: ");
+    println!("--->>> : ");
 } // =======================================================>>>
 fn example4() {
     println!("--->>> : ");

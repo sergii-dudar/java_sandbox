@@ -1,37 +1,60 @@
-pub mod movies {
-    pub fn play(name: String) {
-        println!("Playing movie {}", name);
-    }
-}
-use movies::play;
+use std::fs::File;
 
 fn example1() {
-    movies::play("Herold and Kumar".to_string());
-    play("Herold and Kumar ".to_string());
+    println!("--->>> panic - unrecoverable: ");
+    let no = 12;
+    //try with odd and even
+    if no % 2 == 0 {
+        println!("Thank you , number is even");
+    } else {
+        panic!("NOT_AN_EVEN");
+    }
+    println!("End of main");
 } // =======================================================>>>
-
-pub mod movies1 {
-    pub mod english {
-        pub mod comedy {
-            pub fn play1(name: String) {
-                println!("Playing comedy movie {}", name);
-            }
+fn example2() {
+    println!("--->>> Result Enum and Recoverable Errors: ");
+    let f = File::open("main.jpg"); //this file does not exist
+    match f {
+        Ok(f) => {
+            println!("file found {:?}", f);
+        }
+        Err(e) => {
+            println!("file not found \n{:?}", e); //handled error
         }
     }
-}
-use movies1::english::comedy::play1;
-fn example2() {
-    movies1::english::comedy::play1("Airplane!".to_string());
-    play1("Airplane!".to_string());
+    println!("end of main");
 } // =======================================================>>>
+fn is_even(no: i32) -> Result<bool, String> {
+    if no % 2 == 0 {
+        return Ok(true);
+    } else {
+        return Err("NOT_AN_EVEN".to_string());
+    }
+}
 fn example3() {
-    println!("--->>> Rand from https://crates.io/: ");
+    println!("--->>> : ");
+    let result = is_even(13);
+    match result {
+        Ok(d) => {
+            println!("no is even {}", d);
+        }
+        Err(msg) => {
+            println!("Error msg is {}", msg);
+        }
+    }
+    println!("end of main");
 } // =======================================================>>>
 fn example4() {
-    println!("--->>> : ");
+    println!("--->>> unwrap(): ");
+    let result = is_even(10).unwrap();
+    println!("result is {}", result);
+    println!("end of main");
 } // =======================================================>>>
 fn example5() {
-    println!("--->>> : ");
+    println!("--->>> expect(): ");
+    // let f = File::open("pqr.txt").expect("File not able to open");
+    //file does not exist
+    println!("end of main");
 } // =======================================================>>>
 fn example6() {
     println!("--->>> : ");

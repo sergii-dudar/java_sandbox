@@ -1,96 +1,77 @@
-fn get_pi() -> f64 {
-    22.0 / 7.0
-}
-fn mutate_no_to_zero(mut param_no: i32) {
-    param_no = param_no * 2;
-    println!("param_no value is :{}", param_no);
-}
-fn mutate_no_to_zero_ref(param_no: &mut i32) {
-    *param_no = 0; //de reference
-}
+use std::io::Write;
+
 fn example1() {
-    println!("--->>> basics: ");
-    println!("pi value is {}", get_pi());
-
-    // pass by value
-    let no: i32 = 5;
-    mutate_no_to_zero(no);
-    println!("The value of no is:{}", no);
-
-    // Pass by Reference
-    let mut no1: i32 = 5;
-    mutate_no_to_zero_ref(&mut no1);
-    println!("The value of no is:{}", no1);
-}
-
-fn display(param_name: String) {
-    println!("param_name value is :{}", param_name);
-}
+    println!("--->>> Read Trait: ");
+    /* let mut line = String::new();
+    println!("Enter your name :");
+    let b1 = std::io::stdin().read_line(&mut line).unwrap();
+    println!("Hello , {}", line);
+    println!("no of bytes read , {}", b1); */
+} // =======================================================>>>
 fn example2() {
-    println!("--->>> Passing string to a function: ");
-    let name: String = String::from("TutorialsPoint");
-    display(name);
-    // println!("param_name value is :{}", name);
-}
+    println!("--->>> Write Trait, Writing to the Console: ");
+    let b1 = std::io::stdout().write("Tutorials ".as_bytes()).unwrap();
+    let b2 = std::io::stdout()
+        .write(String::from("Point").as_bytes())
+        .unwrap();
+    std::io::stdout()
+        .write_all(format!("\nbytes written {}", (b1 + b2)).as_bytes())
+        .unwrap();
+} // =======================================================>>>
 fn example3() {
-    println!("--->>> Closure & Lambda functions: ");
-
-    let val = 2;
-    let is_even = |x| x % val == 0;
-    let no = 13;
-    println!("{} is even ? {}", no, is_even(no));
-}
+    println!("--->>> : ");
+} // =======================================================>>>
 fn example4() {
     println!("--->>> : ");
-}
+} // =======================================================>>>
 fn example5() {
     println!("--->>> : ");
-}
+} // =======================================================>>>
 fn example6() {
     println!("--->>> : ");
-}
+} // =======================================================>>>
 fn example7() {
     println!("--->>> : ");
-}
+} // =======================================================>>>
 fn example8() {
     println!("--->>> : ");
-}
+} // =======================================================>>>
 fn example9() {
     println!("--->>> : ");
-}
+} // =======================================================>>>
 fn example10() {
     println!("--->>> : ");
-}
+} // =======================================================>>>
 fn example11() {
     println!("--->>> : ");
-}
+} // =======================================================>>>
 fn example12() {
     println!("--->>> : ");
-}
+} // =======================================================>>>
 fn example13() {
     println!("--->>> : ");
-}
+} // =======================================================>>>
 fn example14() {
     println!("--->>> : ");
-}
+} // =======================================================>>>
 fn example15() {
     println!("--->>> : ");
-}
+} // =======================================================>>>
 fn example16() {
     println!("--->>> : ");
-}
+} // =======================================================>>>
 fn example17() {
     println!("--->>> : ");
-}
+} // =======================================================>>>
 fn example18() {
     println!("--->>> : ");
-}
+} // =======================================================>>>
 fn example19() {
     println!("--->>> : ");
-}
+} // =======================================================>>>
 fn example20() {
     println!("--->>> : ");
-}
+} // =======================================================>>>
 
 fn main() {
     println!(">>>>>--------------EXAMPLE1--------------<<<<<");
