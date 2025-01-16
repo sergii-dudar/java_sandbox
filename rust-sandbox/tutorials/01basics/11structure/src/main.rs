@@ -17,7 +17,7 @@ fn example1() {
         emp1.name, emp1.company, emp1.age
     );
 }
-//-------------------------------------------
+// =======================================================>>>
 fn example2() {
     println!("--->>> Modifying a struct instance: ");
     let mut emp1 = Employee {
@@ -31,7 +31,7 @@ fn example2() {
         emp1.name, emp1.company, emp1.age
     );
 }
-// -----------------------------------------
+// =======================================================>>>
 fn display_struct(emp: Employee) {
     println!(
         "Name is: {} company is: {} age is: {}",
@@ -60,7 +60,7 @@ fn example3() {
     edit_struct(&mut emp2);
     display_struct(emp2);
 }
-//-------------------------------------------
+// =======================================================>>>
 fn who_is_elder(emp1: Employee, emp2: Employee) -> Employee {
     if emp1.age > emp2.age {
         return emp1;
@@ -76,6 +76,7 @@ fn display(emp: Employee) {
         emp.name, emp.company, emp.age
     );
 }
+// =======================================================>>>
 fn example4() {
     println!("--->>> Returning struct from a function: ");
     let emp1 = Employee {
@@ -94,8 +95,8 @@ fn example4() {
     //prints details of the elder employee
     display(elder);
 }
-//-------------------------------------------
 
+// =======================================================>>>
 //define dimensions of a rectangle
 struct Rectangle {
     width: u32,
@@ -114,6 +115,7 @@ impl NewTrait for Rectangle {
     }
 }
 
+// =======================================================>>>
 fn example5() {
     println!("--->>> : Method in Structure");
     let small = Rectangle {
@@ -128,7 +130,7 @@ fn example5() {
         small.area()
     );
 }
-//-------------------------------------------
+// =======================================================>>>
 
 //declare a structure
 struct Point {
@@ -150,17 +152,19 @@ fn example6() {
     let p1 = Point::getInstance(10, 20);
     p1.display();
 }
-//-------------------------------------------
+// =======================================================>>>
 fn example7() {
     println!("--->>> : ");
 }
-//-------------------------------------------
+// =======================================================>>>
 fn example8() {
     println!("--->>> : ");
 }
+// =======================================================>>>
 fn example9() {
     println!("--->>> : ");
 }
+// =======================================================>>>
 fn example10() {
     println!("--->>> : ");
 }

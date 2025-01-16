@@ -9,7 +9,7 @@ fn example1() {
     print_vector(&v); // passing reference
     println!("Printing the value from main() v[0]={}", v[0]);
 }
-// -------------------
+// =======================================================>>>
 fn add_one(e: &mut i32) {
     *e += 1;
 }
@@ -19,7 +19,7 @@ fn example2() {
     add_one(&mut i);
     println!("{}", i);
 }
-// -------------------
+// =======================================================>>>
 fn display(param_name: &mut String) {
     println!("param_name value is :{}", param_name);
     param_name.push_str(" Rocks");
