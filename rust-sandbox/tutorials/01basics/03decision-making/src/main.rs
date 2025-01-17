@@ -18,6 +18,10 @@ fn example1() {
     } else {
         println!("{} is neither positive nor negative", num);
     }
+
+    // "if in a let" statement
+    let a = if true { 1 } else { 2 };
+    println!("value of a is: {}", a);
 }
 fn example2() {
     println!("--->>> Match Statement: ");

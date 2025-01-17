@@ -18,6 +18,13 @@ fn example1() {
         print!("{}, ", i);
     }
 
+    print!("\nvector get: ");
+    let a: Option<&i32> = v.get(3);
+    match a {
+        Some(n) => println!("Fourth element of a vector is {}", n),
+        None => println!("None"),
+    }
+
     v.remove(1);
     println!("\nafter remove first: {:?}", v);
 

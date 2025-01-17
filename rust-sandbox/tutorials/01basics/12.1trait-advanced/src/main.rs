@@ -1,97 +1,119 @@
-use std::fmt::Display;
+trait Perimeter {
+    fn a(&self) -> f64;
+}
+struct Square {
+    side: f64,
+}
+impl Perimeter for Square {
+    fn a(&self) -> f64 {
+        4.0 * self.side
+    }
+}
+struct Rectangle {
+    length: f64,
+    breadth: f64,
+}
+impl Perimeter for Rectangle {
+    fn a(&self) -> f64 {
+        2.0 * (self.length + self.breadth)
+    }
+}
+fn print_perimeter<T1, T2>(s: T1, r: T2)
+where
+    T1: Perimeter,
+    T2: Perimeter,
+{
+    let r1 = s.a();
+    let r2 = r.a();
+    println!("Perimeter of a square is {}", r1);
+    println!("Perimeter of a rectangle is {}", r2);
+}
 
 fn example1() {
-    println!("--->>> Generic Collection: ");
-    let mut vector_integer: Vec<i32> = vec![20, 30];
-    vector_integer.push(40);
-    // vector_integer.push("hello"); missmatched type
-    println!("{:?}", vector_integer);
-} // =======================================================>>>
+    println!("--->>> Multiple trait bounds: ");
 
-struct Data<T> {
-    value: T,
+    let sq = Square { side: 6.2 };
+    let rect = Rectangle {
+        length: 3.2,
+        breadth: 5.6,
+    };
+    print_perimeter(sq, rect);
+}
+// =======================================================>>>
+// =======================================================>>>
+// =======================================================>>>
+
+trait Sample {
+    fn a(&self);
+    fn b(&self) {
+        println!("Print b");
+    }
+}
+
+struct Example {
+    a: i32,
+    b: i32,
+}
+
+impl Sample for Example {
+    fn a(&self) {
+        println!("Value of a is {}", self.a);
+    }
+
+    fn b(&self) {
+        println!("Value of b is {}", self.b);
+    }
 }
 fn example2() {
-    println!("--->>> Generic Structure: ");
-
-    //generic type of i32
-    let t: Data<i32> = Data { value: 350 };
-    println!("value is :{} ", t.value);
-
-    //generic type of String
-    let t2: Data<String> = Data {
-        value: "Tom".to_string(),
-    };
-    println!("value is :{} ", t2.value);
-} // =======================================================>>>
-
-//declare a structure
-struct Book {
-    name: &'static str,
-    id: u32,
+    println!("--->>> Default methods: ");
+    let r = Example { a: 5, b: 7 };
+    r.a();
+    r.b();
 }
-//declare a trait
-trait Printable {
-    fn print(&self);
+// =======================================================>>>
+// =======================================================>>>
+// =======================================================>>>
+
+trait A {
+    fn f(&self);
 }
-//implement the trait
-impl Printable for Book {
-    fn print(&self) {
-        println!(
-            "Printing book with id: {}, and name: {}",
-            self.id, self.name
-        )
+trait B: A {
+    fn t(&self);
+}
+struct ExampleIn {
+    first: String,
+    second: String,
+}
+impl A for ExampleIn {
+    fn f(&self) {
+        print!("{} ", self.first);
+    }
+}
+impl B for ExampleIn {
+    fn t(&self) {
+        print!("{}", self.second);
     }
 }
 
 fn example3() {
-    println!("--->>> Traits: ");
-    //create an instance of the structure
-    let b1 = Book {
-        id: 1001,
-        name: "Rust in Action",
-    };
-    b1.print();
-} // =======================================================>>>
+    println!("--->>> Inheritance: ");
 
-fn print_pro<T: Display>(t: T) {
-    // The parameter’s type should implement the Display trait so that its value can
-    // be printed by the println! macro.
-    println!("Inside print_pro generic function:");
-    println!("{}", t);
-}
+    let s = ExampleIn {
+        first: String::from("javaTpoint"),
+        second: String::from("tutorial"),
+    };
+    s.f();
+    s.t();
+} // =======================================================>>>
 
 fn example4() {
-    println!("--->>> Generic Functions: ");
-    print_pro(10 as u8);
-    print_pro(20 as u16);
-    print_pro("Hello TutorialsPoint");
+    println!("--->>> : ");
 } // =======================================================>>>
-
-struct Program<T> {
-    a: T,
-    b: T,
-}
-impl<T> Program<T> {
-    fn a(&self) -> &T {
-        &self.a
-    }
-}
-
 fn example5() {
-    println!("--->>> Method Definitions: ");
-    let p = Program { a: 5, b: 10 };
-    println!("p.a() is {}", p.a());
+    println!("--->>> : ");
 } // =======================================================>>>
-
 fn example6() {
-    println!("--->>> Generics Enum: ");
-
-    let x: Option<i32> = Some(10); // 'T' is of type i32.
-    let x: Option<bool> = Some(true); // 'T' is of type bool.
-    let x: Option<f64> = Some(10.5); // 'T' is of type f64.
-    let x: Option<char> = Some('b'); // 'T' is of type char.
-                                     // let x: Option<i32> = Some(10.8); // missmatched
+    println!("--->>> : ");
 } // =======================================================>>>
 fn example7() {
     println!("--->>> : ");
