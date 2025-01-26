@@ -25,14 +25,14 @@ int main() {
     return 0;
 }
 
-// inline int square(int x) { return x * x; } not working with gcc compiler
+inline int square(int x) { return x * x; }
 void example1() {
-    // int n = 5;
-    //
-    // // The compiler will replace square(n) with (n * n)
-    // int res = square(n);
-    //
-    // printf("%d", res);
+    int n = 5;
+
+    // The compiler will replace square(n) with (n * n)
+    int res = square(n);
+
+    printf("%d", res);
 }
 
 void example2() {}
