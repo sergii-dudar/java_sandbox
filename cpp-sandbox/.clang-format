@@ -4,7 +4,7 @@ UseTab: Never
 TabWidth: 2
 SpaceAfterCStyleCast: true
 IndentCaseLabels: true
-ColumnLimit: 80
+ColumnLimit: 150
 AllowAllParametersOfDeclarationOnNextLine: false
 BreakBeforeBraces: Attach
 AlignArrayOfStructures: None
@@ -16,3 +16,5 @@ AlignTrailingComments: false
 BinPackArguments: false
 BinPackParameters: false
 BreakStringLiterals: false
+SpacesInParentheses: true
+SpacesInAngles: Always
