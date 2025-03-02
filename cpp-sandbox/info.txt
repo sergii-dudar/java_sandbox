@@ -1,0 +1,2 @@
+last:
+https://www.learncpp.com/cpp-tutorial/introduction-to-literals-and-operators/
