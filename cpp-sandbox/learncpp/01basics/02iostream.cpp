@@ -16,29 +16,50 @@ void example1() {
     std::cout << "x1 is equal to: " << x1 << "\n";
 
     std::cout << std::endl;
-    std::cout << "Hi!" << std::endl; // std::endl will cause the cursor to move to the next line
+    std::cout << "Hi!" << std::endl; // std::endl will cause the cursor to move
+                                     // to the next line
     std::cout << "My name is Alex." << std::endl;
 
     std::cout << std::endl;
     int x2{ 5 };
-    std::cout << "x2 is equal to: " << x2 << '\n'; // single quoted (by itself) (conventional)
-    std::cout << "Yep." << "\n"; // double quoted (by itself) (unconventional but okay)
-    std::cout << "And that's all, folks!\n"; // between double quotes in existing text (conventional)
+    std::cout << "x2 is equal to: " << x2
+              << '\n'; // single quoted (by itself) (conventional)
+    std::cout << "Yep."
+              << "\n"; // double quoted (by itself) (unconventional but okay)
+    std::cout << "And that's all, folks!\n"; // between double quotes in
+                                             // existing text (conventional)
 }
 void example2() {
     // std::cout << "Enter a number: "; // ask user for a number
-    // int x{}; // define variable x to hold user input (and value-initialize it)
-    // std::cin >> x; // get number from keyboard and store it in variable x
+    // int x{}; // define variable x to hold user input (and value-initialize
+    // it) std::cin >> x; // get number from keyboard and store it in variable x
     // std::cout << "You entered " << x << '\n';
 
     std::cout << "Enter two numbers separated by a space: ";
 
     int x{}; // define variable x to hold user input (and value-initialize it)
     int y{}; // define variable y to hold user input (and value-initialize it)
-    std::cin >> x >> y; // get two numbers and store in variable x and y respectively
+    std::cin >> x >>
+        y; // get two numbers and store in variable x and y respectively
     std::cout << "You entered " << x << " and " << y << '\n';
 }
-void example3() {}
+
+int getValueFromUser() {
+    std::cout << "Enter an integer: ";
+    int input{};
+    std::cin >> input;
+
+    return input;
+}
+
+void printDouble( int value ) {
+    std::cout << value << " doubled is: " << value * 2 << '\n';
+}
+void example3() {
+    int num{ getValueFromUser() };
+
+    printDouble( num );
+}
 void example4() {}
 void example5() {}
 void example6() {}

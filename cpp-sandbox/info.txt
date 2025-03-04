@@ -1,2 +1,2 @@
 last:
-https://www.learncpp.com/cpp-tutorial/introduction-to-literals-and-operators/
+https://www.learncpp.com/cpp-tutorial/forward-declarations/
