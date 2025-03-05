@@ -2,7 +2,12 @@
 #include <ostream>
 using namespace std;
 
-void example1() {}
+int add( int x, int y );
+void example1() {
+    std::cout << "The sum of 3 and 4 is: " << add( 3, 4 ) << '\n';
+}
+int add( int x, int y ) { return x + y; }
+
 void example2() {}
 void example3() {}
 void example4() {}

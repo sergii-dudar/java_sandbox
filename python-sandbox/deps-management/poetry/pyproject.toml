@@ -1,0 +1,28 @@
+[project]
+name = "my-project"
+version = "0.1.0"
+description = "My project description"
+authors = [
+    {name = "Your Name",email = "your.email@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pyautogui (>=0.9.54,<0.10.0)"
+]
+
+[tool.poetry]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+# brew install poetry
+# poetry init --name my_project --description "My project description" --author "Your Name <your.email@example.com>" --dependency pyautogui --dev-dependency pytest
+# install: poetry add pyautogui (poetry add --dev pytest)
+# To install all dependencies specified in your pyproject.toml: poetry install
+#
+# run: poetry run python mouse_cursor.py
