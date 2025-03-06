@@ -9,6 +9,7 @@ example1 = do
     -- Sequence / Range Operator
     print [1 .. 10]
 
+---------------------------------------------------------
 example2 = do
     putStrLn "Decision Making: "
     let var = 22
@@ -38,6 +39,9 @@ example2 = do
             if even var
                 then putStrLn "Number is Even"
                 else putStrLn "Number is Odd"
+
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
 
 -- In Haskell, every statement is considered as a mathematical expression and the category of this expression is called as a Type. You can say that "Type" is the data type of the expression used at compile time.
 
@@ -112,6 +116,9 @@ example3 = do
     print (2 :: Int)
     print (2 :: Float)
 
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+
 data Area = Circle Float Float Float
 surface :: Area -> Float
 surface (Circle _ _ r) = pi * r ^ 2
@@ -137,19 +144,10 @@ example5 = do
     putStrLn ("Please look at my favorite odd numbers: " ++ show (filter odd [10 .. 20]))
     putStrLn ("Please look at my favorite even numbers: " ++ show (filter even [10 .. 20]))
 
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+
 example6 = do
-    putStrLn "--->>> :"
-
-example7 = do
-    putStrLn "--->>> :"
-
-example8 = do
-    putStrLn "--->>> :"
-
-example9 = do
-    putStrLn "--->>> :"
-
-example10 = do
     putStrLn "--->>> :"
 
 main = do
@@ -165,11 +163,3 @@ main = do
     example5
     putStrLn "\n>>>>>--------------EXAMPLE6--------------<<<<<"
     example6
-    putStrLn "\n>>>>>--------------EXAMPLE7--------------<<<<<"
-    example7
-    putStrLn "\n>>>>>--------------EXAMPLE8--------------<<<<<"
-    example8
-    putStrLn "\n>>>>>--------------EXAMPLE9--------------<<<<<"
-    example9
-    putStrLn "\n>>>>>--------------EXAMPLE10--------------<<<<<"
-    example10

@@ -23,12 +23,18 @@ example1 = do
     print (sort [8, 5, 3, 2, 1, 6, 4, 2])
     putStrLn ""
 
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+
 example2 = do
     putStrLn "--->>> Char Module:"
     putStrLn ("Different methods of Char Module")
     print (toUpper 'a')
     print (words "Let us study tonight")
     print (toLower 'A')
+
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
 
 myMap :: Integer -> Map Integer [Integer]
 myMap n = Map.fromList (map makePair [1 .. n])
@@ -37,6 +43,9 @@ myMap n = Map.fromList (map makePair [1 .. n])
 example3 = do
     putStrLn "--->>> Map Module:"
     print (myMap 3)
+
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
 
 example4 = do
     putStrLn "--->>> Set Module:"
@@ -49,24 +58,18 @@ example4 = do
     print set1
     print set2
 
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+
 example5 = do
     putStrLn "--->>> Custom Module:"
     print (showEven 4)
     print (showBoolean True)
 
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+
 example6 = do
-    putStrLn "--->>> :"
-
-example7 = do
-    putStrLn "--->>> :"
-
-example8 = do
-    putStrLn "--->>> :"
-
-example9 = do
-    putStrLn "--->>> :"
-
-example10 = do
     putStrLn "--->>> :"
 
 main = do
@@ -82,11 +85,3 @@ main = do
     example5
     putStrLn "\n>>>>>--------------EXAMPLE6--------------<<<<<"
     example6
-    putStrLn "\n>>>>>--------------EXAMPLE7--------------<<<<<"
-    example7
-    putStrLn "\n>>>>>--------------EXAMPLE8--------------<<<<<"
-    example8
-    putStrLn "\n>>>>>--------------EXAMPLE9--------------<<<<<"
-    example9
-    putStrLn "\n>>>>>--------------EXAMPLE10--------------<<<<<"
-    example10

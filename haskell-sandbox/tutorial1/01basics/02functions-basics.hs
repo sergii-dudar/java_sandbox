@@ -13,6 +13,9 @@ factMatching :: Int -> Int
 factMatching 0 = 1
 factMatching n = n * factMatching (n - 1)
 
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+
 example2 = do
     putStrLn "--->>> Pattern Matching:"
     -- Pattern Matching can be considered as a variant of dynamic polymorphism where
@@ -25,7 +28,9 @@ example2 = do
 
 -- putStrLn ""
 
--------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+
 factGuard :: Integer -> Integer
 factGuard n
     | n == 0 = 1
@@ -48,7 +53,8 @@ example3 = do
     -- in the case of pattern matching
     putStrLn ""
 
--------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
 
 -- Where is a keyword or inbuilt function that can be used at runtime to generate
 -- a desired output. It can be very helpful when function calculation becomes complex.
@@ -79,7 +85,9 @@ example4 = do
     print (roots (1, -8, 6))
     putStrLn ""
 
--------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+
 map :: (a -> b) -> [a] -> [b]
 map _ [] = []
 map func (x : abc) = func x : map func abc
@@ -90,7 +98,9 @@ example5 = do
 
     putStrLn ""
 
--------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+
 example6 = do
     putStrLn "--->>> Lambda Expression:"
     -- A lambda function is denoted by "\" character.
@@ -99,18 +109,6 @@ example6 = do
     putStrLn ""
 
 example7 = do
-    putStrLn "--->>> :"
-    putStrLn ""
-
-example8 = do
-    putStrLn "--->>> :"
-    putStrLn ""
-
-example9 = do
-    putStrLn "--->>> :"
-    putStrLn ""
-
-example10 = do
     putStrLn "--->>> :"
     putStrLn ""
 
@@ -129,9 +127,3 @@ main = do
     example6
     putStrLn "\n>>>>>--------------EXAMPLE7--------------<<<<<"
     example7
-    putStrLn "\n>>>>>--------------EXAMPLE8--------------<<<<<"
-    example8
-    putStrLn "\n>>>>>--------------EXAMPLE9--------------<<<<<"
-    example9
-    putStrLn "\n>>>>>--------------EXAMPLE10--------------<<<<<"
-    example10
