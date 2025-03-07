@@ -1,5 +1,19 @@
+import Data.Char
+import Data.Text.IO hiding (
+    appendFile,
+    putStrLn,
+    readFile,
+    writeFile,
+ )
+
+toUpperCase :: String -> String
+toUpperCase = map toUpper
+
+addPrefix :: String -> String
+addPrefix str = "--->>> :" ++ str
+
 example1 = do
-    putStrLn "--->>> :"
+    putStrLn . addPrefix . toUpperCase $ "haskell.org"
 
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
