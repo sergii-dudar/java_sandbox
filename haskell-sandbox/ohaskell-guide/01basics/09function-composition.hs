@@ -1,10 +1,34 @@
+checkLocalhost :: String -> String
+checkLocalhost ip =
+    if ip == "127.0.0.1" || ip == "0.0.0.0"
+        then "It's a localhost!"
+        else "No, it's not a localhost."
+
 example1 = do
-    putStrLn "--->>> :"
+    -- unconvinient way
+    putStrLn (checkLocalhost "173.194.22.100")
+
+    -- composite way
+    putStrLn . checkLocalhost $ "173.194.22.100" -- putStrLn <- checkLocalhost <- "173.194.22.100"
+
+    -- \$ - operato of applying variable to function in pipe vay, whout it, we need apply it by calling way:
+    (putStrLn . checkLocalhost) "173.194.22.100" -- ( putStrLn <- checkLocalhost ) <- "173.194.22.100"
 
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
+-- how composition does work:
+-- (.) f g = \x -> f (g x)
+-- (.) putStrLn checkLocalhost = \x -> putStrLn (checkLocalhost x)
+
+-- our custom composit function
+(<+>) f g = \x -> f (g x)
+(<->) f = \x -> f x
+
+-- or: (<+>) f g = f . g
+-- or: f <+> g = f . g
 
 example2 = do
+    putStrLn <+> checkLocalhost <-> "173.194.22.100"
     putStrLn "--->>> :"
 
 ----------------------------------------------------------------------------
