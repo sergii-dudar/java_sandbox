@@ -1,3 +1,6 @@
+prefix :: String -> String
+prefix str = "--->>> :" ++ str
+
 example1 = do
     putStrLn "--->>> :"
 

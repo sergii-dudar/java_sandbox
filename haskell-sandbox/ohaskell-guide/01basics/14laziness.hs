@@ -1,5 +1,3 @@
-import System.Posix (exitImmediately)
-
 prefix :: String -> String
 prefix str = "--->>> :" ++ str
 
@@ -82,7 +80,7 @@ bad (_ : others) c = bad others $! c + 1 -- 50000000
 
 -- $  - use lazy calculation, that will save not calculated expressions
 
--- $! - don't use lazy, calculate imediatelly, that in result wiht such deep recursion save memory space, as not saving expr, calculate exitImmediately
+-- $! - don't use lazy, calculate imediatelly, that in result wiht such deep recursion save memory space, as not saving expr, calculate
 example5 = do
     print $ bad [1 .. 50000000] 0
 
@@ -90,30 +88,6 @@ example5 = do
 ----------------------------------------------------------------------------
 
 example6 = do
-    putStrLn "--->>> :"
-
-----------------------------------------------------------------------------
-----------------------------------------------------------------------------
-
-example7 = do
-    putStrLn "--->>> :"
-
-----------------------------------------------------------------------------
-----------------------------------------------------------------------------
-
-example8 = do
-    putStrLn "--->>> :"
-
-----------------------------------------------------------------------------
-----------------------------------------------------------------------------
-
-example9 = do
-    putStrLn "--->>> :"
-
-----------------------------------------------------------------------------
-----------------------------------------------------------------------------
-
-example10 = do
     putStrLn "--->>> :"
 
 main = do
@@ -129,11 +103,3 @@ main = do
     example5
     putStrLn "\n>>>>>--------------EXAMPLE6--------------<<<<<"
     example6
-    putStrLn "\n>>>>>--------------EXAMPLE7--------------<<<<<"
-    example7
-    putStrLn "\n>>>>>--------------EXAMPLE8--------------<<<<<"
-    example8
-    putStrLn "\n>>>>>--------------EXAMPLE9--------------<<<<<"
-    example9
-    putStrLn "\n>>>>>--------------EXAMPLE10--------------<<<<<"
-    example10
