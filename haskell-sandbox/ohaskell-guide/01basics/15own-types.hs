@@ -1,8 +1,15 @@
 prefix :: String -> String
 prefix str = "--->>> :" ++ str
 
+-- like classic enum:
+data Transport = TCP | UDP | SCTP deriving (Show)
+
 example1 = do
-    putStrLn "--->>> :"
+    let protocol1 = TCP
+    let protocol2 = UDP
+    putStrLn . prefix $ show protocol1
+
+-- putStrLn . prefix . show protocol2
 
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
