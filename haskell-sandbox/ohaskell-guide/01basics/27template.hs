@@ -1,58 +1,14 @@
 prefix :: String -> String
 prefix str = "--->>> :" ++ str
 
--- like classic enum:
-data Transport = TCP | UDP | SCTP deriving (Show, Eq)
-
-checkProtocol :: Transport -> String
-checkProtocol transport = case transport of
-    TCP -> "That's TCP protocol."
-    UDP -> "That's UDP protocol."
-    SCTP -> "That's SCTP protocol."
-
 example1 = do
-    let protocol1 = TCP
-    let protocol2 = UDP
-    putStrLn . prefix $ show protocol1
-    putStrLn . prefix $ (if protocol2 == TCP then "just UDP" else "else " ++ show protocol2)
-
-    -- enum swith case
-    putStrLn . prefix . checkProtocol $ TCP
+    putStrLn "--->>> :"
 
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
-
-data WorkMode = FiveDays | SixDays deriving (Show)
-data Day
-    = Sunday
-    | Monday
-    | Tuesday
-    | Wednesday
-    | Thursday
-    | Friday
-    | Saturday
-    deriving (Show)
-
-workingDays :: WorkMode -> [Day]
-workingDays FiveDays =
-    [ Monday
-    , Tuesday
-    , Wednesday
-    , Thursday
-    , Friday
-    ]
-workingDays SixDays =
-    [ Monday
-    , Tuesday
-    , Wednesday
-    , Thursday
-    , Friday
-    , Saturday
-    ]
 
 example2 = do
-    putStrLn . prefix $ show FiveDays ++ " : " ++ show (workingDays FiveDays)
-    putStrLn . prefix $ show SixDays ++ " : " ++ show (workingDays SixDays)
+    putStrLn "--->>> :"
 
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
