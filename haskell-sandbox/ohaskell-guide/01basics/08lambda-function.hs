@@ -32,7 +32,8 @@ example1 = do
     putStrLn ("--->>> :" ++ show ((\x y -> x * y) 10 4))
 
     -- with where
-    putStrLn ("--->>> :" ++ show (mul 10 4))
+    putStrLn ("--->>> :" ++ show (mul 10 4) ++ " | " ++ show (mul 2 8))
+    putStrLn ("--->>> :" ++ show (mul 10 4 + mul 2 8))
   where
     mul = \x y -> x * y
 

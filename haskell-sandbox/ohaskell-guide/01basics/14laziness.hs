@@ -88,7 +88,8 @@ example5 = do
 ----------------------------------------------------------------------------
 
 example6 = do
-    putStrLn "--->>> :"
+    putStrLn . take 2 $ replicate 100 'a'
+    putStrLn . take 5 $ repeat 'a'
 
 main = do
     putStrLn ">>>>>--------------EXAMPLE1--------------<<<<<"

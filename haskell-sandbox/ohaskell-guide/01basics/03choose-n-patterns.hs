@@ -103,8 +103,23 @@ example5 = do
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
 
+indicate1 :: String -> String
+indicate1 address =
+    if address == "127.0.0.1" then "localhost" else address
+
+indicate2 :: String -> String
+indicate2 "127.0.0.1" = "localhost"
+indicate2 address = address
+
+indicate3 :: String -> String
+indicate3 address
+    | address == "127.0.0.1" = "localhost"
+    | null address = "empty IP-address"
+    | otherwise = address
+
 example6 = do
-    putStrLn "--->>> :"
+    putStrLn . indicate2 $ "127.0.0.1"
+    putStrLn . indicate3 $ "127.0.0.1"
 
 main = do
     putStrLn ">>>>>--------------EXAMPLE1--------------<<<<<"
