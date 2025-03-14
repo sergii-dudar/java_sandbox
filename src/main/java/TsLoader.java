@@ -2,9 +2,9 @@ import java.io.*;
 import java.net.URI;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.List;
 import java.util.Map;
-
-import static java.lang.String.format;
+import java.util.Map.Entry;
 
 public class TsLoader {
 
@@ -15,24 +15,22 @@ public class TsLoader {
 
         final String title = "invincible";
         outDir = String.format("/home/serhii/serhii.home/videos/%s.s03/", title);
-        final Map<String, String> nameToUrlTmplMap = Map.ofEntries(
-                Map.entry(title + ".s02e08",
-                        "https://zetvideo.net/content/stream/serials/invincible._s02e08._i_thought_you_were_stronger_11650/hls/1080/segment%s.ts"),
-                Map.entry(title + ".s03e01",
-                        "https://zetvideo.net/content/stream/serials/invincible.2021.s03e01.1080p.webdlrip.x264.aac.uaflix_11629/hls/1080/segment%s.ts"),
-                Map.entry(title + ".s03e02",
+        final List<Entry<String, String>> nameToUrlTmplList = List.of(
+                entry("https://zetvideo.net/content/stream/serials/invincible._s02e08._i_thought_you_were_stronger_11650/hls/1080/segment%s.ts"),
+                entry("https://zetvideo.net/content/stream/serials/invincible.2021.s03e01.1080p.webdlrip.x264.aac.uaflix_11629/hls/1080/segment%s.ts"),
+                entry(title + ".s03e02",
                         "https://zetvideo.net/content/stream/serials/invincible.2021.s03e02.1080p.webdlrip.x264.aac.uaflix_11632/hls/1080/segment%s.ts"),
-                Map.entry(title + ".s03e03",
+                entry(title + ".s03e03",
                         "https://zetvideo.net/content/stream/serials/invincible.2021.s03e03.1080p.webdlrip.x264.aac.uaflix_11633/hls/1080/segment%s.ts"),
-                Map.entry(title + ".s03e04",
+                entry(title + ".s03e04",
                         "https://zetvideo.net/content/stream/serials/invincible.2021.s03e04.1080p.webdlrip.x264.aac.uaflix_11922/hls/1080/segment%s.ts"),
-                Map.entry(title + ".s03e05",
+                entry(title + ".s03e05",
                         "https://zetvideo.net/content/stream/serials/invincible/s03/invincible.2021.s03e05.1080p.webdlrip.x264.aac.uaflix_12169/hls/1080/segment%s.ts"),
-                Map.entry(title + ".s03e06",
+                entry(title + ".s03e06",
                         "https://zetvideo.net/content/stream/serials/invincible.2021.s03e06.1080p.webdlrip.x264.aac.uaflix_12362/hls/1080/segment%s.ts"),
-                Map.entry(title + ".s03e07",
+                entry(title + ".s03e07",
                         "https://zetvideo.net/content/stream/serials/invincible.2021.s03e07.1080p.webdlrip.x264.aac.uaflix_12513/hls/1080/segment%s.ts"),
-                Map.entry(title + ".s03e08",
+                entry(title + ".s03e08",
                         "https://zetvideo.net/content/stream/serials/invincible.2021.s03e08.1080p.webdlrip.x264.aac.uaflix_12722/hls/1080/segment%s.ts"));
 
         int startNumber = 1;
@@ -42,14 +40,20 @@ public class TsLoader {
         }
 
         final String outDirRes = outDir;
-        nameToUrlTmplMap.forEach((name, urlTmpl) -> {
-            // String[] parts = urlTmpl.split("/");
-            // final String outFileName = parts[parts.length - 4];
+        nameToUrlTmplList.forEach(entry -> {
+            String name = entry.getKey();
+            final String urlTmpl = entry.getValue();
+
+            if (name == null || name.trim().length() == 0) {
+                final String[] parts = urlTmpl.split("/");
+                name = parts[parts.length - 4];
+            }
+
             final String outFile = outDirRes + name + ".ser.mp4";
-            System.out.println(outFile);
+            System.out.println(ofPurple(outFile) + ofYellow(" started"));
             try (OutputStream outputStream = new BufferedOutputStream(new FileOutputStream(outFile, true))) {
                 for (int i = startNumber;; i++) {
-                    String url = format(urlTmpl, i);
+                    String url = String.format(urlTmpl, i);
                     // String utl = urlTmpl + i + ".ts";
                     try {
                         System.out.println(ofGreen("Trying to load `") +
@@ -59,7 +63,7 @@ public class TsLoader {
                             byte[] bytes = in.readAllBytes();
                             outputStream.write(bytes);
                         } catch (FileNotFoundException ex) {
-                            System.out.println("finished");
+                            System.out.println(ofYellow("finished"));
                             break;
                         }
                     } catch (Throwable ex) {
@@ -73,6 +77,14 @@ public class TsLoader {
         System.out.println();
     }
 
+    private static Entry<String, String> entry(String name, String url) {
+        return Map.entry(name, url);
+    }
+
+    private static Entry<String, String> entry(String url) {
+        return entry("", url);
+    }
+
     private static String ofGreen(String str) {
         return ofColor(str, GREEN_BOLD_BRIGHT);
     }
@@ -83,6 +95,14 @@ public class TsLoader {
 
     private static String ofBlue(String str) {
         return ofColor(str, BLUE_BOLD_BRIGHT);
+    }
+
+    private static String ofYellow(String str) {
+        return ofColor(str, YELLOW_BOLD_BRIGHT);
+    }
+
+    private static String ofPurple(String str) {
+        return ofColor(str, PURPLE_BOLD_BRIGHT);
     }
 
     private static String ofColor(String str, String color) {
