@@ -5,6 +5,7 @@
 *.iws
 *.ipr
 *.tgz
+*.class
 **/.DS_Store
 **/__pycache__
 
