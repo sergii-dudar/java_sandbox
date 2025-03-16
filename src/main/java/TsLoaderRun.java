@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-public class TsLoader {
+public class TsLoaderRun {
 
     public static void main(String[] args) throws IOException {
 
