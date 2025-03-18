@@ -14,7 +14,9 @@ out/
 bin/
 .vscode/
 build/
-target/
+**/target/
+**/bin/
+**/obj/
 **/main/resources/logback-extend.xml
 **/test/resources/application.properties
 **/venv

@@ -1,16 +1,13 @@
 #!/bin/bash
 
-home="$HOME"
-dir="/Users/serhii/serhii.home/work/git.work/ua-payments-payment-preprocessing/payment-preprocessing/src/main/java/ua/raiffeisen/payments/paymentpreprocessing"
+class_name="org.concurrency.data.SyncCounterRunner"
 
-while [ "$dir" != "$home" ]; do
-    found_file=$(fd --no-ignore -d 1 -t f -H ".classpath.cache" "$dir")
-    if [[ -n $found_file ]]; then
-        break
-    fi
-    dir=$(dirname "$dir")
-done
+# Step 1: Convert to package path (remove class name)
+package_name="$(dirname "${class_name//./\/}")"
 
-file="$dir/.classpath.cache"
-cat "$file"
+# Step 2: Count depth and generate "../.." dynamically
+depth=$(tr -cd '/' <<< "$package_name" | wc -c)  # Count slashes
+parent_path=$(printf "../%.0s" $(seq 1 $((depth+1))))  # Generate `..` for each level
 
+echo "$package_name/"  # org/concurrency/
+echo "$parent_path"    # ../..
