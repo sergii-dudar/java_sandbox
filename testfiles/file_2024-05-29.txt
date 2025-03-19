@@ -1,4 +1,0 @@
-src
-testfiles
-venv
-Darwin LenaDudars-MBP.lan 21.6.0 Darwin Kernel Version 21.6.0: Wed Apr 24 06:02:02 PDT 2024; root:xnu-8020.240.18.708.4~1/RELEASE_X86_64 x86_64
