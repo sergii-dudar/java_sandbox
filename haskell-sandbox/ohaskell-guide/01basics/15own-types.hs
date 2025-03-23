@@ -7,6 +7,8 @@ prefix str = "--->>> :" ++ str
 -- like classic enum:
 data Transport = TCP | UDP | SCTP deriving (Show, Eq)
 
+-- TCP, UDP ... it's no args constructors of transport type
+
 checkProtocol :: Transport -> String
 checkProtocol transport = case transport of
     TCP -> "That's TCP protocol."
@@ -14,8 +16,8 @@ checkProtocol transport = case transport of
     SCTP -> "That's SCTP protocol."
 
 example1 = do
-    let protocol1 = TCP
-    let protocol2 = UDP
+    let protocol1 :: Transport = TCP
+    let protocol2 :: Transport = UDP
     putStrLn . prefix $ show protocol1
     putStrLn . prefix $ (if protocol2 == TCP then "just UDP" else "else " ++ show protocol2)
 

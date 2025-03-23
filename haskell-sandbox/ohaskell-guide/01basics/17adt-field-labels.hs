@@ -13,6 +13,7 @@ type Port = Int
 type Endpoint = String
 type RedirectData = String
 
+-- stadnard data type declaration
 data ArgumentsCtor
     = ArgumentsCtor
         Port
@@ -23,7 +24,7 @@ data ArgumentsCtor
         Bool
         FilePath
 
--- or by labels:
+-- or by labels (more convenient to work with):
 data ArgumentsLabels = ArgumentsLabels
     { runWDServer :: Port
     , withWDServer :: Endpoint
@@ -197,4 +198,3 @@ data Patient2 = Patient2
       , hasInsurance2 ::
         Bool
     }
-

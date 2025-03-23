@@ -70,6 +70,9 @@ data Maybe  a        = Nothing   | Just      a
 Здесь присутствует уже знакомая нам типовая заглушка a, она-то и делает Maybe конструктором типа. Как мы помним, на место типовой заглушки всегда встаёт какой-то тип.
 -}
 
+type MString = Maybe String
+type MInteger = Maybe Integer
+
 lookupChapterNameByMaybe :: FilePath -> Chapters -> Maybe String -- new constructed type (Maybe String)
 lookupChapterNameByMaybe _ [] = Nothing -- nothing found
 lookupChapterNameByMaybe path ((realPath, name) : others)
