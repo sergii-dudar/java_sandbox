@@ -1,3 +1,7 @@
+{-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
+{-# HLINT ignore "Avoid lambda" #-}
+{-# HLINT ignore "Redundant lambda" #-}
+
 checkLocalhost :: String -> String
 checkLocalhost ip =
     if ip == "127.0.0.1" || ip == "0.0.0.0"
@@ -21,7 +25,10 @@ example1 = do
 -- (.) putStrLn checkLocalhost = \x -> putStrLn (checkLocalhost x)
 
 -- our custom composit function
+(<+>) :: (t1 -> t2) -> (t3 -> t1) -> t3 -> t2
 (<+>) f g = \x -> f (g x)
+
+(<->) :: (t1 -> t2) -> t1 -> t2
 (<->) f = \x -> f x
 
 -- or: (<+>) f g = f . g

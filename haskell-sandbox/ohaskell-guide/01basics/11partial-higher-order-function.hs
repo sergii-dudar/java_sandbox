@@ -68,8 +68,21 @@ example4 = do
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
 
+-- divide :: Double -> Double -> Double
+divide :: Double -> (Double -> Double) -- or
+divide arg1 arg2 = arg1 / arg2
+
+-- totalSum :: Double -> Double -> Double -> Double
+totalSum :: Double -> (Double -> (Double -> Double)) -- or
+totalSum arg1 arg2 arg3 = arg1 + arg2 + arg3
+
 example5 = do
-    putStrLn "--->>> :"
+    let temporaryFunction = divide 10.03
+     in putStrLn . addPrefix . show . temporaryFunction $ 2.1
+
+    let firstFunction = totalSum 1.0
+        secondFunction = firstFunction 2.0
+     in putStrLn . addPrefix . show . secondFunction $ 3.0
 
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
