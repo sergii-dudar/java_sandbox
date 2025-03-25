@@ -1,6 +1,12 @@
 -- creating synonym for type, where instead [Char] -> String can be used, ad vie versa
 -- type String = [Char] : it's already present in prelude default library
 
+{-
+data - for defining oun types
+class - for defining class of types
+instance - for defining instance of class of types
+ -}
+
 prefix :: String -> String
 prefix str = "--->>> :" ++ str
 

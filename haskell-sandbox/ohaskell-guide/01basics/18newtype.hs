@@ -8,10 +8,10 @@ prefix str = "--->>> :" ++ str
 -- newtype EndPoint = EndPoint String Int - error, ctor with only one arg
 -- newtype HardDay = Monday - nullar value (enum) also can't be used, only single arg ctor
 
-newtype IPAddress = IP String
+newtype IPAddress = IP String deriving (Show)
 
 -- or with label
-newtype IPAddress2 = IP2 {value2 :: String}
+newtype IPAddress2 = IP2 {value2 :: String} deriving (Show)
 
 example1 = do
     putStrLn "--->>> :"
