@@ -25,8 +25,8 @@ example1 = do
             makeAlias
                 "173.194.71.106"
                 "www.google.com"
-        host = fst pair -- Берём первое...
-        alias = snd pair -- Берём второе...
+        host = fst pair -- take first...
+        alias = snd pair -- take second...
      in print (host ++ ", " ++ alias)
 
 ----------------------------------------------------------------------------
@@ -67,6 +67,17 @@ example3 = do
                 , 59
                 )
         )
+
+-- haskage have convenient library: tuple
+-- http://hackage.haskell.org/package/tuple
+-- build-depends: base ==4.6.*, tuple
+-- example:
+
+{-
+    import Data.Tuple.Select
+    main = print $ sel3 ("One", "Two", "Three", "Four")
+    main = print $ sel5 ("One", "Two", "Three", "Four", "Five")
+-}
 
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
