@@ -31,8 +31,17 @@ example1 =
 
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
+-- (=<<) mirror composition (same as >>=, but in reversed order):
 
-example2 =
+example2 = do
+    print $ underlineSpaces =<< toLowerCase =<< name
+  where
+    name = "Lorem ipsuM"
+
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+
+example3 =
     print $ name >>= toLowerCase
   where
     -- name = "NAME" -- result: name
@@ -45,12 +54,6 @@ example2 =
     NOTE: FUNCTIONS DEVELOPED TO WORK WITH ONE TYPE OF MONAD, CAN BE USED (AND SHOULD BE USED) TO ANOTHER MONAD
         it's very good reusability code idea! (can be compared to java, c# generics in some moments)
 -}
-
-----------------------------------------------------------------------------
-----------------------------------------------------------------------------
-
-example3 = do
-    putStrLn "--->>> :"
 
 main = do
     putStrLn ">>>>>--------------EXAMPLE1--------------<<<<<"

@@ -10,6 +10,8 @@ class Monad m where
     return :: a -> m a
     fail :: String -> m a
 
+additionally to (>>=), in base library we have (=<<) - mirror composition
+
 ----------------------
 or with IO typed:
 
