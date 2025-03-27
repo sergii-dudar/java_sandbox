@@ -8,6 +8,7 @@ prefix str = "--->>> :" ++ str
 -}
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
+-- (>>=)    Monad m => m a -> (a -> m b) -> m b
 
 -- toLowerCase :: Char -> [Char]
 toLowerCase :: (Monad m) => Char -> m Char -- return type can be any monaid type, not only list, maybe for example, or any atnoher Monad implementation
@@ -31,7 +32,8 @@ example1 =
 
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
--- (=<<) mirror composition (same as >>=, but in reversed order):
+-- (=<<)    Monad m => (a -> m b) -> m a -> m b
+-- mirror composition (same as >>=, but in reversed order):
 
 example2 = do
     print $ underlineSpaces =<< toLowerCase =<< name

@@ -2,7 +2,7 @@ prefix :: String -> String
 prefix str = "--->>> :" ++ str
 
 ----------------------------------------------------------------------------
--- (>>) then (or commands concatenator)
+-- (>>) then (or commands concatenator)  (  Monad m => m a -> m b -> m b  )
 -- simple operator that likns operators without returns
 -- analog unix operator ; ` whoami ; pwd `
 

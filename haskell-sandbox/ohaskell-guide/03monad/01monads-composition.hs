@@ -12,6 +12,9 @@ class Monad m where
 
 additionally to (>>=), in base library we have (=<<) - mirror composition
 
+(>>=):    Monad m => m a -> (a -> m b) -> m b
+(=<<):    Monad m => (a -> m b) -> m a -> m b
+
 ----------------------
 or with IO typed:
 
@@ -24,7 +27,7 @@ class Monad IO where
 
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
--- (>>=) sequentially composition
+-- (>>=) sequentially composition (   Monad m => m a -> (a -> m b) -> m b  )
 -- this operator is alanogue of unix pipe operator - `ls | grep xml`
 
 {-
