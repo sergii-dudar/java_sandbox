@@ -11,8 +11,8 @@ instance Functor Year where
 ----------------------------------------------------------------------------
 -- usage example:
 
--- not that `increase` function nothing know about functor, and where it will be using
--- it's just know about real velua and how to do with it
+-- note that `increase` function nothing know about functor, and where it will be using
+-- it's just know about real velua and how to work with it
 increase :: Int -> Int
 increase year = year + 1
 
@@ -26,7 +26,8 @@ example1 = do
     yearInt = Year 1988
 
 example2 = do
-    putStrLn . prefix . show $ fmap increaseStr yearInt
+    -- putStrLn . prefix . show $ fmap increaseStr yearInt
+    putStrLn . prefix . show $ increaseStr `fmap` yearInt
   where
     yearInt = Year "1988"
 

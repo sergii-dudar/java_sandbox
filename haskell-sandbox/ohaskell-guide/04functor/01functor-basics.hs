@@ -4,8 +4,10 @@ prefix :: String -> String
 prefix str = "--->>> :" ++ str
 
 {-
-class Functor f where
-    fmap :: Functor f => (a -> b) -> f a -> f b
+    class Functor f where
+        fmap :: Functor f => (a -> b) -> f a -> f b
+-}
+{-
 
 Functor - it's value wrapper that applying to some function and returning another functor wrapper
 
@@ -13,7 +15,7 @@ functor type, has only one method `fmap` that doind exectly it.
 -}
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
--- simple examples:
+-- simple example:
 
 example1 = do
     putStrLn . prefix . show $ fmap toLower ['A' .. 'Z']
