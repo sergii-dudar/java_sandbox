@@ -90,16 +90,10 @@ example5 = do
 example6 = do
     putStrLn "--->>> :"
 
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+
 example7 = do
-    putStrLn "--->>> :"
-
-example8 = do
-    putStrLn "--->>> :"
-
-example9 = do
-    putStrLn "--->>> :"
-
-example10 = do
     putStrLn "--->>> :"
 
 main = do
@@ -117,9 +111,3 @@ main = do
     example6
     putStrLn "\n>>>>>--------------EXAMPLE7--------------<<<<<"
     example7
-    putStrLn "\n>>>>>--------------EXAMPLE8--------------<<<<<"
-    example8
-    putStrLn "\n>>>>>--------------EXAMPLE9--------------<<<<<"
-    example9
-    putStrLn "\n>>>>>--------------EXAMPLE10--------------<<<<<"
-    example10

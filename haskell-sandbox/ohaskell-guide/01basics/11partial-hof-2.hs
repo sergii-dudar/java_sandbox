@@ -19,9 +19,9 @@ userInfo login password avatarURL userId =
         ++ avatarURL
 
 type EmptyInfo = Login -> Password -> AvatarURL -> UserId -> String
-type WithLogin =          Password -> AvatarURL -> UserId -> String
-type AndWithPassword =                AvatarURL -> UserId -> String
-type AndWithAvatarURL =                            UserId -> String
+type WithLogin = Password -> AvatarURL -> UserId -> String
+type AndWithPassword = AvatarURL -> UserId -> String
+type AndWithAvatarURL = UserId -> String
 
 storeLoginIn :: EmptyInfo -> UserId -> WithLogin
 storeLoginIn emptyInfo userId = emptyInfo "denis" -- in reala app get by userId
@@ -30,7 +30,7 @@ storePasswordIn :: WithLogin -> UserId -> AndWithPassword
 storePasswordIn infoWithLogin userId = infoWithLogin "123456789abc" -- in reala app get by userId
 
 storeAvatarURLIn :: AndWithPassword -> UserId -> AndWithAvatarURL
-storeAvatarURLIn infoWithPassword userId = infoWithPassword "http://serhii.biz/serhii_avatar.png"  -- in reala app get by userId
+storeAvatarURLIn infoWithPassword userId = infoWithPassword "http://serhii.biz/serhii_avatar.png" -- in reala app get by userId
 
 example1 = do
     let userId = 1234
@@ -46,9 +46,10 @@ example1 = do
 type Prefix = String
 
 obtainLogin :: UserId -> (Prefix -> String)
-obtainLogin userId = 
+obtainLogin userId =
     loginStorage "serhii" -- login is get from somewhere
-    where loginStorage login prefix = prefix ++ ": " ++ login -- by the fact is's lambda, equvalent of: [ loginStorage = \login prefix -> prefix ++ ": " ++ login ]
+  where
+    loginStorage login prefix = prefix ++ ": " ++ login -- by the fact is's lambda, equvalent of: [ loginStorage = \login prefix -> prefix ++ ": " ++ login ]
 
 example2 = do
     let userId = 1234
@@ -66,42 +67,6 @@ example3 = do
 example4 = do
     putStrLn "--->>> :"
 
-----------------------------------------------------------------------------
-----------------------------------------------------------------------------
-
-example5 = do
-    putStrLn "--->>> :"
-
-----------------------------------------------------------------------------
-----------------------------------------------------------------------------
-
-example6 = do
-    putStrLn "--->>> :"
-
-----------------------------------------------------------------------------
-----------------------------------------------------------------------------
-
-example7 = do
-    putStrLn "--->>> :"
-
-----------------------------------------------------------------------------
-----------------------------------------------------------------------------
-
-example8 = do
-    putStrLn "--->>> :"
-
-----------------------------------------------------------------------------
-----------------------------------------------------------------------------
-
-example9 = do
-    putStrLn "--->>> :"
-
-----------------------------------------------------------------------------
-----------------------------------------------------------------------------
-
-example10 = do
-    putStrLn "--->>> :"
-
 main = do
     putStrLn ">>>>>--------------EXAMPLE1--------------<<<<<"
     example1
@@ -111,16 +76,3 @@ main = do
     example3
     putStrLn "\n>>>>>--------------EXAMPLE4--------------<<<<<"
     example4
-    putStrLn "\n>>>>>--------------EXAMPLE5--------------<<<<<"
-    example5
-    putStrLn "\n>>>>>--------------EXAMPLE6--------------<<<<<"
-    example6
-    putStrLn "\n>>>>>--------------EXAMPLE7--------------<<<<<"
-    example7
-    putStrLn "\n>>>>>--------------EXAMPLE8--------------<<<<<"
-    example8
-    putStrLn "\n>>>>>--------------EXAMPLE9--------------<<<<<"
-    example9
-    putStrLn "\n>>>>>--------------EXAMPLE10--------------<<<<<"
-    example10
-
