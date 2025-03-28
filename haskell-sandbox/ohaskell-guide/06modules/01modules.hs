@@ -35,7 +35,10 @@ example2 = do
 
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
-
+{-
+    Map is an unsorted value-added pair type data type. It is a widely used module with many useful functions.
+    The following example shows how you can use a predefined function available in the Map module.
+-}
 myMap :: Integer -> Map Integer [Integer]
 myMap n = Map.fromList (map makePair [1 .. n])
   where
@@ -46,7 +49,10 @@ example3 = do
 
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
-
+{-
+    The Set module has some very useful predefined functions to manipulate mathematical data.
+    A set is implemented as a binary tree, so all the elements in a set must be unique.
+-}
 example4 = do
     putStrLn "--->>> Set Module:"
     let text1 = "Hey buddy"
@@ -85,3 +91,4 @@ main = do
     example5
     putStrLn "\n>>>>>--------------EXAMPLE6--------------<<<<<"
     example6
+

@@ -64,9 +64,19 @@ example3 = do
 
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
--- exceptions in pure functions
 
 example4 = do
+    putStrLn "--->>> Exceptions: "
+    result <- try (evaluate (5 `div` 0)) :: IO (Either SomeException Int)
+    case result of
+        Left ex -> putStrLn $ "Caught exception: " ++ show ex
+        Right val -> putStrLn $ "The answer was: " ++ show val
+
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+-- exceptions in pure functions
+
+example5 = do
     -- result <- try $ 2 `div` 0 :: IO (Either SomeException Integer) -- cant compile, as `try` expecting IO action!
     -- wrap to `evaluate`
     result <- try $ evaluate $ 2 `div` 0 :: IO (Either SomeException Integer) -- cant compile, as `try` expecting IO action!
@@ -81,7 +91,7 @@ example4 = do
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
 
-example5 = do
+example6 = do
     putStrLn "--->>> :"
 
 main = do
@@ -95,3 +105,5 @@ main = do
     example4
     putStrLn "\n>>>>>--------------EXAMPLE5--------------<<<<<"
     example5
+    putStrLn "\n>>>>>--------------EXAMPLE6--------------<<<<<"
+    example6

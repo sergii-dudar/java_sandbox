@@ -1,5 +1,3 @@
-import Control.Exception
-
 example1 = do
     putStrLn "--->>> Files and Streams: "
     let file = "test-file01.txt"
@@ -11,11 +9,7 @@ example1 = do
 ----------------------------------------------------------------------------
 
 example2 = do
-    putStrLn "--->>> Exceptions: "
-    result <- try (evaluate (5 `div` 0)) :: IO (Either SomeException Int)
-    case result of
-        Left ex -> putStrLn $ "Caught exception: " ++ show ex
-        Right val -> putStrLn $ "The answer was: " ++ show val
+    putStrLn "--->>> :"
 
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
