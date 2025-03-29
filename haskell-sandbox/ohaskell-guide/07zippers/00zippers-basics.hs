@@ -8,10 +8,9 @@ goBack :: ZipperList a -> ZipperList a
 goBack (xs, b : bs) = (b : xs, bs)
 
 example1 = do
-    putStrLn "--->>> :"
-    let list_Ex = [1, 2, 3, 4]
-    print (goForward (list_Ex, []))
-    print (goBack ([4], [3, 2, 1]))
+    putStrLn "--->>> Zipper simple:"
+    print (goForward ([1, 2, 3, 4], [])) -- ([2,3,4],[1])
+    print (goBack ([4], [3, 2, 1])) -- ([3,4],[2,1])
 
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
@@ -24,4 +23,3 @@ main = do
     example1
     putStrLn "\n>>>>>--------------EXAMPLE2--------------<<<<<"
     example2
-
