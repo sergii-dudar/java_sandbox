@@ -11,6 +11,11 @@ prefix str = "--->>> :" ++ str
         mappend :: m -> m -> m
         mconcat :: [m] -> m
         mconcat = foldr mappend mempty
+
+    infix form of `mappend`:
+
+    class Semigroup a where
+       (<>) :: a -> a -> a
 -}
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------

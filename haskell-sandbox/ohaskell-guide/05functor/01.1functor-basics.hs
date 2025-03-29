@@ -6,6 +6,8 @@ prefix str = "--->>> :" ++ str
 {-
     class Functor f where
         fmap :: Functor f => (a -> b) -> f a -> f b
+
+    <$> is infix form of fmap of functor
 -}
 {-
 
