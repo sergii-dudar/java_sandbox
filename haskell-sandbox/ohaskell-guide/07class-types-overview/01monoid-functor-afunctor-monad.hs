@@ -1,18 +1,6 @@
 import Data.Char
 import Data.Monoid
 
--- Alternative, MonadPlus, Arrow, Comonad
-{-
-TODO:
-Haskell Type Classes:  Monoid, Functor, Applicative, Monad, Semigroup, Foldable, Traversable, Alternative, MonadPlus, Arrow, Comonad
-
-table with: purpose, what it represent, when to use, when to avoid and what to use instead betteer
-
-good understandable examples and good explanation which one use better over another (if applicable)
-
-how to choose each of them
--}
-
 {-
     🔹 Overview of When to Use Each
    ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
