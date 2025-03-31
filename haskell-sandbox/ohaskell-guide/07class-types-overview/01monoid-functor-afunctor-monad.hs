@@ -4,22 +4,22 @@ import Data.Monoid
 {-
     🔹 Overview of When to Use Each
    ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-   | Concept     | What it represents                   | When to use                                                                                                        |
+   | Concept        | What it represents                   | When to use                                                                                                     |
    |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
    |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   | Monoid      | A type with an associative binary    | When you need to combine things, e.g., summing numbers, merging lists, combining logs                              |
-   |             |   operation and an identity element  |                                                                                                                    |
-   |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   | Functor     | A context that allows mapping        | When you want to apply a function to wrapped values (e.g., `Maybe a`, `IO a`, `Either e a`)                        |
-   |             |   a function over it (fmap)          |                                                                                                                    |
-   | Applicative | Functor with additional structure:   | When you need to apply a function inside a context (Just (+3) <*> Just 5) or work with multiple wrapped values     |
-   |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   | Functor     |   allows applying functions wrapped  |                                                                                                                    |
-   |             |   in a context                       |                                                                                                                    |
-   |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   | Monad       | Like an Applicative but allows       | When the computation depends on previous results (e.g., reading input before computing the next step)              |
-   |             |    sequencing operations (>>=)       |                                                                                                                    |
-   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   | 1. Monoid      | A type with an associative binary    | When you need to combine things, e.g., summing numbers, merging lists, combining logs                           |
+   |                |   operation and an identity element  |                                                                                                                 |
+   |----------------|--------------------------------------|-----------------------------------------------------------------------------------------------------------------|
+   | 2. Applicative | A context that allows mapping        | When you want to apply a function to wrapped values (e.g., `Maybe a`, `IO a`, `Either e a`)                     |
+   |  Functor       |   a function over it (fmap)          |                                                                                                                 |
+   |                | Functor with additional structure:   | When you need to apply a function inside a context (Just (+3) <*> Just 5) or work with multiple wrapped values  |
+   |----------------|--------------------------------------|-----------------------------------------------------------------------------------------------------------------|
+   | 4. Functor     |   allows applying functions wrapped  |                                                                                                                 |
+   |                |   in a context                       |                                                                                                                 |
+   |----------------|--------------------------------------|-----------------------------------------------------------------------------------------------------------------|
+   | 4. Monad       | Like an Applicative but allows       | When the computation depends on previous results (e.g., reading input before computing the next step)           |
+   |                |    sequencing operations (>>=)       |                                                                                                                 |
+   ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     How to Choose?
     1. Do you need to combine values? → Monoid
