@@ -1,3 +1,0 @@
-https://chatgpt.com/c/67e86c76-9124-8012-bde0-a75b7710c9b6
-
-A Semigroup is a type class that represents associative binary operations. It provides a way to combine two values of the same type.

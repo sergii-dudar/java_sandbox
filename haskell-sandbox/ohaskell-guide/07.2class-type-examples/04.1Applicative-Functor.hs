@@ -43,15 +43,29 @@
 
     💡 Applicative sits between Functor and Monad, providing structured computation while keeping it simple! 🚀
 
+     INFO: Functor vs. Applicative vs. Monad
+
+       ------------------------------------------------------------------------------------------------------
+        Feature                                                     | Functor   | Applicative   | Monad
+       ------------------------------------------------------------------------------------------------------
+       ------------------------------------------------------------------------------------------------------
+        Apply functions inside context                              | ✅ (fmap) | ✅ (<*>)      | ✅ (>>=)
+       -------------------------------------------------------------|-----------|---------------|------------
+        Handles functions inside context                            | ❌        | ✅            | ✅
+       -------------------------------------------------------------|-----------|---------------|------------
+        Chains computations where next step depends on previous     | ❌        | ❌            | ✅
+       -------------------------------------------------------------|-----------|---------------|------------
+        Works with independent computations                         | ✅        | ✅            | ❌
+       ------------------------------------------------------------------------------------------------------
+
+        Monads solve problems where each step depends on the previous result
+            (unlike Applicative, where computations are independent).
 -}
 
 ----------------------------------------------------------------------------
 -------------------------- Examples of Applicative Instances ---------------
 ----------------------------------------------------------------------------
 -- INFO: 1. Applicative for Maybe
-{-
-
--}
 
 example1 = do
     putStrLn "--->>> 1. Applicative for Maybe:"
@@ -85,14 +99,12 @@ example2 = do
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
 -- INFO: 3. Applicative for Either
-{-
-
--}
 
 example3 = do
     putStrLn "--->>> 3. Applicative for Either:"
     print $ (pure (* 2) <*> Right 5 :: Either Int Int) -- Result: Right 10
     print $ (Left "Error" <*> Right 5 :: Either String Int) -- Result: Left "Error"
+    print $ (pure (+) <*> Right 3 <*> Right 5 :: Either Int Int) -- Result: Right 8
 
 {-
     📌 Explanation:
@@ -102,9 +114,6 @@ example3 = do
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
 -- INFO: 4. Applicative for Functions ((->) r)
-{-
-
--}
 
 example4 = do
     putStrLn "--->>> 4. Applicative for Functions ((->) r):"

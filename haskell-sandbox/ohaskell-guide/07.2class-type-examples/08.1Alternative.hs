@@ -1,155 +1,92 @@
+import Control.Applicative
+
+-- import Data.Attoparsec.Text
+import Data.Text (pack)
+
 {-
+    The "Alternative" type class is an extension of "Applicative", providing a way to "combine computations"
+        and define "empty values".
+
+    Definition:
+        ----------------------------------------
+        class Applicative f => Alternative f where
+            empty :: f a
+            (<|>) :: f a -> f a -> f a
+        ----------------------------------------
+        empty: Represents a failure or neutral element.
+        (<|>): Chooses the first non-empty result (like an OR operation).
+
+    INFO: Alternative Laws
+
+    1. Identity:
+        empty <|> x == x
+        x <|> empty == x
+
+        (Empty is neutral.)
+
+    2. Associativity:
+        (x <|> y) <|> z == x <|> (y <|> z)
+
+        (Grouping does not change the result.)
+
+    INFO: Alternative vs. MonadPlus
+
+      ----------------------------------------
+        Feature | Alternative   | MonadPlus
+      ----------------------------------------
+      ----------------------------------------
+        Extends | Applicative   | Monad
+      ----------|---------------|-------------
+        `<      | >`            | ✅ (choice)
+      ----------|---------------|-------------
+        empty   | ✅            | ✅
+      ----------|---------------|-------------
+        mfilter | ❌            | ✅
+      ----------------------------------------
+
+    INFO: Why Use Alternative?
+
+    - Defines a fallback mechanism (<|>).
+    - Useful for parsing, error handling, and search.
+    - Works with "Applicative effects".
+
+    💡 Alternative provides choice and failure handling in computations! 🚀
 
 -}
 
 ----------------------------------------------------------------------------
+------------------ Examples of Alternative Instances -----------------------
 ----------------------------------------------------------------------------
--- INFO:
-{-
-
--}
+-- INFO: 1. Alternative for Maybe
 
 example1 = do
-    putStrLn "--->>> :"
+    putStrLn "--->>> 1. Alternative for Maybe:"
+    print $ Just 5 <|> Just 10 -- Result: Just 5
+    print $ Nothing <|> Just 10 -- Result: Just 10
+    print $ (Nothing <|> Nothing :: Maybe Int) -- Result: Nothing
 
 {-
-
+    📌 Explanation:
+        1. Chooses the first Just value.
+        2. If both are Nothing, the result is Nothing.
 -}
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
--- INFO:
-{-
-
--}
+-- INFO: 2. Alternative for Lists
 
 example2 = do
-    putStrLn "--->>> :"
+    putStrLn "--->>> 2. Alternative for Lists:"
+    print $ [1, 2] <|> [3, 4] -- Result: [1,2,3,4]
+    print $ [] <|> [3, 4] -- Result: [3,4]
+    print $ ([] <|> [] :: [Int]) -- Result: []
 
 {-
-
--}
-----------------------------------------------------------------------------
-----------------------------------------------------------------------------
--- INFO:
-{-
-
+    📌 Explanation:
+        Concatenates lists, treating [] as empty.
 -}
 
-example3 = do
-    putStrLn "--->>> :"
-
-{-
-
--}
-----------------------------------------------------------------------------
-----------------------------------------------------------------------------
--- INFO:
-{-
-
--}
-
-example4 = do
-    putStrLn "--->>> :"
-
-{-
-
--}
-----------------------------------------------------------------------------
-----------------------------------------------------------------------------
--- INFO:
-{-
-
--}
-
-example5 = do
-    putStrLn "--->>> :"
-
-{-
-
--}
-----------------------------------------------------------------------------
-----------------------------------------------------------------------------
--- INFO:
-{-
-
--}
-
-example6 = do
-    putStrLn "--->>> :"
-
-{-
-
--}
-----------------------------------------------------------------------------
-----------------------------------------------------------------------------
--- INFO:
-{-
-
--}
-
-example7 = do
-    putStrLn "--->>> :"
-
-{-
-
--}
-----------------------------------------------------------------------------
-----------------------------------------------------------------------------
--- INFO:
-{-
-
--}
-
-example8 = do
-    putStrLn "--->>> :"
-
-{-
-
--}
-----------------------------------------------------------------------------
-----------------------------------------------------------------------------
--- INFO:
-{-
-
--}
-
-example9 = do
-    putStrLn "--->>> :"
-
-{-
-
--}
-----------------------------------------------------------------------------
-----------------------------------------------------------------------------
--- INFO:
-{-
-
--}
-
-example10 = do
-    putStrLn "--->>> :"
-
-{-
-
--}
 main = do
     putStrLn ">>>>>--------------EXAMPLE1--------------<<<<<"
     example1
     putStrLn "\n>>>>>--------------EXAMPLE2--------------<<<<<"
     example2
-    putStrLn "\n>>>>>--------------EXAMPLE3--------------<<<<<"
-    example3
-    putStrLn "\n>>>>>--------------EXAMPLE4--------------<<<<<"
-    example4
-    putStrLn "\n>>>>>--------------EXAMPLE5--------------<<<<<"
-    example5
-    putStrLn "\n>>>>>--------------EXAMPLE6--------------<<<<<"
-    example6
-    putStrLn "\n>>>>>--------------EXAMPLE7--------------<<<<<"
-    example7
-    putStrLn "\n>>>>>--------------EXAMPLE8--------------<<<<<"
-    example8
-    putStrLn "\n>>>>>--------------EXAMPLE9--------------<<<<<"
-    example9
-    putStrLn "\n>>>>>--------------EXAMPLE10--------------<<<<<"
-    example10

@@ -1,3 +1,4 @@
+import qualified Data.Map as M
 import Data.Monoid
 
 {-
@@ -225,26 +226,32 @@ example7 = do
 -}
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
--- INFO:
-{-
+-- INFO: 8. Efficient Map Reduction (Parallel Computation)
 
--}
+sumList :: [Int] -> Int
+sumList = getSum . mconcat . map Sum
 
 example8 = do
-    putStrLn "--->>> :"
+    putStrLn "--->>> 8. Efficient Map Reduction (Parallel Computation):"
+    print $ sumList [1, 2, 3, 4, 5] -- Result: 15
 
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
--- INFO:
+-- INFO: 9. Merging Configurations (Map Monoid)
 {-
-
+    Monoids help merge settings.
 -}
 
 example9 = do
-    putStrLn "--->>> :"
+    putStrLn "--->>> 9. Merging Configurations (Map Monoid):"
+    let config1 = M.fromList [("timeout", 30), ("retries", 3)]
+    let config2 = M.fromList [("timeout", 50)]
+    let mergedconfig = M.union config2 config1
+    print $ mergedconfig -- Result: fromList [("retries",3),("timeout",50)]
 
 {-
-
+    📌 Explanation:
+        Map uses the first value if keys overlap.
 -}
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
