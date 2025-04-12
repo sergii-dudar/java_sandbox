@@ -10,8 +10,8 @@ public class TsLoaderRun {
 
     public static void main(String[] args) throws IOException {
 
-        String outDir = "/home/serhii/serhii.home/videos/";
-        final String title = "yellowjackets.s03";
+        String outDir = "/home/serhii/serhii.home/videos";
+        final String title = "gangs.of.london.s03";
 
         // for serials
         outDir = String.format("%s/%s/", outDir, title);
@@ -19,23 +19,21 @@ public class TsLoaderRun {
                 // entry("https://zetvideo.net/content/stream/serials/invincible._s02e08._i_thought_you_were_stronger_11650/hls/1080/segment%s.ts"),
 
                 entry(title + "e01",
-                        "https://zetvideo.net/content/stream/serials/yellowjackets/s03/yellowjackets.s03e01.1080p.webdlrip.x264.aac.uaflix_11985/hls/1080/segment%s.ts"),
+                        "https://zetvideo.net/content/stream/serials/gangs.of.london.s03e01.1080p.webrip.x264.aac.uaflix_13095/hls/1080/segment%s.ts"),
                 entry(title + "e02",
-                        "https://zetvideo.net/content/stream/serials/yellowjackets.s03e02.1080p.webdlrip.x264.aac.uaflix_12012/hls/1080/segment%s.ts"),
+                        "https://zetvideo.net/content/stream/serials/gangs.of.london.s03e02.1080p.webrip.x264.aac.uaflix_13098/hls/1080/segment%s.ts"),
                 entry(title + "e03",
-                        "https://zetvideo.net/content/stream/serials/yellowjackets.s03e03.1080p.webdlrip.x264.aac.uaflix_12260/hls/1080/segment%s.ts"),
+                        "https://zetvideo.net/content/stream/serials/gangs.of.london.s03e03.1080p.webrip.x264.aac.uaflix_13099/hls/1080/segment%s.ts"),
                 entry(title + "e04",
-                        "https://zetvideo.net/content/stream/serials/yellowjackets.s03e04.1080p.webdlrip.x264.aac.uaflix_12387/hls/1080/segment%s.ts"),
+                        "https://zetvideo.net/content/stream/serials/gangs.of.london.s03e04.1080p.webrip.x264.aac.uaflix_13206/hls/1080/segment%s.ts"),
                 entry(title + "e05",
-                        "https://zetvideo.net/content/stream/serials/yellowjackets.s03e05.1080p.webdlrip.x264.aac.uaflix_12538/hls/1080/segment%s.ts"),
+                        "https://zetvideo.net/content/stream/serials/gangs.of.london.s03e05.1080p.webrip.x264.aac.uaflix_13207/hls/1080/segment%s.ts"),
                 entry(title + "e06",
-                        "https://zetvideo.net/content/stream/serials/yellowjackets.s03e06.1080p.webdlrip.x264.aac.uaflix_12781/hls/1080/segment%s.ts"),
+                        "https://zetvideo.net/content/stream/serials/gangs.of.london.s03e06.1080p.webrip.x264.aac.uaflix_13208/hls/1080/segment%s.ts"),
                 entry(title + "e07",
-                        "https://zetvideo.net/content/stream/serials/yellowjackets.s03e07.1080p.webrip.x264.aac.uaflix_13056/hls/1080/segment%s.ts"),
+                        "https://zetvideo.net/content/stream/serials/gangs.of.london.s03e07.1080p.webrip.x264.aac.uaflix_13209/hls/1080/segment%s.ts"),
                 entry(title + "e08",
-                        "https://zetvideo.net/content/stream/serials/yellowjackets.s03e08.1080p.webrip.x264.aac.uaflix_13377/hls/1080/segment%s.ts"),
-                entry(title + "e09",
-                        "https://zetvideo.net/content/stream/serials/yellowjackets.s03e09.1080p.webrip.x264.aac.uaflix_13699/hls/1080/segment%s.ts")
+                        "https://zetvideo.net/content/stream/serials/gangs.of.london.s03e08.1080p.webrip.x264.aac.uaflix_13210/hls/1080/segment%s.ts")
 
         // entry(title + ".s03e08",
         // "https://zetvideo.net/content/stream/serials/invincible.2021.s03e08.1080p.webdlrip.x264.aac.uaflix_12722/hls/1080/segment%s.ts"),
@@ -45,7 +43,8 @@ public class TsLoaderRun {
         int startNumber = 1;
 
         if (!Files.exists(Path.of(outDir))) {
-            Files.createDirectory(Path.of(outDir));
+            // Files.createDirectory(Path.of(outDir));
+            Files.createDirectories(Path.of(outDir));
         }
 
         final String outDirRes = outDir;
