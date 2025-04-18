@@ -3,6 +3,20 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Stream;
 
 public class Reactivity {
+    // GetInstantLePaymentAvailabilityIT
+
+    public static <T> void stubSystemAccountOwnersApi(WireMockServer wireMockServer, String iban, T response,
+            HttpStatus returnHttpStatus) {
+        // wireMockServer.stubFor(get(WireMock.urlPathEqualTo(PAYMENT_SYSTEM_ACCOUNT_OWNERS_URI_API
+        // + iban))
+        wireMockServer.stubFor(get(WireMock.anyUrl())
+                .willReturn(aResponse()
+                        .withHeader(CONTENT_TYPE, APPLICATION_JSON_VALUE)
+                        .withBody(toJson(response))
+                        .withStatus(returnHttpStatus.value())));
+    }
+
+    // ----------------------
 
     @Test
     public void test12() {
