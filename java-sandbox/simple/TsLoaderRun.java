@@ -10,30 +10,33 @@ public class TsLoaderRun {
 
     public static void main(String[] args) throws IOException {
 
-        String outDir = "/home/serhii/serhii.home/videos";
-        final String title = "gangs.of.london.s03";
+        String outDir = "/home/serhii/serhii.home/videos/";
+        final String title = "american-horror-story-12";
 
         // for serials
-        outDir = String.format("%s/%s/", outDir, title);
+        outDir = String.format("%s%s/", outDir, title);
+
         final List<Entry<String, String>> nameToUrlTmplList = List.of(
                 // entry("https://zetvideo.net/content/stream/serials/invincible._s02e08._i_thought_you_were_stronger_11650/hls/1080/segment%s.ts"),
 
                 entry(title + "e01",
-                        "https://zetvideo.net/content/stream/serials/gangs.of.london.s03e01.1080p.webrip.x264.aac.uaflix_13095/hls/1080/segment%s.ts"),
+                        "https://jk19ocmjeoyql3tj.ashdi.vip/content/stream/serials/american_horror_story__s12e01_2023_webrip_1080p_ukr.eng_czkava_deya_103242/hls/1080/segment%s.ts"),
                 entry(title + "e02",
-                        "https://zetvideo.net/content/stream/serials/gangs.of.london.s03e02.1080p.webrip.x264.aac.uaflix_13098/hls/1080/segment%s.ts"),
+                        "https://jk19ocmjeoyql3tj.ashdi.vip/content/stream/serials/american_horror_story__s12e02_2023_webrip_1080p_ukr.eng_czkava_deya_104079/hls/1080/segment%s.ts"),
                 entry(title + "e03",
-                        "https://zetvideo.net/content/stream/serials/gangs.of.london.s03e03.1080p.webrip.x264.aac.uaflix_13099/hls/1080/segment%s.ts"),
+                        "https://jk19ocmjeoyql3tj.ashdi.vip/content/stream/serials/american_horror_story__s12e03_2023_webrip_1080p_ukr.eng_czkava_deya_104694/hls/1080/segment%s.ts"),
                 entry(title + "e04",
-                        "https://zetvideo.net/content/stream/serials/gangs.of.london.s03e04.1080p.webrip.x264.aac.uaflix_13206/hls/1080/segment%s.ts"),
+                        "https://jk19ocmjeoyql3tj.ashdi.vip/content/stream/serials/ser/american_horror_story__s12e04_2023_webrip_1080p_ukr.eng_czkava_deya_105271/hls/1080/segment%s.ts"),
                 entry(title + "e05",
-                        "https://zetvideo.net/content/stream/serials/gangs.of.london.s03e05.1080p.webrip.x264.aac.uaflix_13207/hls/1080/segment%s.ts"),
+                        "https://jk19ocmjeoyql3tj.ashdi.vip/content/stream/serials/american_horror_story__s12e05_2023_webrip_1080p_ukr.eng_czkava_deya_105905/hls/1080/segment%s.ts"),
                 entry(title + "e06",
-                        "https://zetvideo.net/content/stream/serials/gangs.of.london.s03e06.1080p.webrip.x264.aac.uaflix_13208/hls/1080/segment%s.ts"),
+                        "https://jk19ocmjeoyql3tj.ashdi.vip/content/stream/serials/american_horror_story_s12/american_horror_story_s12e06_2023_webdl_1080p_ukr_eng_hurtom_127444/hls/1080/segment%s.ts"),
                 entry(title + "e07",
-                        "https://zetvideo.net/content/stream/serials/gangs.of.london.s03e07.1080p.webrip.x264.aac.uaflix_13209/hls/1080/segment%s.ts"),
+                        "https://jk19ocmjeoyql3tj.ashdi.vip/content/stream/serials/american_horror_story_s12/american_horror_story_s12e07_2023_webdl_1080p_ukr_eng_hurtom_127445/hls/1080/segment%s.ts"),
                 entry(title + "e08",
-                        "https://zetvideo.net/content/stream/serials/gangs.of.london.s03e08.1080p.webrip.x264.aac.uaflix_13210/hls/1080/segment%s.ts")
+                        "https://jk19ocmjeoyql3tj.ashdi.vip/content/stream/serials/american_horror_story_s12/american_horror_story_s12e08_2023_webdl_1080p_ukr_eng_hurtom_127446/hls/1080/segment%s.ts"),
+                entry(title + "e09",
+                        "https://jk19ocmjeoyql3tj.ashdi.vip/content/stream/serials/american_horror_story_s12/american_horror_story_s12e09_2023_webdl_1080p_ukr_eng_hurtom_127447/hls/1080/segment%s.ts")
 
         // entry(title + ".s03e08",
         // "https://zetvideo.net/content/stream/serials/invincible.2021.s03e08.1080p.webdlrip.x264.aac.uaflix_12722/hls/1080/segment%s.ts"),
