@@ -29,6 +29,13 @@ example1 = do
     -- print $ endswith "text" "sometext"
     putStrLn . prefix . show $ [toUpper c | c <- "http"] -- HTTP
 
+    -- predicate
+    putStrLn ""
+    putStrLn . prefix . show $ [c | c <- "http", c == 't'] -- TT
+    putStrLn . prefix . show $ ["http" | True] -- TT
+    putStrLn . prefix . show $ ["http" | False] -- TT
+    putStrLn ""
+    
     -- add predicate
     putStrLn . prefix . show $ [toUpper c | c <- "http", c == 't'] -- TT
 
