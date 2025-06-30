@@ -21,7 +21,7 @@ echo "   abc     def" | awk '{print $2}' # def
 
 # ==========================
 # ================tr (translate)
-
+echo "------------------  "
 echo "This is a line of text" | tr a A # This is A line of text
 echo "This is a line of text" | tr aeio AEIO # ThIs Is A lInE Of tExt
 echo "This is a line of text" | tr -d aeio # [delete chart] Ths s  ln f txt

@@ -11,7 +11,7 @@ public class TsLoaderRun {
     public static void main(String[] args) throws IOException {
 
         String outDir = "/home/serhii/serhii.home/videos/";
-        final String title = "american-horror-story-12";
+        final String title = "squid-game-s3";
 
         // for serials
         outDir = String.format("%s%s/", outDir, title);
@@ -19,24 +19,30 @@ public class TsLoaderRun {
         final List<Entry<String, String>> nameToUrlTmplList = List.of(
                 // entry("https://zetvideo.net/content/stream/serials/invincible._s02e08._i_thought_you_were_stronger_11650/hls/1080/segment%s.ts"),
 
-                entry(title + "e01",
-                        "https://jk19ocmjeoyql3tj.ashdi.vip/content/stream/serials/american_horror_story__s12e01_2023_webrip_1080p_ukr.eng_czkava_deya_103242/hls/1080/segment%s.ts"),
+                // entry(title + "e01",
+                // "https://wqueuqwue13.boogiemovie.online/hls/348/3/1/10332_m/1080.mp4/seg-%s-v1-a1.ts"),
                 entry(title + "e02",
-                        "https://jk19ocmjeoyql3tj.ashdi.vip/content/stream/serials/american_horror_story__s12e02_2023_webrip_1080p_ukr.eng_czkava_deya_104079/hls/1080/segment%s.ts"),
+                        "https://wqueuqwue12.boogiemovie.online/hls/348/3/2/10333_m/1080.mp4/seg-%s-v1-a1.ts"),
                 entry(title + "e03",
-                        "https://jk19ocmjeoyql3tj.ashdi.vip/content/stream/serials/american_horror_story__s12e03_2023_webrip_1080p_ukr.eng_czkava_deya_104694/hls/1080/segment%s.ts"),
+                        "https://wqueuqwue12.boogiemovie.online/hls/348/3/3/10338_m/1080.mp4/seg-%s-v1-a1.ts"),
                 entry(title + "e04",
-                        "https://jk19ocmjeoyql3tj.ashdi.vip/content/stream/serials/ser/american_horror_story__s12e04_2023_webrip_1080p_ukr.eng_czkava_deya_105271/hls/1080/segment%s.ts"),
+                        "https://wqueuqwue12.boogiemovie.online/hls/348/3/4/10339_m/1080.mp4/seg-%s-v1-a1.ts"),
                 entry(title + "e05",
-                        "https://jk19ocmjeoyql3tj.ashdi.vip/content/stream/serials/american_horror_story__s12e05_2023_webrip_1080p_ukr.eng_czkava_deya_105905/hls/1080/segment%s.ts"),
+                        "https://wqueuqwue13.boogiemovie.online/hls/348/3/5/10340_m/1080.mp4/seg-%s-v1-a1.ts"),
                 entry(title + "e06",
-                        "https://jk19ocmjeoyql3tj.ashdi.vip/content/stream/serials/american_horror_story_s12/american_horror_story_s12e06_2023_webdl_1080p_ukr_eng_hurtom_127444/hls/1080/segment%s.ts"),
-                entry(title + "e07",
-                        "https://jk19ocmjeoyql3tj.ashdi.vip/content/stream/serials/american_horror_story_s12/american_horror_story_s12e07_2023_webdl_1080p_ukr_eng_hurtom_127445/hls/1080/segment%s.ts"),
-                entry(title + "e08",
-                        "https://jk19ocmjeoyql3tj.ashdi.vip/content/stream/serials/american_horror_story_s12/american_horror_story_s12e08_2023_webdl_1080p_ukr_eng_hurtom_127446/hls/1080/segment%s.ts"),
-                entry(title + "e09",
-                        "https://jk19ocmjeoyql3tj.ashdi.vip/content/stream/serials/american_horror_story_s12/american_horror_story_s12e09_2023_webdl_1080p_ukr_eng_hurtom_127447/hls/1080/segment%s.ts")
+                        "https://wqueuqwue12.boogiemovie.online/hls/348/3/6/10341_m/1080.mp4/seg-%s-v1-a1.ts")
+        // entry(title + "",
+        // ""),
+        // entry(title + "",
+        // "")
+        // entry(title + "",
+        // ""),
+        // entry(title + "e08",
+        // ""),
+        // entry(title + "e09",
+        // ""),
+        // entry(title + "e10",
+        // "")
 
         // entry(title + ".s03e08",
         // "https://zetvideo.net/content/stream/serials/invincible.2021.s03e08.1080p.webdlrip.x264.aac.uaflix_12722/hls/1080/segment%s.ts"),
