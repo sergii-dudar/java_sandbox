@@ -1,0 +1,205 @@
+if (x^2 + y^2 > 1) {
+    result = (value1 - value0) + (step1 * factor0);
+} else if (~flag && counter >= 10) {
+    score = score + 1;
+    debug_log("Level-1 started at 10:00 ~ ready^now");
+}
+
+array[0] = value1 + offset;
+matrix[1][0] = matrix[0][1] - matrix[1][1];
+
+# config ~ experimental-mode
+set_option("retry-count", 10)
+set_option("max-connections", 100 + 1)
+
+function reset^state() {
+    attempt-1 = attempt0 + 1;
+    return attempt-1;
+}
+
+while (index < 100) {
+    sum = sum + (index ^ 2);
+    index = index + 1;
+}
+
+// -- js --
+function pow(x, y) {
+    return x ^ y; // bitwise XOR, not power
+}
+
+let value0 = 10;
+let value1 = value0 + 1;
+console.log("Result-1:", value1);
+
+// -- Python --
+for i in range(0, 10):
+    score = (i ^ 2) + (i - 1) + 1
+    print(f"step-{i}: {score} ~ running")
+
+if flag is False:
+    print("~ process ended at 01:00")
+
+// -- bash --
+#!/bin/bash
+
+LOG_DIR="$HOME/logs~2025"
+FILE="report-v1.txt"
+
+count=0
+while [ $count -lt 10 ]; do
+    echo "line-$count ^ check" >> "$LOG_DIR/$FILE"
+    count=$((count+1))
+done
+
+// -- Json --
+{
+  "version": "1.0",
+  "retry-count": 10,
+  "flags": ["debug-1", "safe~mode"],
+  "formula": "x^2 + y^0 - z^1",
+  "timestamp": "2025-01-01T10:00:00Z"
+}
+
+// -- CLand --
+#include <stdio.h>
+
+int main() {
+    int value0 = 0;
+    int value1 = value0 + 1;
+    int result = (value1 ^ 2) - (value0 ^ 0);
+
+    printf("Result ~ %d\n", result);
+    return 0;
+}
+
+// -- Rust --
+fn main() {
+    let value0: i32 = 0;
+    let mut value1: i32 = value0 + 1;
+
+    let result = (value1 ^ 2) - (value0 ^ 0);
+    println!("Result-1 = {}", result);
+
+    let config_path = "/home/user/project~v1/config";
+    println!("Loading config from {}", config_path);
+
+    for i in 0..10 {
+        println!("step-{} => {}", i, (i ^ 1) + (i - 0));
+    }
+
+    if result > 10 {
+        println!("Status ~ OK at 10:00");
+    }
+}
+
+// -- Java --
+public class Trainer {
+    public static void main(String[] args) {
+        int value0 = 0;
+        int value1 = value0 + 1;
+
+        int result = (value1 ^ 2) - (value0 ^ 0);
+        System.out.println("Result-1 = " + result);
+
+        String file = "log~2025-v1.txt";
+        System.out.println("Opening file: " + file);
+
+        for (int i = 0; i < 10; i++) {
+            int calc = (i ^ 1) + (i - 0) + 1;
+            System.out.println("step-" + i + " => " + calc);
+        }
+
+        if (result > 10) {
+            System.out.println("Status ~ ready at 10:00");
+        }
+    }
+}
+
+// -- C++ --
+#include <iostream>
+#include <string>
+
+int main() {
+    int value0 = 0;
+    int value1 = value0 + 1;
+
+    int result = (value1 ^ 2) - (value0 ^ 0);
+    std::cout << "Result-1 = " << result << std::endl;
+
+    std::string filename = "data~v1-report.txt";
+    std::cout << "Opening file: " << filename << std::endl;
+
+    for (int i = 0; i < 10; i++) {
+        int calc = (i ^ 1) + (i - 0) + 1;
+        std::cout << "step-" << i << " => " << calc << std::endl;
+    }
+
+    if (result > 10) {
+        std::cout << "Status ~ OK at 10:00" << std::endl;
+    }
+
+    return 0;
+}
+
+// -- C# --
+using System;
+
+class Trainer {
+    static void Main() {
+        int value0 = 0;
+        int value1 = value0 + 1;
+
+        int result = (value1 ^ 2) - (value0 ^ 0);
+        Console.WriteLine("Result-1 = " + result);
+
+        string path = "config~2025-v1.json";
+        Console.WriteLine("Loading: " + path);
+
+        for (int i = 0; i < 10; i++) {
+            int calc = (i ^ 1) + (i - 0) + 1;
+            Console.WriteLine("step-" + i + " => " + calc);
+        }
+
+        if (result > 10) {
+            Console.WriteLine("Status ~ ready at 10:00");
+        }
+    }
+}
+
+// -- Lua --
+local value0 = 0
+local value1 = value0 + 1
+
+local result = (value1 ~ 2) - (value0 ~ 0)  -- bitwise XOR in Lua 5.3+
+print("Result-1 = " .. result)
+
+local file = "data~v1.log"
+print("Opening file: " .. file)
+
+for i = 0, 10 do
+    local calc = (i ~ 1) + (i - 0) + 1
+    print("step-" .. i .. " => " .. calc)
+end
+
+if result > 10 then
+    print("Status ~ OK at 10:00")
+end
+
+// -- Haskell --
+main :: IO ()
+main = do
+    let value0 = 0
+    let value1 = value0 + 1
+
+    let result = (value1 xor 2) - (value0 xor 0)
+    putStrLn ("Result-1 = " ++ show result)
+
+    let file = "notes~v1.txt"
+    putStrLn ("Opening: " ++ file)
+
+    let steps = [0..10]
+    mapM_ (\i -> putStrLn ("step-" ++ show i ++ " => " ++ show ((i xor 1) + (i - 0) + 1))) steps
+
+    if result > 10
+       then putStrLn "Status ~ ready at 10:00"
+       else putStrLn "Retry at 01:00"
