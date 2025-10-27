@@ -89,7 +89,7 @@
                         </dependency>
                     </annotationProcessorPaths>
                     <compilerArgs>
-                        <compilerArg>-Amapstruct.defaultComponentModel=spring</compilerArg>
+                        <!-- <compilerArg>-Amapstruct.defaultComponentModel=spring</compilerArg> -->
                         <compilerArg>-Amapstruct.defaultInjectionStrategy=constructor</compilerArg>
                         <compilerArg>-Amapstruct.unmappedTargetPolicy=ERROR</compilerArg>
                     </compilerArgs>

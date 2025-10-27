@@ -1,4 +1,4 @@
-package ua.serhii.application.com2;
+package ua.serhii.application.com;
 
 import lombok.Value;
 
