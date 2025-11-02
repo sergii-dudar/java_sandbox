@@ -1,4 +1,4 @@
-package org.example.io.socket.server.nio.simple;
+package org.io.socket.server.nio.simple;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -20,7 +20,7 @@ public class SocketChannelClient {
         Path path = Paths.get(TEMP_FILE_PATH);
         FileChannel fileChannel = FileChannel.open(path);
         ByteBuffer buffer = ByteBuffer.allocate(1024);
-        while(fileChannel.read(buffer) > 0) {
+        while (fileChannel.read(buffer) > 0) {
             buffer.flip();
             server.write(buffer);
             buffer.clear();

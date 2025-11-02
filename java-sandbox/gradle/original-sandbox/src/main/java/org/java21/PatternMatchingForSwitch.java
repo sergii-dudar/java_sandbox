@@ -1,4 +1,4 @@
-package org.example.java21;
+package org.java21;
 
 /**
  * https://mydeveloperplanet.com/2023/11/01/whats-new-between-java-17-and-java-21/
@@ -40,7 +40,7 @@ public class PatternMatchingForSwitch {
     }
 
 
-    //---------------------------------------
+    // ---------------------------------------
 
     public static void switchNullTest() {
         final Object obj = 10;
@@ -71,7 +71,7 @@ public class PatternMatchingForSwitch {
         }
     }
 
-    //---------------------------------------
+    // ---------------------------------------
 
     public static void caseRefinementTest() {
         final Object obj = FruitType.APPLE;
@@ -122,9 +122,6 @@ public class PatternMatchingForSwitch {
     }
 
     enum FruitType {
-        APPLE,
-        AVOCADO,
-        PEAR,
-        ORANGE
+        APPLE, AVOCADO, PEAR, ORANGE
     }
 }

@@ -1,12 +1,6 @@
-package org.example.java21;
+package org.java21;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.SequencedMap;
-import java.util.Set;
-import java.util.SortedSet;
-import java.util.TreeSet;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -26,7 +20,7 @@ public class SequencedCollections {
         System.out.println("\nSequencedCollection\n");
 
         List<String> sc = Stream.of("Alpha", "Bravo", "Charlie", "Delta")
-            .collect(Collectors.toCollection(ArrayList::new));
+                .collect(Collectors.toCollection(ArrayList::new));
         System.out.println("Initial list: " + sc);
         System.out.println("Reversed list: " + sc.reversed());
         System.out.println("First item: " + sc.getFirst());
@@ -60,7 +54,7 @@ public class SequencedCollections {
     private static void sequencedMap() {
         System.out.println("\nSequencedMap\n");
 
-        LinkedHashMap<Integer,String> hm = new LinkedHashMap<Integer,String>();
+        LinkedHashMap<Integer, String> hm = new LinkedHashMap<Integer, String>();
         hm.put(1, "Alpha");
         hm.put(2, "Bravo");
         hm.put(3, "Charlie");

@@ -1,4 +1,4 @@
-package org.example.java21;
+package org.java21;
 
 /**
  * https://mydeveloperplanet.com/2023/11/01/whats-new-between-java-17-and-java-21/

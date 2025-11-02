@@ -1,4 +1,4 @@
-package org.example.java17;
+package org.java17;
 
 public class TextBlocks {
 
@@ -8,12 +8,12 @@ public class TextBlocks {
 
     private static void runTest() {
         String text = """
-              {
-                "name": "John Doe",
-                "age": 45,
-                "address": "Doe Street, 23, Java Town"
-              }
-            """;
+                  {
+                    "name": "John Doe",
+                    "age": 45,
+                    "address": "Doe Street, 23, Java Town"
+                  }
+                """;
         System.out.println(text);
     }
 }

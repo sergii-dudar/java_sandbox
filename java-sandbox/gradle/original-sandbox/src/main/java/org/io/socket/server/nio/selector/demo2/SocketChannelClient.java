@@ -1,4 +1,4 @@
-package org.example.io.socket.server.nio.selector.demo2;
+package org.io.socket.server.nio.selector.demo2;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -14,7 +14,7 @@ public class SocketChannelClient {
         final boolean resultSet = closed.compareAndSet(false, true);
 
         SocketChannel client = SocketChannel.open();
-        client.connect(new InetSocketAddress( 8080));
+        client.connect(new InetSocketAddress(8080));
 
         String data = "Hello World\n";
 

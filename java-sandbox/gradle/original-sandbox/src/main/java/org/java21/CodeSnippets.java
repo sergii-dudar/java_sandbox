@@ -1,4 +1,4 @@
-package org.example.java21;
+package org.java21;
 
 /**
  * https://mydeveloperplanet.com/2023/11/01/whats-new-between-java-17-and-java-21/
@@ -10,20 +10,20 @@ public class CodeSnippets {
         runTest();
     }
 
-    private static void runTest() {
-    }
+    private static void runTest() {}
 
     /**
      * this is an example in Java 17:
      *
      * <pre>{@code
-     *    if (success) {
-     *        System.out.println("This is a success!");
-     *    } else {
-     *        System.out.println("This is a failure");
-     *    }
+     * if (success) {
+     *     System.out.println("This is a success!");
+     * } else {
+     *     System.out.println("This is a failure");
+     * }
      * }
      * </pre>
+     * 
      * @param success
      */
     public void example1(boolean success) {
@@ -37,11 +37,11 @@ public class CodeSnippets {
     /**
      * this is an example for inline snippets
      * {@snippet :
-     *    if (success) {
-     *        System.out.println("This is a success!");
-     *    } else {
-     *        System.out.println("This is a failure");
-     *    }
+     * if (success) {
+     *     System.out.println("This is a success!");
+     * } else {
+     *     System.out.println("This is a failure");
+     * }
      * }
      *
      * @param success

@@ -1,7 +1,6 @@
-package org.example.io.socket.server.nio.selector.baeldung;
+package org.io.socket.server.nio.selector.baeldung;
 
 import lombok.SneakyThrows;
-
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
@@ -12,8 +11,7 @@ import java.nio.channels.SocketChannel;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.Executors;
-
-import static org.example.io.socket.server.nio.selector.baeldung.EchoTest.PORT;
+import static org.io.socket.server.nio.selector.baeldung.EchoTest.PORT;
 
 public class EchoServer {
 
@@ -51,7 +49,7 @@ public class EchoServer {
     }
 
     private static void answerWithEcho(ByteBuffer buffer, SelectionKey key)
-        throws IOException {
+            throws IOException {
 
         SocketChannel client = (SocketChannel) key.channel();
         int r = client.read(buffer);
@@ -66,7 +64,7 @@ public class EchoServer {
     }
 
     private static void register(Selector selector, ServerSocketChannel serverSocket)
-        throws IOException {
+            throws IOException {
 
         SocketChannel client = serverSocket.accept();
         client.configureBlocking(false);
@@ -75,10 +73,10 @@ public class EchoServer {
 
     public static void start() {
         Executors.newSingleThreadExecutor()
-            .submit(() -> {
-                System.out.println("Server is started and listening incoming requests...");
-                main(new String[0]);
-            });
+                .submit(() -> {
+                    System.out.println("Server is started and listening incoming requests...");
+                    main(new String[0]);
+                });
     }
 
     @SneakyThrows

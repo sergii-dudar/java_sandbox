@@ -1,9 +1,8 @@
-package org.example.io.socket.server.nio.async;
+package org.io.socket.server.nio.async;
 
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
-import org.example.io.socket.server.nio.async.AsyncEchoClientServer.AsyncEchoCompletionHandlerServer.AsyncClient;
-
+import org.io.socket.server.nio.async.AsyncEchoClientServer.AsyncEchoCompletionHandlerServer.AsyncClient;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.AsynchronousServerSocketChannel;
@@ -23,7 +22,7 @@ public class AsyncEchoClientServer {
         final ExecutorService executor = Executors.newSingleThreadExecutor();
 
         executor.submit(() -> {
-            //AsyncEchoServer server = new AsyncEchoServer();
+            // AsyncEchoServer server = new AsyncEchoServer();
             AsyncEchoCompletionHandlerServer server = new AsyncEchoCompletionHandlerServer();
             System.out.println("starting server...");
             server.runServer();
@@ -45,8 +44,7 @@ public class AsyncEchoClientServer {
         @SneakyThrows
         public void runServer() {
 
-            AsynchronousServerSocketChannel serverChannel
-                = AsynchronousServerSocketChannel.open();
+            AsynchronousServerSocketChannel serverChannel = AsynchronousServerSocketChannel.open();
             serverChannel.bind(new InetSocketAddress("127.0.0.1", 4999));
 
             Future<AsynchronousSocketChannel> acceptResult = serverChannel.accept();
@@ -84,52 +82,51 @@ public class AsyncEchoClientServer {
         @SneakyThrows
         public void runServer() {
 
-            AsynchronousServerSocketChannel serverChannel
-                = AsynchronousServerSocketChannel.open();
+            AsynchronousServerSocketChannel serverChannel = AsynchronousServerSocketChannel.open();
             serverChannel.bind(new InetSocketAddress("127.0.0.1", 4999));
 
             while (true) {
                 serverChannel.accept(
-                    null, new CompletionHandler<AsynchronousSocketChannel, Object>() {
+                        null, new CompletionHandler<AsynchronousSocketChannel, Object>() {
 
-                        @Override
-                        public void completed(
-                            AsynchronousSocketChannel result, Object attachment) {
-                            if (serverChannel.isOpen()) {
-                                serverChannel.accept(null, this);
+                            @Override
+                            public void completed(
+                                    AsynchronousSocketChannel result, Object attachment) {
+                                if (serverChannel.isOpen()) {
+                                    serverChannel.accept(null, this);
+                                }
+
+                                final AsynchronousSocketChannel clientChannel = result;
+                                if ((clientChannel != null) && (clientChannel.isOpen())) {
+                                    ReadWriteHandler handler = new ReadWriteHandler(clientChannel);
+                                    ByteBuffer buffer = ByteBuffer.allocate(32);
+
+                                    Map<String, Object> readInfo = new HashMap<>();
+                                    readInfo.put("action", "read");
+                                    readInfo.put("buffer", buffer);
+
+                                    clientChannel.read(buffer, readInfo, handler);
+                                }
                             }
 
-                            final AsynchronousSocketChannel clientChannel = result;
-                            if ((clientChannel != null) && (clientChannel.isOpen())) {
-                                ReadWriteHandler handler = new ReadWriteHandler(clientChannel);
-                                ByteBuffer buffer = ByteBuffer.allocate(32);
-
-                                Map<String, Object> readInfo = new HashMap<>();
-                                readInfo.put("action", "read");
-                                readInfo.put("buffer", buffer);
-
-                                clientChannel.read(buffer, readInfo, handler);
+                            @Override
+                            public void failed(Throwable exc, Object attachment) {
+                                // process error
                             }
-                        }
-
-                        @Override
-                        public void failed(Throwable exc, Object attachment) {
-                            // process error
-                        }
-                    });
+                        });
                 System.in.read();
             }
         }
 
         @AllArgsConstructor
         public static class ReadWriteHandler implements
-            CompletionHandler<Integer, Map<String, Object>> {
+                CompletionHandler<Integer, Map<String, Object>> {
 
             private final AsynchronousSocketChannel clientChannel;
 
             @Override
             public void completed(
-                Integer result, Map<String, Object> attachment) {
+                    Integer result, Map<String, Object> attachment) {
                 Map<String, Object> actionInfo = attachment;
                 String action = (String) actionInfo.get("action");
 

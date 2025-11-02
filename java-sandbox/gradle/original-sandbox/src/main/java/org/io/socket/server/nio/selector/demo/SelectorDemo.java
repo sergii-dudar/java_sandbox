@@ -1,4 +1,4 @@
-package org.example.io.socket.server.nio.selector.demo;
+package org.io.socket.server.nio.selector.demo;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -40,7 +40,7 @@ public class SelectorDemo {
 
                     System.out.println("request text is: " + requestText);
 
-                   if (requestText.equals(demo_text)) {
+                    if (requestText.equals(demo_text)) {
                         client.close();
                         System.out.println("Not accepting client messages anymore");
                     }

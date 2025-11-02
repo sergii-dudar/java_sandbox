@@ -9,12 +9,12 @@ import ua.serhii.application.model.UserDto;
 @Mapper(unmappedTargetPolicy = ReportingPolicy.ERROR)
 public interface UserMapper {
 
-    @Mapping(target = "age", source = "testAge")
-    @Mapping(target = "firstName", source = "testFirstName")
-    @Mapping(target = "secondName", source = "testSecondName")
-    @Mapping(target = "address", source = "testAddress")
+    @Mapping(source = "testFirstName", target = "firstName")
+    @Mapping(source = "testSecondName", target = "secondName")
+    @Mapping(source = "testAge", target = "age")
+    @Mapping(source = "testAddress", target = "address")
     UserDto toUser(User user);
 
-    @Mapping(target = "street", source = "testStreet")
+    @Mapping(source = "testStreet", target = "street")
     UserDto.Address toAddress(User.Address address);
 }

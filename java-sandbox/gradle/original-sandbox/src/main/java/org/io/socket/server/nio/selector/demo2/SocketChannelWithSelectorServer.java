@@ -1,7 +1,6 @@
-package org.example.io.socket.server.nio.selector.demo2;
+package org.io.socket.server.nio.selector.demo2;
 
 import lombok.extern.slf4j.Slf4j;
-
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
@@ -53,7 +52,7 @@ public class SocketChannelWithSelectorServer {
         log.info("Accepted connection from " + socketChannel);
         socketChannel.configureBlocking(false);
         socketChannel.write(ByteBuffer.wrap(("Welcome: " + socketChannel.getRemoteAddress() +
-            "\nThe thread assigned to you is: " + Thread.currentThread().getId() + "\n").getBytes()));
+                "\nThe thread assigned to you is: " + Thread.currentThread().getId() + "\n").getBytes()));
         dataMap.put(socketChannel, new LinkedList<>()); // store socket connection
         log.info("Total clients connected: " + dataMap.size());
         socketChannel.register(selectionKey.selector(), SelectionKey.OP_READ); // selector pointing to READ operation

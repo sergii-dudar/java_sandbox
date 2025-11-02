@@ -1,6 +1,6 @@
-package org.example.java17;
+package org.java17;
 
-import java.awt.*;
+import java.awt.Color;
 import java.util.HashMap;
 
 public class NPEInfoImprove {
@@ -10,7 +10,8 @@ public class NPEInfoImprove {
     }
 
     private static void runTest() {
-        record Grape(Color color, int number){};
+        record Grape(Color color, int number) {
+        };
 
         HashMap<String, Grape> grapes = new HashMap<>();
         grapes.put("grape1", new Grape(Color.BLUE, 2));

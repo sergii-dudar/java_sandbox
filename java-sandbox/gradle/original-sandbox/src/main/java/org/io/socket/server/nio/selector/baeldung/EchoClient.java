@@ -1,13 +1,11 @@
-package org.example.io.socket.server.nio.selector.baeldung;
+package org.io.socket.server.nio.selector.baeldung;
 
 import lombok.SneakyThrows;
-
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
-
-import static org.example.io.socket.server.nio.selector.baeldung.EchoTest.PORT;
+import static org.io.socket.server.nio.selector.baeldung.EchoTest.PORT;
 
 public class EchoClient {
 

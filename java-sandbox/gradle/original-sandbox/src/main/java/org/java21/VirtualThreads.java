@@ -1,4 +1,4 @@
-package org.example.java21;
+package org.java21;
 
 import java.time.Duration;
 import java.util.concurrent.Executors;
@@ -13,8 +13,10 @@ public class VirtualThreads {
 
     public static void main(String[] args) {
 
-        Thread osThread = new Thread(() -> {});
-        Thread virtualThread = Thread.startVirtualThread(() -> {});
+        Thread osThread = new Thread(() -> {
+        });
+        Thread virtualThread = Thread.startVirtualThread(() -> {
+        });
 
         testPlatformThreads(1000);
         testPlatformThreads(10_000);
@@ -25,7 +27,7 @@ public class VirtualThreads {
     private static void testPlatformThreads(int maximum) {
         long time = System.currentTimeMillis();
 
-        //try (var executor = Executors.newCachedThreadPool()) {
+        // try (var executor = Executors.newCachedThreadPool()) {
 
         AtomicLong counter = new AtomicLong();
         try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {

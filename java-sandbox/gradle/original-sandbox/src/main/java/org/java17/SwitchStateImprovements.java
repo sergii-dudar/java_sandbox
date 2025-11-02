@@ -1,4 +1,4 @@
-package org.example.java17;
+package org.java17;
 
 public class SwitchStateImprovements {
 
@@ -20,11 +20,11 @@ public class SwitchStateImprovements {
 
     private static void withReturnValueEvenShorter(Fruit fruit) {
         System.out.println(
-            switch (fruit) {
-                case APPLE, PEAR -> "Common fruit";
-                case ORANGE, AVOCADO -> "Exotic fruit";
-                default -> "Undefined fruit";
-            });
+                switch (fruit) {
+                    case APPLE, PEAR -> "Common fruit";
+                    case ORANGE, AVOCADO -> "Exotic fruit";
+                    default -> "Undefined fruit";
+                });
     }
 
     private static void withReturnValue(Fruit fruit) {
@@ -60,9 +60,6 @@ public class SwitchStateImprovements {
     }
 
     public enum Fruit {
-        APPLE,
-        PEAR,
-        ORANGE,
-        AVOCADO
+        APPLE, PEAR, ORANGE, AVOCADO
     }
 }

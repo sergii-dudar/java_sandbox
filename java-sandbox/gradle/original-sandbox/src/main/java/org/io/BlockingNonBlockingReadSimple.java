@@ -1,15 +1,9 @@
-package org.example.io;
+package org.io;
 
 import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.client.WireMock;
 import lombok.SneakyThrows;
-
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.nio.ByteBuffer;
@@ -18,13 +12,12 @@ import java.nio.channels.SocketChannel;
 import java.nio.charset.Charset;
 import java.nio.charset.CharsetDecoder;
 import java.nio.charset.StandardCharsets;
-
 import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.wireMockConfig;
 
 public class BlockingNonBlockingReadSimple {
 
     private static final WireMockServer WIRE_MOCK =
-        new WireMockServer(wireMockConfig().dynamicPort().portNumber());
+            new WireMockServer(wireMockConfig().dynamicPort().portNumber());
 
     private static final String REQUESTED_RESOURCE = "/test.json";
     public static final String GET_JSON_REQUEST_OP = "GET " + REQUESTED_RESOURCE + " HTTP/1.0\r\n\r\n";
@@ -32,7 +25,7 @@ public class BlockingNonBlockingReadSimple {
     public static void main(String[] args) {
         runServer();
 
-        //readDataFromServerBlocking();
+        // readDataFromServerBlocking();
         readDataFromServerNonBlocking();
 
         System.out.println();
@@ -44,7 +37,7 @@ public class BlockingNonBlockingReadSimple {
 
         // add request command
         InetSocketAddress address = new InetSocketAddress("localhost", WIRE_MOCK.port());
-        try(SocketChannel socketChannel = SocketChannel.open(address)) {
+        try (SocketChannel socketChannel = SocketChannel.open(address)) {
 
             Charset charset = StandardCharsets.UTF_8;
             socketChannel.write(charset.encode(CharBuffer.wrap(GET_JSON_REQUEST_OP)));
@@ -54,7 +47,7 @@ public class BlockingNonBlockingReadSimple {
             CharsetDecoder charsetDecoder = charset.newDecoder();
             CharBuffer charBuffer = CharBuffer.allocate(1192);
 
-            //socketChannel.read(byteBuffer);
+            // socketChannel.read(byteBuffer);
 
             while (socketChannel.read(byteBuffer) != -1 || byteBuffer.position() > 0) {
                 byteBuffer.flip();
@@ -67,7 +60,7 @@ public class BlockingNonBlockingReadSimple {
     }
 
     public static void storeBufferContents(ByteBuffer byteBuffer, CharBuffer charBuffer,
-        CharsetDecoder charsetDecoder, StringBuilder ourStore) {
+            CharsetDecoder charsetDecoder, StringBuilder ourStore) {
         charsetDecoder.decode(byteBuffer, charBuffer, true);
         charBuffer.flip();
         ourStore.append(charBuffer);
@@ -89,7 +82,7 @@ public class BlockingNonBlockingReadSimple {
                 BufferedReader reader = new BufferedReader(new InputStreamReader(serverInput));
                 StringBuilder ourStore = new StringBuilder();
 
-                for (String line; (line = reader.readLine()) != null; ) {
+                for (String line; (line = reader.readLine()) != null;) {
                     ourStore.append(line);
                     ourStore.append(System.lineSeparator());
                 }
@@ -101,9 +94,9 @@ public class BlockingNonBlockingReadSimple {
 
     public static void runServer() {
         WIRE_MOCK.stubFor(WireMock.get(WireMock.urlEqualTo(REQUESTED_RESOURCE))
-            .willReturn(WireMock.aResponse()
-                .withStatus(200)
-                .withBody("{ \"response\" : \"It worked!\" }")));
+                .willReturn(WireMock.aResponse()
+                        .withStatus(200)
+                        .withBody("{ \"response\" : \"It worked!\" }")));
         WIRE_MOCK.start();
     }
 }

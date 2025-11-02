@@ -14,7 +14,6 @@ public class Main {
         List<String> list = List.of("");
         System.out.println("Hello, World from Maven project! " + CollectionUtils.isEmpty(list));
         System.out.println("Instance: " + TestClassTest.INSTANCE);
-
         UserMapper mapper = new UserMapperImpl();
         System.out.println(mapper.toUser(User.builder()
                 .testAge(25)

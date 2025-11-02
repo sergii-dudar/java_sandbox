@@ -1,4 +1,4 @@
-package org.example.java17;
+package org.java17;
 
 public class RecordTypes {
 
