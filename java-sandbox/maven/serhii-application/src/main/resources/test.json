@@ -1,0 +1,27 @@
+{
+    "arrays": {
+        "emptyArray": [],
+        "numberArray": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "stringArray": [
+            "apple",
+            "banana",
+            "cherry"
+        ],
+        "mixedArray": [
+            1,
+            "two",
+            3.0,
+            true,
+            null
+        ],
+        "anoher": {
+            "test": "hello"
+        }
+    }
+}
