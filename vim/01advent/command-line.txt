@@ -1,3 +1,6 @@
+g/DEBUG/d               remove all lines containing debug
+
+
 2016-06-16 17:02:13 INFO  Info log message
 2016-06-16 17:02:13 ERROR Error log message
 2016-06-16 17:02:13 TRACE Trace log message
