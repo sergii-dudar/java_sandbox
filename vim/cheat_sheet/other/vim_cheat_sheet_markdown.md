@@ -468,5 +468,3 @@ set mouse=a                " Enable mouse support
 | `:help`  | Get help              |
 
 ---
-
-_Created by [youtube.com/@marco_peluso](https://youtube.com/@marco_peluso) • [marcopeluso.com](https://marcopeluso.com)_
