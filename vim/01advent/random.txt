@@ -1,5 +1,24 @@
 0
-111 here we adding new next line AM EET 2025
+111 here we *adding* n test ew next line AM EET 2025
+111 here we *adding* n test ew next line AM  asdfasd EET 2025
+111 here we *adding* n test ew sadfsa sdafasd next line AM EET 2025
+111 here we *adding* n test ew next line AM EET 2025 2025
+111 here we *adding* n test ew next line AM EET 2025
+111 here we *adding* n test ew next line AM EET 2025
+- original: ls
+- replacement: eza
+- original: find
+- replacement: fd
+- timeless: like and subscribe
+- original: grep
+- replacement: ripgrep(rg)
+- original: cat
+dateMDY
+uuid
+
+diso
+
+find
 2
 3
 4 sdfsdfsdfsdfsdfsd test some 
@@ -8,7 +27,7 @@
 2
 111 here we adding new next linesdf 
 
-3
+312
 ds4  
 5 
 6
