@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #This is a single-line comment in Bash Script.
 # echo "Enter your name:"

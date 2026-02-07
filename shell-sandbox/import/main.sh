@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Source the library script
 #''. ./library.sh' or 'source ./library.sh'

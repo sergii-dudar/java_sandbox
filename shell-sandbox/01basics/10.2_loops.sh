@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo -e "------------loop on array member"
 NAMES=(Joe Jenny Sara Tony)

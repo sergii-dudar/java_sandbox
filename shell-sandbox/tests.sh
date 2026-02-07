@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 class_name="org.concurrency.data.SyncCounterRunner"
 

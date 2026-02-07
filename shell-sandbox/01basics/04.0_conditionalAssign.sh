@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ifEmptyThen=${zero:+$plus} # something like ternam opartor
 echo "if empty them : $ifEmptyThen"

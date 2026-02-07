@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # In Bash, the [[ ... ]] construct supports regular expression matching 
 #   with the =~ operator. This allows you to check if a string matches a regular expression pattern.

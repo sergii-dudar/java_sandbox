@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #1. ; (Semicolon) -  Separates multiple commands. Each command is executed sequentially, regardless of whether the previous command succeeds or fails.
 # command1; command2; command3

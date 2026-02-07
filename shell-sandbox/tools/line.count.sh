@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # cat ~/.zshrc | wc -l
 # cat ~/.zshrc | nl

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 dateNow=$(date)
 plus=$((2 + 2))

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #filew="./testfiles/usersw"
 filew="./testfiles/file_$(date +%Y-%m-%d).txt"

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 function echo() {
    builtin echo -n "$(date +"[%m-%d %H:%M:%S]"): "

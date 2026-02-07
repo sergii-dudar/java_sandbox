@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #-----------explicitly declaring numeric array
 # -a        to make NAMEs indexed arrays (if supported)

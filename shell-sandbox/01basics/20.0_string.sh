@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 str1="WelcometoJavatpoint"
 str2="javatpoint"

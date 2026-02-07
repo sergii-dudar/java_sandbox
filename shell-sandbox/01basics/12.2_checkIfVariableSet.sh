@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 printf "\n---------#Check whether a variable is set or not using -v option "
 

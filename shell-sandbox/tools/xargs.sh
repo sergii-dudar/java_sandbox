@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo "one two three" | xargs touch
 echo "one two three" | xargs rm

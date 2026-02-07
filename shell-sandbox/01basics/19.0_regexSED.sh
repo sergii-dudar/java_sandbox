@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # https://www.tutorialspoint.com/unix/unix-regular-expressions.htm
 
 # SED stands for stream editor. This stream-oriented editor was created exclusively for executing scripts.

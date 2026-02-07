@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # + : Addition, measures addition of numbers (operands)
 # res=$(( 10 + 3 ))

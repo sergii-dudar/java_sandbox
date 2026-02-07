@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #() is for subshells.
 #(( )) is for arithmetic evaluations.

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 
 # -b : File Returns	'True' if the FILE exists as a block special file.

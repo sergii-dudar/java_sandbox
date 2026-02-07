@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Process substitution allows a process’s input or output to be referred to using a filename.
 #   It has two forms: output <(cmd), and input >(cmd).

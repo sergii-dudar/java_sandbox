@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #----if expression Options
 # ! EXPRESSION -	To check if EXPRESSION is false.

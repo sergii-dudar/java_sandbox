@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # get first line
 head --lines 1 ~/.zshrc

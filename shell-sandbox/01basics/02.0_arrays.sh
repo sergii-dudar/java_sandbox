@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #ARRAY[0]="Zara"
 #ARRAY[1]="Qadir"
