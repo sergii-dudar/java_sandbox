@@ -1,0 +1,26 @@
+services:
+  redis:
+    image: redis:7
+    container_name: sandbox-redis
+    command: >
+      sh -c "redis-server --requirepass pass &&
+             redis-cli -a pass < /docker-entrypoint-initdb.d/seed.redis"
+    ports:
+      - "6379:6379"
+    volumes:
+      - redisdata:/data
+      - ./init-redis:/docker-entrypoint-initdb.d
+
+  redis-seed:
+    image: redis:7
+    container_name: sandbox-redis-seed
+    depends_on:
+      - redis
+    restart: "no"
+    entrypoint: >
+      sh -c "sleep 3 && redis-cli -h redis -a pass < /seed/seed.redis && echo 'Seeding complete'"
+    volumes:
+      - ./init-redis:/seed
+
+volumes:
+  redisdata:

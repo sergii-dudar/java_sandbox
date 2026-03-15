@@ -1,0 +1,21 @@
+SET greeting "Hello from Redis!"
+
+HSET user:1 first_name Alice last_name Smith email alice@example.com department Engineering salary 95000
+HSET user:2 first_name Bob last_name Johnson email bob@example.com department Engineering salary 88000
+HSET user:3 first_name Carol last_name Williams email carol@example.com department Marketing salary 72000
+HSET user:4 first_name Dave last_name Brown email dave@example.com department Sales salary 67000
+HSET user:5 first_name Eve last_name Davis email eve@example.com department HR salary 78000
+
+SADD departments Engineering Marketing Sales HR
+
+LPUSH recent:logins alice@example.com bob@example.com carol@example.com
+
+ZADD leaderboard 95000 Alice 88000 Bob 72000 Carol 67000 Dave 78000 Eve
+
+HSET project:1 title "Website Redesign" description "Overhaul the company website" active true
+HSET project:2 title "Mobile App" description "Build a cross-platform mobile app" active true
+HSET project:3 title "CRM Migration" description "Migrate CRM to new platform" active false
+
+SADD project:1:members 1 2 3
+SADD project:2:members 1
+SADD project:3:members 4
