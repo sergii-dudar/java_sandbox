@@ -1,0 +1,13 @@
+{
+  "details": {
+    "type": "example",
+    "value": 100
+  },
+  "id": 1,
+  "name": "Test Item",
+  "tags": [
+    "testing",
+    "json"
+  ],
+  "valid": true
+}

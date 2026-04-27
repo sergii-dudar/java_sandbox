@@ -1,0 +1,30 @@
+{
+  "args": {},
+  "data": "{  \"details\": {    \"type\": \"example\",    \"value\": 100  },  \"id\": 1,  \"name\": \"Test Item\",  \"tags\": [    \"testing\",    \"json\"  ],  \"valid\": true}",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "application/json",
+    "Content-Length": "144",
+    "Content-Type": "application/json",
+    "Host": "httpbin.org",
+    "User-Agent": "kulala.nvim/5.3.4 HTTP/1.1",
+    "X-Amzn-Trace-Id": "Root=1-69efcbba-4bdace2b2192cbb20e25cc8b"
+  },
+  "json": {
+    "details": {
+      "type": "example",
+      "value": 100
+    },
+    "id": 1,
+    "name": "Test Item",
+    "tags": [
+      "testing",
+      "json"
+    ],
+    "valid": true
+  },
+  "method": "POST",
+  "origin": "195.114.144.163",
+  "url": "https://httpbin.org/anything"
+}
