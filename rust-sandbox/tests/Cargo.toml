@@ -11,6 +11,14 @@ path = "src/lib.rs"
 name = "test1"
 path = "src/main.rs"
 
+[[bench]]
+name = "math_bench"
+harness = false
+
+[[bench]]
+name = "strings_bench"
+harness = false
+
 [dependencies]
 tokio = { version = "1", features = ["rt", "rt-multi-thread", "macros", "time", "sync"] }
 

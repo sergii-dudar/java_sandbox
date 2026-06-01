@@ -1,0 +1,48 @@
+# `cargo-fuzz` workspace for the `test1` crate.
+#
+# Created with `cargo fuzz init`. Requires the nightly toolchain because
+# `libfuzzer-sys` uses sanitizer instrumentation.
+#
+# Run with:
+#   cargo +nightly fuzz run parse_fuzz
+#   cargo +nightly fuzz run reverse_fuzz
+#
+# Output (corpus, crashes, artifacts) goes to `fuzz/corpus/<target>/`
+# and `fuzz/artifacts/<target>/`. cargo-fuzz prints libFuzzer's own
+# distinct output format (iteration counts, NEW units, crashes).
+
+[package]
+name = "test1-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+
+[dependencies.test1]
+path = ".."
+
+# Prevent this crate from being treated as part of the parent workspace.
+[workspace]
+members = []
+
+[[bin]]
+name = "parse_fuzz"
+path = "fuzz_targets/parse_fuzz.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "reverse_fuzz"
+path = "fuzz_targets/reverse_fuzz.rs"
+test = false
+doc = false
+bench = false
+
+[profile.release]
+debug = 1
