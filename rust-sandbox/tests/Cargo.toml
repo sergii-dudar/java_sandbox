@@ -12,3 +12,18 @@ name = "test1"
 path = "src/main.rs"
 
 [dependencies]
+tokio = { version = "1", features = ["rt", "rt-multi-thread", "macros", "time", "sync"] }
+
+[dev-dependencies]
+rstest          = { version = "0.23", features = ["async-timeout"] }
+test-case       = "3.3"
+proptest        = "1"
+quickcheck      = "1"
+quickcheck_macros = "1"
+insta           = { version = "1", features = ["yaml", "json"] }
+tokio           = { version = "1", features = ["rt", "rt-multi-thread", "macros", "time", "sync", "test-util"] }
+mockall         = "0.13"
+trybuild        = "1"
+criterion       = { version = "0.5", features = ["html_reports"] }
+async-std       = { version = "1", features = ["attributes"] }
+futures         = "0.3"

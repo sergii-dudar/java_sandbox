@@ -9,6 +9,8 @@ pub mod collections;
 pub mod shapes;
 pub mod bank;
 pub mod parser;
+pub mod async_utils;
+pub mod services;
 
 #[cfg(test)]
 mod units;

@@ -1,0 +1,26 @@
+# Nextest configuration.
+# See: https://nexte.st/book/configuration.html
+
+[profile.default]
+retries = 0
+failure-output = "immediate-final"
+success-output = "never"
+fail-fast = false
+slow-timeout = { period = "30s", terminate-after = 2 }
+
+[profile.ci]
+retries = 2
+fail-fast = false
+failure-output = "immediate-final"
+success-output = "never"
+slow-timeout = { period = "60s", terminate-after = 3 }
+
+[profile.quick]
+fail-fast = true
+failure-output = "immediate"
+success-output = "never"
+
+[profile.with-output]
+# Always show stdout/stderr, even for passing tests.
+failure-output = "immediate-final"
+success-output = "immediate"
