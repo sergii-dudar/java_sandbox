@@ -1,12 +1,23 @@
 -- String helper tests + insulate / expose demo.
 -- `insulate` runs the block in its own sandbox so global/package mutations
 -- don't leak to other specs. `expose` does the opposite.
+--
+-- NOTE: `insulate` does NOT deep-copy nested tables like `math`. Assigning
+-- to `math.random` directly mutates the shared global table and leaks to
+-- subsequent specs. Use setup/teardown to save and restore.
 
 local s = require("sandbox.strs")
 
 insulate("strs (isolated module env)", function()
-  -- Replace `math.random` only inside this insulated block.
-  math.random = function() return 0.5 end
+  -- Save and restore `math.random` so the stub doesn't leak to other specs.
+  local _orig_random
+  setup(function()
+    _orig_random = math.random
+    math.random = function() return 0.5 end
+  end)
+  teardown(function()
+    math.random = _orig_random
+  end)
 
   it("reverse round-trips", function()
     assert.equals("hello", s.reverse(s.reverse("hello")))
