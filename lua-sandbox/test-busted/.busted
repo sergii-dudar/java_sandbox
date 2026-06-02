@@ -1,0 +1,30 @@
+-- Busted configuration. Run with: `busted` from this directory.
+-- See: https://lunarmodules.github.io/busted/#configuration-file
+return {
+  _all = {
+    -- Tell Lua how to find our library modules.
+    ROOT     = { "spec" },
+    pattern  = "_spec",
+    lpath    = "./src/?.lua;./src/?/init.lua",
+    helper   = "./spec/helper.lua",
+    coverage = false,
+    verbose  = false,
+  },
+  default = {
+    output = "utfTerminal", -- pretty, with colours
+  },
+  ci = {
+    output  = "plainTerminal",
+    verbose = true,
+  },
+  tap = {
+    output = "TAP",
+  },
+  json = {
+    output = "json",
+  },
+  junit = {
+    output      = "junit",
+    ["output-file"] = "test-results.xml",
+  },
+}

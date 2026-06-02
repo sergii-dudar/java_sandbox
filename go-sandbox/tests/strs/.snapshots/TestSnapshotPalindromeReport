@@ -1,0 +1,6 @@
+(map[string]bool) (len=4) {
+  (string) "": (bool) true,
+  (string) (len=5) "hello": (bool) false,
+  (string) (len=18) "no lemon, no melon": (bool) true,
+  (string) (len=7) "racecar": (bool) true
+}
