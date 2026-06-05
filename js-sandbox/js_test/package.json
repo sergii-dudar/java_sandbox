@@ -1,0 +1,22 @@
+{
+  "name": "js-jest-tests",
+  "version": "1.0.0",
+  "description": "Jest testing examples (JavaScript) — all variants",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:verbose": "jest --verbose"
+  },
+  "devDependencies": {
+    "jest": "^30.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "verbose": true
+  }
+}

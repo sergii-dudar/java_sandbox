@@ -25,6 +25,8 @@ build/
 **/main/generated/
 **/test/generated_tests/
 
+**/node_modules
+
 # Gradle tools
 .gradle/
 local.gradle.properties

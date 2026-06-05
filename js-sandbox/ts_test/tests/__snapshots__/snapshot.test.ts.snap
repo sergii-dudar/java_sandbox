@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`snapshots file snapshot of an object 1`] = `
+{
+  "fizzbuzz": [
+    "1",
+    "Fizz",
+    "Buzz",
+    "FizzBuzz",
+  ],
+  "greeting": "Hi, World!",
+}
+`;
