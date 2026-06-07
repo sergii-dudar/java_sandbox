@@ -3,38 +3,38 @@
 import { delay, fetchUser, loadConfig } from "../src/strings";
 
 describe("async", () => {
-  test("async/await", async () => {
-    const value = await delay("ready", 5);
-    expect(value).toBe("ready");
-  });
-
-  test("returning a promise", () => {
-    return delay(42, 5).then((value) => {
-      expect(value).toBe(42);
+    test("async/await", async () => {
+        const value = await delay("ready", 5);
+        expect(value).toBe("ready");
     });
-  });
 
-  test("resolves matcher", async () => {
-    await expect(delay("ok", 5)).resolves.toBe("ok");
-  });
-
-  test("rejects matcher", async () => {
-    await expect(fetchUser(0)).rejects.toThrow("id is required");
-  });
-
-  test("resolved object", async () => {
-    await expect(fetchUser(7)).resolves.toEqual({ id: 7, name: "user-7" });
-  });
-
-  test("callback with done", (done) => {
-    loadConfig((err, config) => {
-      try {
-        expect(err).toBeNull();
-        expect(config.mode).toBe("production");
-        done();
-      } catch (e) {
-        done(e as Error);
-      }
+    test("returning a promise", () => {
+        return delay(42, 5).then((value) => {
+            expect(value).toBe(42);
+        });
     });
-  });
+
+    test("resolves matcher", async () => {
+        await expect(delay("ok", 5)).resolves.toBe("ok");
+    });
+
+    test("rejects matcher", async () => {
+        await expect(fetchUser(0)).rejects.toThrow("id is required");
+    });
+
+    test("resolved object", async () => {
+        await expect(fetchUser(7)).resolves.toEqual({ id: 7, name: "user-7" });
+    });
+
+    test("callback with done", (done) => {
+        loadConfig((err, config) => {
+            try {
+                expect(err).toBeNull();
+                expect(config.mode).toBe("production");
+                done();
+            } catch (e) {
+                done(e as Error);
+            }
+        });
+    });
 });

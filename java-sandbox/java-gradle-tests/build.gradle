@@ -1,0 +1,49 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.example'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+dependencies {
+    // JUnit 5/6 (Jupiter) via the BOM so all artifacts share one version.
+    testImplementation platform('org.junit:junit-bom:6.1.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // AssertJ for fluent assertions.
+    testImplementation 'org.assertj:assertj-core:3.27.7'
+}
+
+test {
+    useJUnitPlatform {
+        // Exclude tests tagged "slow" by default; override with -PincludeSlow.
+        if (!project.hasProperty('includeSlow')) {
+            excludeTags 'slow'
+        }
+    }
+
+    testLogging {
+        events 'passed', 'skipped', 'failed'
+        showStandardStreams = false
+    }
+}
+
+// Convenience task: run only the "smoke"-tagged tests.
+tasks.register('smokeTest', Test) {
+    useJUnitPlatform {
+        includeTags 'smoke'
+    }
+    testClassesDirs = sourceSets.test.output.classesDirs
+    classpath = sourceSets.test.runtimeClasspath
+}
