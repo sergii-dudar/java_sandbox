@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="6817b270-ea90-4b2e-8594-fec03d0ee2aa" name="@serhii 2026-06-08 17:22:53" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-06-08T17:22:53.5849949+03:00" queuing="2026-06-08T17:22:53.5849949+03:00" start="2026-06-08T17:22:50.9350587+03:00" finish="2026-06-08T17:22:53.5900466+03:00" />
+  <TestSettings name="default" id="ec7cd4e2-04e9-4af6-9ee8-8377dbcbeb01">
+    <Deployment runDeploymentRoot="_serhii_2026-06-08_17_22_53" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="e30cd8c9-a10b-45d0-802b-310243187868" testId="dcfdf380-a458-861c-54ff-2d65078f0529" testName="NumberAssertions" computerName="serhii" duration="00:00:00.9973090" startTime="2026-06-08T17:22:52.4580584+03:00" endTime="2026-06-08T17:22:53.4552509+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e30cd8c9-a10b-45d0-802b-310243187868" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="NumberAssertions" storage="/home/serhii/serhii.home/git/java_sandbox/csharp-sandbox/cs-nunit-tests/bin/debug/net10.0/csnunittests.dll" id="dcfdf380-a458-861c-54ff-2d65078f0529">
+      <Execution id="e30cd8c9-a10b-45d0-802b-310243187868" />
+      <TestMethod codeBase="/home/serhii/serhii.home/git/java_sandbox/csharp-sandbox/cs-nunit-tests/bin/Debug/net10.0/CsNunitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="CsNunitTests.AssertionsTests" name="NumberAssertions" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="dcfdf380-a458-861c-54ff-2d65078f0529" executionId="e30cd8c9-a10b-45d0-802b-310243187868" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>Waiting for debugger attach...
+Process Id: 800446, Name: dotnet
+NUnit Adapter 5.0.0.0: Test execution started
+Debugging selected tests in /home/serhii/serhii.home/git/java_sandbox/csharp-sandbox/cs-nunit-tests/bin/Debug/net10.0/CsNunitTests.dll
+   NUnit3TestExecutor discovered 1 of 1 NUnit test cases using Current Discovery mode, Non-Explicit run
+NUnit Adapter 5.0.0.0: Test execution complete
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>
