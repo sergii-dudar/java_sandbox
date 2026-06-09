@@ -23,15 +23,15 @@ harness = false
 tokio = { version = "1", features = ["rt", "rt-multi-thread", "macros", "time", "sync"] }
 
 [dev-dependencies]
-rstest          = { version = "0.23", features = ["async-timeout"] }
+rstest          = { version = "0.26.1", features = ["async-timeout"] }
 test-case       = "3.3"
 proptest        = "1"
 quickcheck      = "1"
 quickcheck_macros = "1"
 insta           = { version = "1", features = ["yaml", "json"] }
 tokio           = { version = "1", features = ["rt", "rt-multi-thread", "macros", "time", "sync", "test-util"] }
-mockall         = "0.13"
+mockall         = "0.14.0"
 trybuild        = "1"
-criterion       = { version = "0.5", features = ["html_reports"] }
+criterion       = { version = "0.8.2", features = ["html_reports"] }
 async-std       = { version = "1", features = ["attributes"] }
 futures         = "0.3"
