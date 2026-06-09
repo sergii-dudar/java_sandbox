@@ -1,4 +1,9 @@
-use test1::{bank::Account, math, shapes::{Circle, Shape}, strings};
+use test1::{
+    bank::Account,
+    math,
+    shapes::{Circle, Shape},
+    strings,
+};
 
 fn main() {
     println!("add(2, 3) = {}", math::add(2, 3));
