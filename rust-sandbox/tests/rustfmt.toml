@@ -1,5 +1,10 @@
-tab_spaces                   = 4
-max_width                    = 170
+tab_spaces                  = 4
+max_width                   = 170
+comment_width               = 170
+imports_granularity         = "Module"
+group_imports               = "StdExternalCrate"
+reorder_modules             = true
+wrap_comments               = false
 # color                        = "Never"
 # condense_wildcard_suffixes   = true
 # edition                      = "2024"
