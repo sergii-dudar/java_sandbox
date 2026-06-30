@@ -5,6 +5,9 @@ fn five() -> i32 {
 fn plus_one(x: i32) -> i32 {
     x + 1
 }
+fn print_labeled_measurement(value: i32, unit_label: char) {
+    println!("The measurement is: {value}{unit_label}");
+}
 
 fn example1() {
     println!("--->>> Statements and Expressions: ");
@@ -20,10 +23,21 @@ fn example1() {
     println!("The value of x is: {x}");
 } // =======================================================>>>
 fn example2() {
+    print_labeled_measurement(5, 'h');
     println!("--->>> : ");
 } // =======================================================>>>
 fn example3() {
-    println!("--->>> : ");
+    let y = 10;
+    let x = 12;
+    let z = {
+        let x = 3;
+        x + 1
+        // Note the x + 1 line without a semicolon at the end, which is unlike
+        // most of the lines you’ve seen so far. Expressions do not include
+        // ending semicolons. If you add a semicolon to the end of an expression,
+        // you turn it into a statement, and it will then not return a value.
+    };
+    println!("--->>> : {y}, {x}, {z}");
 } // =======================================================>>>
 fn example4() {
     println!("--->>> : ");
