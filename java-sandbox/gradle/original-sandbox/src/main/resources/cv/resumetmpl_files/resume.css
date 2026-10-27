@@ -102,3 +102,12 @@ hr.dotted {
 .text-align {
     text-align: justify;
 }
+@media print {
+    @page { size: A4; margin: 12mm; }
+    body, #inner { background: #fff !important; }
+    #inner { padding: 0 20px; }
+    #ft { padding-bottom: 0; }
+    .job > div:first-child, .job h4 { break-after: avoid; }
+    .job p, .job ul, .job li { break-inside: avoid; }
+    hr.dotted { break-after: avoid; }
+}
